@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./assets/fonts/GothamPro/stylesheets.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Syle CSS -->
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <!-- Header -->
+        <header class="header bg-white">
+            <div class="container py-4 d-flex align-items-center justify-content-between gap-4">
+                <a href="/" class="header-logo">
+                    <img src="./assets/images/logo.svg" alt="">
+                </a>
+                <div class="d-flex align-items-center gap-4 header-right">
+                    <div class="header-form d-flex align-items-center py-2 pe-2 ps-3">
+                        <div class="inp-search position-relative">
+                            <i class="bi bi-search position-absolute"></i>
+                            <input type="text" placeholder="Куда поедем?">
+                        </div>
+                        <div class="inp-calendar position-relative">
+                            <i class="bi bi-calendar-check position-absolute"></i>
+                            <input type="text" placeholder="Когда?">
+                        </div>
+                        <button class="btn-gray">Найти туры</button>
+                    </div>
+                    <a href="#" class="d-flex flex-column align-items-center gap-1 favorite-link">
+                        <i class="bi bi-heart"></i>
+                        <span>Избранное</span>
+                    </a>
+                    <a href="#" class="btn-green d-flex align-items-center justify-content-center">Войти</a>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+        
+        <main>
+
+            <!-- Breadcrumb -->
+            <section class="breadcrumb">
+                <ul class="container d-flex align-items-center flex-wrap gap-2">
+                    <li><a href="#" class="active">Крошки</a></li>
+                    <li><span class="active">/</span></li>
+                    <li><a href="#">Супер</a></li>
+                    <li><span>/</span></li>
+                    <li><a href="#">Сеошки</a></li>
+                </ul>
+            </section>
+            <!-- Breadcrumb end -->
+            
+            <!-- Home -->
+            <section class="home">
+                <div class="container">
+                    <h1>В Петергоф на метеоре: Большой дворец и Нижний парк (от Дворцовой)</h1>
+                    <div class="home-head d-flex align-items-center justify-content-between">
+                        <div class="home-head__left d-flex align-items-center">
+                            <div class="star d-flex align-items-center">
+                                <img src="./assets/images/star.svg" alt="">
+                                <span>5</span>
+                            </div>
+                            <p>143 отзывов</p>
+                            <div class="dot"></div>
+                            <p>Петроград</p>
+                            <div class="dot"></div>
+                            <p>7 дней (6 ночей)</p>
+                        </div>
+                        <div class="home-head__right d-flex align-items-center">
+                            <a href="#" class="d-flex align-items-center">
+                                <span>Добавить в</span>
+                                <i class="bi bi-heart"></i>
+                            </a>
+                            <a href="#" class="d-flex align-items-center">
+                                <span>Поделиться</span>
+                                <i class="bi bi-box-arrow-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="home-swp mb-4 pb-2">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/home-slide-1.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/home-slide-2.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/home-slide-3.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/home-slide-4.png" alt="">
+                                </div>
+                                <div class="swiper-slide position-relative overflow-hidden">
+                                    <img src="./assets/images/home-slide-5.png" alt="">
+                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center fw-medium">+33 фото</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Home end -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="main-content d-flex flex-column">
+
+                            <section class="home-foot">
+                                <div class="description bg-white">А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль! Прямо из центра Петербурга мы попадём в Петергоф, увидев его таким, каким он был задуман для прибывающих из-за границы важных гостей. Вы посетите Большой дворец и прогуляетесь по Нижнему парку .</div>
+                            </section>
+
+                            <section class="home-foot__data d-flex align-items-start justify-content-between bg-white">
+                                <div class="home-foot__data-card">
+                                    <b class="fw-medium d-block">Сложность маршрута:</b>
+                                    <div class="d-flex align-items-center justify-content-between home-foot__data-card__content">
+                                        <p>Средний уровень</p>
+                                        <div class="rating d-flex align-items-center gap-1">
+                                            <ul class="d-flex align-items-center">
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="d-flex align-items-center justify-content-between fw-medium">
+                                        <span>Смотреть маршрут</span>
+                                        <img src="./assets/images/arrow-up-right.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="home-foot__data-card">
+                                    <b class="fw-medium d-block">Условия комфорта:</b>
+                                    <div class="d-flex align-items-center justify-content-between home-foot__data-card__content">
+                                        <p>Высший уровень</p>
+                                        <div class="rating d-flex align-items-center gap-1">
+                                            <ul class="d-flex align-items-center">
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                            </ul>
+                                            <img src="./assets/images/star-green.svg" width="15" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="d-flex align-items-center justify-content-between fw-medium">
+                                        <span class="text-nowrap">К месту проживания</span>
+                                        <img src="./assets/images/arrow-up-right.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="home-foot__data-card">
+                                    <b class="fw-medium d-block">Размер группы:</b>
+                                    <div class="d-flex align-items-center justify-content-between home-foot__data-card__content">
+                                        <p>От 2 до 14 человек, с 5 лет</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="tour d-flex flex-column">
+                                <div class="tour-content bg-white">
+                                    <h2 class="fw-medium">Программа тура</h2>
+                                    <div class="tour-head d-flex align-items-center justify-content-between">
+                                        <a href="#" class="d-flex align-items-center fw-medium">
+                                            <span>Получить на E-mail почту</span>
+                                            <img src="./assets/images/mail-icon.svg" alt="">
+                                        </a>
+                                        <a href="#" class="d-flex align-items-center fw-medium">
+                                            <span>Показать все даты</span>
+                                            <img src="./assets/images/arrow-down-blue.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <h3 class="d-flex align-items-center fw-medium">
+                                        <img src="./assets/images/sun-icon.svg" alt="">
+                                        <span>Первый день. Привет Питергоф!</span>
+                                    </h3>
+                                    <div class="tour-card__wrap d-flex align-items-center justify-content-between">
+                                        <div class="tour-card w-100 overflow-hidden">
+                                            <img src="./assets/images/tour-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="tour-card w-100 overflow-hidden">
+                                            <img src="./assets/images/tour-card-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="tour-card w-100 position-relative overflow-hidden">
+                                            <img src="./assets/images/tour-card-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            <a href="#" class="fw-medium position-absolute top-0 star-0 w-100 h-100 d-flex align-items-center justify-content-center">+13 фото</a>
+                                        </div>
+                                    </div>
+                                    <div class="tour-text mb-3">
+                                        <b class="d-flex fw-medium mb-3">Приветствуем вас в центре северной столицы России</b>
+                                        <p>А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль! Прямо из центра Петербурга мы попадём в Петергоф, увидев его таким, каким он был задуман для прибывающих из-за...</p>
+                                    </div>
+                                    <button class="show-btn d-inline-flex align-items-center fw-medium">
+                                        <span>Читать полностью</span>
+                                        <span>Скрывать</span>
+                                        <img src="./assets/images/arrow-down-blue.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="accordion d-flex flex-column" id="tourAcc">
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header border-0 w-100 p-0">
+                                            <button class="accordion-button collapsed focus-ring-0 fw-bold d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#tourAccItem1" aria-expanded="false" aria-controls="tourAccItem1">
+                                                <span>День 2. А вы давно были в круизе?</span>
+                                                <img src="./assets/images/accordion-icon.svg" alt="">
+                                            </button>
+                                        </h2>
+                                        <div id="tourAccItem1" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body">
+                                                <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header border-0 w-100 p-0">
+                                            <button class="accordion-button collapsed focus-ring-0 fw-bold d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#tourAccItem2" aria-expanded="false" aria-controls="tourAccItem2">
+                                                <span>День 3. Давайте отправимся на скоростном</span>
+                                                <img src="./assets/images/accordion-icon.svg" alt="">
+                                            </button>
+                                        </h2>
+                                        <div id="tourAccItem2" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body">
+                                                <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="arrival bg-white">
+                                <h2 class="fw-medium mb-3">Рекомендации по прибытию:</h2>
+                                <div class="arrival-content d-flex align-items-start justify-content-between">
+                                    <div class="arrival-left w-100 d-flex flex-column">
+                                        <div class="arrival-card">
+                                            <label for="">На самолете:</label>
+                                            <ul class="d-flex align-items-start justify-content-between">
+                                                <li>
+                                                    <h3 class="d-flex align-items-center fw-medium">
+                                                        <img src="./assets/images/plane-1.svg" alt="">
+                                                        <span>Прибытие</span>
+                                                    </h3>
+                                                    <div class="city">Краснодар</div>
+                                                    <p>В день начала тура</p>
+                                                </li>
+                                                <li>
+                                                    <h3 class="d-flex align-items-center fw-medium">
+                                                        <img src="./assets/images/plane-2.svg" alt="">
+                                                        <span>Вылет</span>
+                                                    </h3>
+                                                    <div class="city">Краснодар</div>
+                                                    <p>В день окончания тура</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="arrival-card">
+                                            <label for="">На поезде или другом транспорте:</label>
+                                            <ul class="d-flex align-items-start justify-content-between">
+                                                <li>
+                                                    <h3 class="d-flex align-items-center fw-medium">
+                                                        <img src="./assets/images/train-icon-1.svg" alt="">
+                                                        <span>Прибытие</span>
+                                                    </h3>
+                                                    <div class="city">Краснодар</div>
+                                                    <p>В день начала тура</p>
+                                                </li>
+                                                <li>
+                                                    <h3 class="d-flex align-items-center fw-medium">
+                                                        <img src="./assets/images/train-icon-2.svg" alt="">
+                                                        <span>Вылет</span>
+                                                    </h3>
+                                                    <div class="city">Краснодар</div>
+                                                    <p>В день окончания тура</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="arrival-right flex-shrink-0 d-flex flex-column align-items-center">
+                                        <img src="./assets/images/arrival-icon.svg" alt="">
+                                        <p class="text-center fw-medium">Узнать стоимость тура с билетами из вашего города</p>
+                                        <a href="#" class="btn-green d-flex align-items-center justify-content-center">Узнать стоимость</a>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="itinerary bg-white">
+                                <div class="accordion d-flex flex-column" id="itineraryAcc">
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header border-0 w-100 p-0">
+                                            <button class="accordion-button p-0 focus-ring-0 fw-medium fw-bold d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#itineraryAccItem1" aria-expanded="true" aria-controls="itineraryAccItem1">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./assets/images/map-icon.svg" alt="">
+                                                    <span>Маршрут тура</span>
+                                                </div>
+                                                <div class="icon d-flex align-items-center justify-content-center">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </h2>
+                                        <div id="itineraryAccItem1" class="accordion-collapse collapse show border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <div class="map position-relative">
+                                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aba65b24c20cbcc7ab8242f5e27f18f60af6dfa12531ad340ab9ba3a4e43f2598&amp;source=constructor" width="1280" height="508" frameborder="0"></iframe>
+                                                    <a href="#" class="btn-green position-absolute d-flex align-items-center justify-content-center">Показать на карте</a>
+                                                </div>
+                                                <div class="text">
+                                                    <h3 class="fw-medium mb-3">Организатор комментирует:</h3>
+                                                    <p>А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль! Прямо из центра Петербурга мы попадём в Петергоф, увидев его таким, каким он был задуман для прибывающих из-за...</p>
+                                                </div>
+                                                <button class="show-btn d-inline-flex align-items-center gap-1 fw-medium">
+                                                    <span>Раскрыть</span>
+                                                    <span>Скрывать</span>
+                                                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>
+                                </h2>
+                            </section>
+
+                            <section class="accomodation">
+                                <div class="accomodation-content bg-white">
+                                    <h2 class="fw-medium">Проживание:</h2>
+                                    <div class="accomodation-head d-flex align-items-center justify-content-between">
+                                        <div class="description">А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</div>
+                                        <a href="#" class="more-link d-flex align-items-center fw-medium flex-shrink-0">
+                                            <span>Показать все</span>
+                                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="accordion acc1" id="accomodationAcc">
+                                        <div class="accordion-item border-0">
+                                            <div class="accordion-header border-0 w-100 p-0">
+                                                <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#accomodationAccItem1" aria-expanded="true" aria-controls="accomodationAccItem1">
+                                                    <div class="accordion-button__left d-flex flex-column align-items-start">
+                                                        <div class="accordion-button__alert fw-medium">6 ночей</div>
+                                                        <span class="fw-medium">Крутой отель шар</span>
+                                                    </div>
+                                                    <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                        <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                        <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                    </div>
+                                                </button>
+                                            </div>
+                                            <div id="accomodationAccItem1" class="accordion-collapse collapse show border-0">
+                                                <div class="accordion-body p-0 pt-3">
+                                                    <p>А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</p>
+                                                    <div class="swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <img src="./assets/images/accomodation-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img src="./assets/images/accomodation-card-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                            </div>
+                                                            <div class="swiper-slide position-relative">
+                                                                <img src="./assets/images/accomodation-card-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                                <a href="#" class="h-100 w-100 position-absolute top-0 start-0 d-flex align-items-center justify-content-center fw-medium">+12 фото</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion acc2 d-flex flex-column bg-transparent" id="accomodationAcc2">
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#accomodationAcc2Item1" aria-expanded="false" aria-controls="accomodationAcc2Item1">
+                                                <div class="accordion-button__left d-flex flex-column align-items-start">
+                                                    <div class="accordion-button__alert fw-medium">4 ночи</div>
+                                                    <span class="fw-medium">Глэмпинг супер крутой отель</span>
+                                                </div>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="accomodationAcc2Item1" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</p>
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img src="./assets/images/accomodation-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img src="./assets/images/accomodation-card-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                        <div class="swiper-slide position-relative">
+                                                            <img src="./assets/images/accomodation-card-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                            <a href="#" class="h-100 w-100 position-absolute top-0 start-0 d-flex align-items-center justify-content-center fw-medium">+12 фото</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#accomodationAcc2Item2" aria-expanded="false" aria-controls="accomodationAcc2Item2">
+                                                <div class="accordion-button__left d-flex flex-column align-items-start">
+                                                    <div class="accordion-button__alert fw-medium">2 ночи</div>
+                                                    <span class="fw-medium">Отель Валера 4*</span>
+                                                </div>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="accomodationAcc2Item2" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</p>
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img src="./assets/images/accomodation-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img src="./assets/images/accomodation-card-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                        <div class="swiper-slide position-relative">
+                                                            <img src="./assets/images/accomodation-card-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                            <a href="#" class="h-100 w-100 position-absolute top-0 start-0 d-flex align-items-center justify-content-center fw-medium">+12 фото</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#accomodationAcc2Item3" aria-expanded="false" aria-controls="accomodationAcc2Item3">
+                                                <div class="accordion-button__left d-flex flex-column align-items-start">
+                                                    <div class="accordion-button__alert fw-medium d-flex align-items-center gap-1">
+                                                        <img src="./assets/images/moon-icon.svg" alt="" width="14" class="flex-shrink-0">
+                                                        3 ночи
+                                                    </div>
+                                                    <span class="fw-medium">База отдыха “Братья Китайцы”</span>
+                                                </div>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="accomodationAcc2Item3" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</p>
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img src="./assets/images/accomodation-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img src="./assets/images/accomodation-card-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                        <div class="swiper-slide position-relative">
+                                                            <img src="./assets/images/accomodation-card-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                            <a href="#" class="h-100 w-100 position-absolute top-0 start-0 d-flex align-items-center justify-content-center fw-medium">+12 фото</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="options">
+                                <h2 class="fw-medium mb-3">Варианты размещения:</h2>
+                                <ul class="d-flex flex-column">
+                                    <li class="options-card d-flex align-items-center justify-content-between bg-white">
+                                        <div class="options-card__left d-flex align-items-center flex-shrink-0">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <img src="./assets/images/options-icon-1.svg" alt="">
+                                            </div>
+                                            <p>2-х местный номер</p>
+                                        </div>
+                                        <img src="./assets/images/warning-circle-blue.svg" alt="" class="flex-shrink-0">
+                                    </li>
+                                    <li class="options-card d-flex align-items-center justify-content-between bg-white">
+                                        <div class="options-card__left d-flex align-items-center flex-shrink-0">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <img src="./assets/images/options-icon-2.svg" alt="">
+                                            </div>
+                                            <p>3-х местный номер</p>
+                                        </div>
+                                        <img src="./assets/images/warning-circle-blue.svg" alt="" class="flex-shrink-0">
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="service">
+                                <h2 class="fw-medium">Дополнительные услуги:</h2>
+                                <h3 class="fw-medium mb-3">Можно приорести в процессе бронирования</h3>
+                                <div class="service-card d-flex align-items-center justify-content-between bg-white">
+                                    <div class="service-card__left d-flex align-items-center flex-shrink-0">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <img src="./assets/images/service-icon-1.svg" alt="">
+                                        </div>
+                                        <p>Одноместное проживание</p>
+                                    </div>
+                                    <div class="price fw-bold">22 000<span class="fw-normal">₽</span></div>
+                                </div>
+                            </section>
+
+                            <section class="network d-flex align-items-center justify-content-between">
+                                <div class="network-left d-flex flex-column align-items-start">
+                                    <b class="d-block fw-medium">Не знаете, что выбрать? Мы поможем!</b>
+                                    Напишите нам в WhatsApp или оставьте заявку.
+                                </div>
+                                <div class="network-btn d-flex align-items-center flex-shrink-0">
+                                    <a href="" class="btn-green d-flex align-items-center justify-content-center gap-1">
+                                        <span>WhatsApp</span>
+                                        <img src="./assets/images/whatsap-icon.svg" alt="">
+                                    </a>
+                                    <a href="#" class="btn-white d-flex align-items-center justify-content-center">Оставить заявку</a>
+                                </div>
+                            </section>
+
+                            <section class="author bg-white">
+                                <div class="author-head d-flex align-items-center gap-3">
+                                    <div class="author-logo flex-shrink-0 rounded-circle overflow-hidden">
+                                        <img src="./assets/images/author-logo.png" alt="" class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div>
+                                        <h2 class="author-name fw-medium">Евгения А. </h2>
+                                        <div class="author-type">— автор путшествия</div>
+                                    </div>
+                                </div>
+                                <ul class="d-flex flex-column align-items-start">
+                                    <li>
+                                        <img src="./assets/images/circle-check.svg" alt="" class="d-inline">
+                                        <p class="d-inline">Личность подтверждена</p>
+                                        <img src="./assets/images/ask-icon.svg" alt="" class="d-inline">
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/author-icon-2.svg" alt="" class="d-inline">
+                                        <p class="d-inline">Представитель туроператора, зарегистрированного <a href="#" class="d-inline">в Федеральном реестре</a></p>
+                                        <img src="./assets/images/ask-icon.svg" alt="" class="d-inline">
+                                    </li>
+                                    <li>
+                                        <p>Автор и организатор тура — сообщество «Клуб гидов»</p>
+                                    </li>
+                                </ul>
+                                <div class="text mb-3">
+                                    <p>Ещё в 2005 году Евгения и Александр решили посвятить себя семейному делу. Евгения, имея опыт директора туристических компаний, занималась организацией экскурсионных программ на курортах. Александр курировал деятельность…</p>
+                                </div>
+                                <button class="show-btn d-inline-flex align-items-center gap-1">
+                                    <span>Раскрыть</span>
+                                    <span>Скрывать</span>
+                                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="author-foot d-flex align-items-center">
+                                    <a href="#" class="btn-green d-flex align-items-center justify-content-center">Оставить заявку</a>
+                                    <a href="#" class="btn-green__outline d-flex align-items-center justify-content-center">Смотреть туры организатора</a>
+                                </div>
+                            </section>
+
+                            <section class="row prices g-3 bg-white">
+                                <div class="col-6">
+                                    <h3 class="fw-medium">Включено в стоимость:</h3>
+                                    <ul class="d-flex flex-column">
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-1.svg" alt="" class="flex-shrink-0">
+                                            <p>Проживание: 6 ночей на базе озера Лама и 1 ночь в гостинице Норильска.</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-2.svg" alt="" class="flex-shrink-0">
+                                            <p>Питание по программе, включая дегустацию местных блюд из рыбы и мяса.</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-3.svg" alt="" class="flex-shrink-0">
+                                            <p>Транспортное сопровождение: авто, микроавтобусы, лодки и судно на подушке.</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-4.svg" alt="" class="flex-shrink-0">
+                                            <p>Услуги гидов и инструкторов на всём протяжении маршрута.</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-5.svg" alt="" class="flex-shrink-0">
+                                            <p>Ежедневное посещение бань на базе и купание в фурако (1 день).</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-6.svg" alt="" class="flex-shrink-0">
+                                            <p>Аренда сапбордов и гидрокостюмов для активного отдыха.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <h3 class="fw-medium">Дополнительно оплачивается:</h3>
+                                    <ul class="d-flex flex-column">
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-7.svg" alt="" class="flex-shrink-0">
+                                            <p>Авиабилеты до Норильска и обратно (от 33 300 ₽/чел.).</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-8.svg" alt="" class="flex-shrink-0">
+                                            <p>Питание в Норильске: завтрак, обед и ужин в день прилёта и отъезда.</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-9.svg" alt="" class="flex-shrink-0">
+                                            <p>Одноместное размещение в гостинице города Норильска.</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-10.svg" alt="" class="flex-shrink-0">
+                                            <p>Вертолётная экскурсия по программе (от 130 000 ₽/чел.).</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-11.svg" alt="" class="flex-shrink-0">
+                                            <p>Спутниковая связь и интернет для использования в личных целях.</p>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img src="./assets/images/price-icon-12.svg" alt="" class="flex-shrink-0">
+                                            <p>Автоэкскурсия по Норильску в 7-й день (от 70 000 ₽/группа).</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <section class="direction">
+                                <ul class="d-flex align-items-start justify-content-between">
+                                    <li class="d-flex align-items-start">
+                                        <img src="./assets/images/lock-icon.svg" alt="" class="flex-shrink-0">
+                                        <div>
+                                            <h3 class="fw-medium">Надёжная оплата</h3>
+                                            <p>Оплачивайте туры через защищённую платёжную систему.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <img src="./assets/images/circle-check-white.svg" alt="" class="flex-shrink-0">
+                                        <div>
+                                            <h3 class="fw-medium">Проверенные партнёры</h3>
+                                            <p>Каждого партнёра мы отбираем по 8 ключевым критериям.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <img src="./assets/images/shield-check-white.svg" alt="" class="flex-shrink-0">
+                                        <div>
+                                            <h3 class="fw-medium">Гарантия цены</h3>
+                                            <p>Туры напрямую от организаторов, без скрытых наценок.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="know">
+                                <h2 class="fw-medium mb-3">Важно знать:</h2>
+                                <div class="accordion d-flex flex-column bg-transparent" id="knowAcc">
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#knowAccItem1" aria-expanded="true" aria-controls="knowAccItem1">
+                                                <span class="fw-medium">Какая погода ждёт</span>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="knowAccItem1" class="accordion-collapse collapse show border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>В июле и августе на плато Путорана температура колеблется от +5 до +25 °C. Возможны туманы, дожди и сильный ветер.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#knowAccItem2" aria-expanded="false" aria-controls="knowAccItem2">
+                                                <span class="fw-medium">Что взять с собой</span>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="knowAccItem2" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>В июле и августе на плато Путорана температура колеблется от +5 до +25 °C. Возможны туманы, дожди и сильный ветер.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#knowAccItem3" aria-expanded="false" aria-controls="knowAccItem3">
+                                                <span class="fw-medium">Как будут кормить</span>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="knowAccItem3" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>В июле и августе на плато Путорана температура колеблется от +5 до +25 °C. Возможны туманы, дожди и сильный ветер.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#knowAccItem4" aria-expanded="false" aria-controls="knowAccItem4">
+                                                <span class="fw-medium">Кто сопровождает в путешествии</span>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="knowAccItem4" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>В июле и августе на плато Путорана температура колеблется от +5 до +25 °C. Возможны туманы, дожди и сильный ветер.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 bg-white">
+                                        <div class="accordion-header border-0 w-100">
+                                            <button class="accordion-button bg-transparent shadow-none p-0 focus-ring-0 fw-bold d-flex align-items-end justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#knowAccItem6" aria-expanded="false" aria-controls="knowAccItem6">
+                                                <span class="fw-medium">Какой транспорт используется</span>
+                                                <div class="icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                                    <img src="./assets/images/minus-icon-green.svg" alt="">
+                                                    <img src="./assets/images/plus-icon-green.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div id="knowAccItem6" class="accordion-collapse collapse border-0">
+                                            <div class="accordion-body p-0 pt-3">
+                                                <p>В июле и августе на плато Путорана температура колеблется от +5 до +25 °C. Возможны туманы, дожди и сильный ветер.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="place">
+                                <h2 class="mb-3 fw-medium">Как забронировать место в группе?</h2>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="place-card h-100 bg-white">
+                                            <div class="place-card__head d-flex align-items-center gap-1">
+                                                <div class="number flex-shrink-0 d-flex align-items-center justify-content-center fw-bold">1</div>
+                                                <h3 class="fw-medium">Заявка</h3>
+                                            </div>
+                                            <p>Заполняете форму обратной связи на сайте</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="place-card h-100 bg-white">
+                                            <div class="place-card__head d-flex align-items-center gap-1">
+                                                <div class="number flex-shrink-0 d-flex align-items-center justify-content-center fw-bold">2</div>
+                                                <h3 class="fw-medium">Обсуждение</h3>
+                                            </div>
+                                            <p>Обговариваем условия тура и отвечаем на вопросы</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="place-card h-100 bg-white">
+                                            <div class="place-card__head d-flex align-items-center gap-1">
+                                                <div class="number flex-shrink-0 d-flex align-items-center justify-content-center fw-bold">3</div>
+                                                <h3 class="fw-medium">Договор и ₽</h3>
+                                            </div>
+                                            <p>Заключаем договор и принимаем предоплату</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="place-card h-100 bg-white">
+                                            <div class="place-card__head d-flex align-items-center gap-1">
+                                                <div class="number flex-shrink-0 d-flex align-items-center justify-content-center fw-bold">4</div>
+                                                <h3 class="fw-medium">Авиабилеты</h3>
+                                            </div>
+                                            <p>Помогаем с подбором билетов и предлагаем лучшие варианты</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="place-card h-100 bg-white">
+                                            <div class="place-card__head d-flex align-items-center gap-1">
+                                                <div class="number flex-shrink-0 d-flex align-items-center justify-content-center fw-bold">5</div>
+                                                <h3 class="fw-medium">Чат участников</h3>
+                                            </div>
+                                            <p>Добавляем вас в чат, отправляем памятку и чек-листы</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="place-card p-0">
+                                            <img src="./assets/images/ticket-card.svg" alt="" class="w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="tour-dates">
+                                <h2 class="fw-medium pb-2 mb-1">Даты тура</h2>
+                                <ul class="tour-dates__lists bg-white d-flex flex-column">
+                                    <li class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="price fw-bold">22 000₽</div>
+                                            </div>
+                                            <div class="datas d-flex align-items-center">
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/calendar.svg" alt="">
+                                                    <span>12-17 сент.</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/sun.svg" alt="">
+                                                    <span>4 дня</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/moon.svg" alt="">
+                                                    <span>3 ночи</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-green__outline d-flex flex-column align-items-center justify-content-center text-center">
+                                            <b class="fw-normal">Отправить заявку</b>
+                                            <span class="fw-normal">без оплаты сейчас</span>
+                                        </a>
+                                    </li>
+                                    <li class="line flex-shrink-0 w-100"></li>
+                                    <li class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="price fw-bold">16 000₽</div>
+                                            </div>
+                                            <div class="datas d-flex align-items-center">
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/calendar.svg" alt="">
+                                                    <span>12-17 сент.</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/sun.svg" alt="">
+                                                    <span>4 дня</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/moon.svg" alt="">
+                                                    <span>3 ночи</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-green__outline d-flex flex-column align-items-center justify-content-center text-center">
+                                            <b class="fw-normal">Отправить заявку</b>
+                                            <span class="fw-normal">без оплаты сейчас</span>
+                                        </a>
+                                    </li>
+                                    <li class="line flex-shrink-0 w-100"></li>
+                                    <li class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="price fw-bold disabled">16 000₽</div>
+                                            </div>
+                                            <div class="datas d-flex align-items-center">
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/calendar.svg" alt="">
+                                                    <span>12-17 сент.</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/sun.svg" alt="">
+                                                    <span>4 дня</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/moon.svg" alt="">
+                                                    <span>3 ночи</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-green__outline d-flex flex-column align-items-center justify-content-center text-center disabled">
+                                            Нет метст
+                                        </a>
+                                    </li>
+                                    <li class="line flex-shrink-0 w-100"></li>
+                                    <li class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="price fw-bold">33 000₽</div>
+                                            </div>
+                                            <div class="datas d-flex align-items-center">
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/calendar.svg" alt="">
+                                                    <span>12-17 сент.</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/sun.svg" alt="">
+                                                    <span>4 дня</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/moon.svg" alt="">
+                                                    <span>3 ночи</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-green__outline d-flex flex-column align-items-center justify-content-center text-center">
+                                            <b class="fw-normal">Отправить заявку</b>
+                                            <span class="fw-normal">без оплаты сейчас</span>
+                                        </a>
+                                    </li>
+                                    <li class="line flex-shrink-0 w-100"></li>
+                                    <li class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="price fw-bold bg-gray">122 000₽</div>
+                                                <div class="alert-yellow">на уточнении</div>
+                                            </div>
+                                            <div class="datas d-flex align-items-center">
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/calendar.svg" alt="">
+                                                    <span>12-17 сент.</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/sun.svg" alt="">
+                                                    <span>4 дня</span>
+                                                </div>
+                                                <div class="datas-item d-flex align-items-center">
+                                                    <img src="./assets/images/moon.svg" alt="">
+                                                    <span>3 ночи</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-green__outline bg-gray d-flex flex-column align-items-center justify-content-center text-center">
+                                            <b class="fw-normal">Отправить заявку</b>
+                                            <span class="fw-normal">без оплаты сейчас</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-medium">
+                                        <span>Показать все даты тура</span>
+                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </section>
+
+                            <section class="review d-flex flex-column">
+                                <div class="review-head bg-white">
+                                    <h2 class="fw-medium">415 отзывов путешествующих</h2>
+                                    <div class="review-head__content d-flex align-items-start justify-content-between">
+                                        <div class="review-head__left">
+                                            <div class="star d-flex align-items-end">
+                                                <span class="fw-medium">4.98</span>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./assets/images/big-star.svg" alt="">
+                                                    <img src="./assets/images/big-star.svg" alt="">
+                                                    <img src="./assets/images/big-star.svg" alt="">
+                                                    <img src="./assets/images/big-star.svg" alt="">
+                                                    <img src="./assets/images/big-star.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <p>Написать отзыв можно только после посещения. <a href="#" class="d-inline">Подробнее</a></p>
+                                        </div>
+                                        <ul class="review-head__right d-flex flex-column">
+                                            <li class="d-flex align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center flex-shrink-0 star">
+                                                    <img src="./assets/images/rating-star.svg" alt="" class="flex-shrink-0">
+                                                </div>
+                                                <b class="flex-shrink-0 fw-bold">5</b>
+                                                <div class="line position-relative">
+                                                    <span class="position-absolute start-0 top-0 h-100" style="width: 90%"></span>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center flex-shrink-0 star">
+                                                    <img src="./assets/images/rating-star.svg" alt="" class="flex-shrink-0">
+                                                </div>
+                                                <b class="flex-shrink-0 fw-bold">4</b>
+                                                <div class="line position-relative">
+                                                    <span class="position-absolute start-0 top-0 h-100" style="width: 20%"></span>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center flex-shrink-0 star">
+                                                    <img src="./assets/images/rating-star.svg" alt="" class="flex-shrink-0">
+                                                </div>
+                                                <b class="flex-shrink-0 fw-bold">3</b>
+                                                <div class="line position-relative">
+                                                    <span class="position-absolute start-0 top-0 h-100" style="width: 10%"></span>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center flex-shrink-0 star">
+                                                    <img src="./assets/images/rating-star.svg" alt="" class="flex-shrink-0">
+                                                </div>
+                                                <b class="flex-shrink-0 fw-bold">2</b>
+                                                <div class="line position-relative">
+                                                    <span class="position-absolute start-0 top-0 h-100" style="width: 5%"></span>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center flex-shrink-0 star">
+                                                    <img src="./assets/images/rating-star.svg" alt="" class="flex-shrink-0">
+                                                </div>
+                                                <b class="flex-shrink-0 fw-bold">1</b>
+                                                <div class="line position-relative">
+                                                    <span class="position-absolute start-0 top-0 h-100" style="width: 2%"></span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="photos-tourists bg-white">
+                                    <h3 class="fw-medium mb-3">Фото туристов</h3>
+                                    <div class="photos-tourists__content d-flex align-items-center justify-content-between">
+                                        <button class="swp-btn swp-btn__prev d-flex align-items-center justify-content-center flex-shrink-0">
+                                            <img src="./assets/images/swp-btn-prev.svg" alt="">
+                                        </button>
+                                        <div class="photos-tourists__swp">
+                                            <div class="swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-6.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                    <div class="swiper-slide overflow-hidden">
+                                                        <img src="./assets/images/tourist-card-6.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="swp-btn swp-btn__next d-flex align-items-center justify-content-center flex-shrink-0">
+                                            <img src="./assets/images/swp-btn-next.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="review-card bg-white">
+                                    <div class="review-card__head d-flex align-items-center mb-3">
+                                        <div class="logo overflow-hidden flex-shrink-0">
+                                            <img src="./assets/images/review-logo-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="ps-2 ms-1">
+                                            <div class="d-flex align-items-center name">
+                                                <div class="star d-flex align-items-center fw-bold">
+                                                    <span class="d-flex align-items-start justify-content-center">
+                                                        <img src="./assets/images/star.svg" width="17" alt="">
+                                                    </span>
+                                                    5.0
+                                                </div>
+                                                <h3 class="fw-medium">Александр</h3>
+                                            </div>
+                                            <div class="date fw-medium">3 сентября 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-card__body">
+                                        <p>Петроград — это город, в который хочется возвращаться снова и снова. Особенно понравилась прогулка по Невскому проспекту и посещение Эрмитажа. Организация тура была на высшем уровне, всё чётко и без задержек. Спасибо за насыщенные дни и новые впечатления!</p>
+                                        <ul class="image-list">
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="show-btn d-inline-flex align-items-center fw-medium mt-3">
+                                        <span>Читать полностью</span>
+                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="review-card bg-white">
+                                    <div class="review-card__head d-flex align-items-center mb-3">
+                                        <div class="logo overflow-hidden flex-shrink-0">
+                                            <img src="./assets/images/review-logo-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="ps-2 ms-1">
+                                            <div class="d-flex align-items-center name">
+                                                <div class="star d-flex align-items-center fw-bold">
+                                                    <span class="d-flex align-items-start justify-content-center">
+                                                        <img src="./assets/images/star.svg" width="17" alt="">
+                                                    </span>
+                                                    5.0
+                                                </div>
+                                                <h3 class="fw-medium">Александр</h3>
+                                            </div>
+                                            <div class="date fw-medium">3 сентября 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-card__body">
+                                        <p>Петроград — это город, в который хочется возвращаться снова и снова. Особенно понравилась прогулка по Невскому проспекту и посещение Эрмитажа. Организация тура была на высшем уровне, всё чётко и без задержек. Спасибо за насыщенные дни и новые впечатления!</p>
+                                        <ul class="image-list">
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="show-btn d-inline-flex align-items-center fw-medium mt-3">
+                                        <span>Читать полностью</span>
+                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="review-card bg-white">
+                                    <div class="review-card__head d-flex align-items-center mb-3">
+                                        <div class="logo overflow-hidden flex-shrink-0 d-flex align-items-center justify-content-center">
+                                            <span class="fw-medium">М</span>
+                                        </div>
+                                        <div class="ps-2 ms-1">
+                                            <div class="d-flex align-items-center name">
+                                                <div class="star d-flex align-items-center fw-bold">
+                                                    <span class="d-flex align-items-start justify-content-center">
+                                                        <img src="./assets/images/star.svg" width="17" alt="">
+                                                    </span>
+                                                    5.0
+                                                </div>
+                                                <h3 class="fw-medium">Александр</h3>
+                                            </div>
+                                            <div class="date fw-medium">3 сентября 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-card__body">
+                                        <p>Петроград — это город, в который хочется возвращаться снова и снова. Особенно понравилась прогулка по Невскому проспекту и посещение Эрмитажа. Организация тура была на высшем уровне, всё чётко и без задержек. Спасибо за насыщенные дни и новые впечатления!</p>
+                                        <ul class="image-list">
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                            <li class="overflow-hidden">
+                                                <img src="./assets/images/review-card-img-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="show-btn d-inline-flex align-items-center fw-medium mt-3">
+                                        <span>Читать полностью</span>
+                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="d-flex align-items-center more-link">
+                                        <span class="fw-medium">Показать все отзывы тура</span>
+                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </section>
+
+                            <section class="excursion">
+                                <div class="excursion-head d-flex align-items-center justify-content-between">
+                                    <h2 class="fw-medium">Похожие экскурсии</h2>
+                                    <div class="swp-btn d-flex align-items-center">
+                                        <button class="swp-btn__prev d-flex align-items-center justify-content-center">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1L1 8L8 15" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="swp-btn__next d-flex align-items-center justify-content-center">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.999999 1L8 8L1 15" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide excursion-card bg-white d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div class="excursion-card__head overflow-hidden mb-3">
+                                                    <img src="./assets/images/excursion-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                </div>
+                                                <h3 class="fw-medium">Домбай - Эльбрус пример заголовка в две или даже в три строки</h3>
+                                                <ul class="d-flex flex-column gap-1">
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>10 дней</p>
+                                                        <p>18.09.2025</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Регион</p>
+                                                        <p>Приэльбрусье</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Сложность</p>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p>Средняя</p>
+                                                            <div class="rating d-flex align-items-center">
+                                                                <span class="active"></span>
+                                                                <span class="active"></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="btn-lightgray w-100 d-flex align-items-center justify-content-center">5,950.00<span>руб</span></a>
+                                        </div>
+                                        <div class="swiper-slide excursion-card bg-white d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div class="excursion-card__head overflow-hidden mb-3">
+                                                    <img src="./assets/images/excursion-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                </div>
+                                                <h3 class="fw-medium">Домбай - Эльбрус пример заголовка в две или даже в три строки</h3>
+                                                <ul class="d-flex flex-column gap-1">
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>10 дней</p>
+                                                        <p>18.09.2025</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Регион</p>
+                                                        <p>Приэльбрусье</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Сложность</p>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p>Средняя</p>
+                                                            <div class="rating d-flex align-items-center">
+                                                                <span class="active"></span>
+                                                                <span class="active"></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="btn-lightgray w-100 d-flex align-items-center justify-content-center">5,950.00<span>руб</span></a>
+                                        </div>
+                                        <div class="swiper-slide excursion-card bg-white d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div class="excursion-card__head overflow-hidden mb-3">
+                                                    <img src="./assets/images/excursion-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                </div>
+                                                <h3 class="fw-medium">Домбай - Эльбрус пример заголовка в две или даже в три строки</h3>
+                                                <ul class="d-flex flex-column gap-1">
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>10 дней</p>
+                                                        <p>18.09.2025</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Регион</p>
+                                                        <p>Приэльбрусье</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Сложность</p>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p>Средняя</p>
+                                                            <div class="rating d-flex align-items-center">
+                                                                <span class="active"></span>
+                                                                <span class="active"></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="btn-lightgray w-100 d-flex align-items-center justify-content-center">5,950.00<span>руб</span></a>
+                                        </div>
+                                        <div class="swiper-slide excursion-card bg-white d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div class="excursion-card__head overflow-hidden mb-3">
+                                                    <img src="./assets/images/excursion-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                </div>
+                                                <h3 class="fw-medium">Домбай - Эльбрус пример заголовка в две или даже в три строки</h3>
+                                                <ul class="d-flex flex-column gap-1">
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>10 дней</p>
+                                                        <p>18.09.2025</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Регион</p>
+                                                        <p>Приэльбрусье</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Сложность</p>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p>Средняя</p>
+                                                            <div class="rating d-flex align-items-center">
+                                                                <span class="active"></span>
+                                                                <span class="active"></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="btn-lightgray w-100 d-flex align-items-center justify-content-center">5,950.00<span>руб</span></a>
+                                        </div>
+                                        <div class="swiper-slide excursion-card bg-white d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div class="excursion-card__head overflow-hidden mb-3">
+                                                    <img src="./assets/images/excursion-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                                </div>
+                                                <h3 class="fw-medium">Домбай - Эльбрус пример заголовка в две или даже в три строки</h3>
+                                                <ul class="d-flex flex-column gap-1">
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>10 дней</p>
+                                                        <p>18.09.2025</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Регион</p>
+                                                        <p>Приэльбрусье</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center justify-content-between">
+                                                        <p>Сложность</p>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p>Средняя</p>
+                                                            <div class="rating d-flex align-items-center">
+                                                                <span class="active"></span>
+                                                                <span class="active"></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="btn-lightgray w-100 d-flex align-items-center justify-content-center">5,950.00<span>руб</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <section class="booking bg-white d-flex flex-column align-items-center">
+                            <div class="booking-price d-flex align-items-center w-100">
+                                <h3 class="fw-bold">от ₽123 000</h3>
+                                <del class="fw-medium">153 500</del>
+                                <span class="fw-medium">-10%</span>
+                            </div>
+                            <div class="booking-date d-flex align-items-center w-100">
+                                <i class="bi bi-calendar4"></i>
+                                <b class="fw-medium"> 4 104₽</b>
+                                / день
+                                <div class="dot"></div>
+                                4 дня
+                            </div>
+                            <a href="#" class="ticket-link d-flex fw-medium">
+                                <img src="./assets/images/air-icon.svg" alt="">
+                                <span>Узнать стоиость с билетами из вашего города</span>
+                            </a>
+                            <div class="d-flex flex-column align-items-start w-100">
+                                <label for="" class="fw-medium">Даты путешествия</label>
+                                <select name="" id="" class="w-100">
+                                    <option value="" selected>12 - 18 сентября</option>
+                                    <option value="">12 - 18 сентября</option>
+                                    <option value="">12 - 18 сентября</option>
+                                </select>
+                            </div>
+                            <div class="booking-calculate d-flex align-items-center justify-content-between w-100">
+                                <div class="booking-calculate__left">
+                                    <label for="">Кол-во туристов</label>
+                                    <p>2-14 туристов, с 5 лет</p>
+                                </div>
+                                <div class="calculation d-flex align-items-center">
+                                    <button class="minus-btn d-flex align-items-center justify-content-center">
+                                        <img src="./assets/images/minus-icon.svg" alt="">
+                                    </button>
+                                    <p class="fw-medium text-center">2</p>
+                                    <button class="plus-btn d-flex align-items-center justify-content-center">
+                                        <img src="./assets/images/plus-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-center booking-btn w-100">
+                                <button class="btn-green w-100 d-flex align-items-center justify-content-center">
+                                    <span>Забронировать сейчас</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 12L10.2426 16.2426L18.7275 7.75732" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="booking-btn__bottom d-flex align-items-center justify-content-between w-100">
+                                    <a href="#" class="fw-medium">Не требует оплаты сейчас</a>
+                                    <p class="d-flex align-items-center">
+                                        <span>Гарантия проведения</span>
+                                        <img src="./assets/images/circle-warning.svg" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-blue__outline d-flex align-items-center justify-content-center">
+                                <span>Запросить индивидуальный тур</span>
+                                <img src="./assets/images/star-yellow.svg" width="15" alt="">
+                            </a>
+                            <a href="#" class="blue-link fw-medium d-flex align-items-center justify-content-center">
+                                <span>Мгновенная бронь</span>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.03735 11.5875H9.53735C9.53735 11.3113 9.3135 11.0875 9.03735 11.0875V11.5875ZM9.03735 11.6625L9.03723 12.1625C9.16986 12.1625 9.29707 12.1098 9.39086 12.0161C9.48466 11.9223 9.53735 11.7951 9.53735 11.6625H9.03735ZM8.96265 11.6624H8.46265C8.46265 11.9385 8.68643 12.1624 8.96252 12.1624L8.96265 11.6624ZM8.96265 11.5875V11.0875C8.6865 11.0875 8.46265 11.3113 8.46265 11.5875H8.96265ZM9.5 6.33746C9.5 6.06132 9.27614 5.83746 9 5.83746C8.72386 5.83746 8.5 6.06132 8.5 6.33746H9H9.5ZM8.5 9.33746C8.5 9.61361 8.72386 9.83746 9 9.83746C9.27614 9.83746 9.5 9.61361 9.5 9.33746H9H8.5ZM9 15.75V15.25C5.54822 15.25 2.75 12.4518 2.75 9H2.25H1.75C1.75 13.0041 4.99594 16.25 9 16.25V15.75ZM2.25 9H2.75C2.75 5.54822 5.54822 2.75 9 2.75V2.25V1.75C4.99594 1.75 1.75 4.99594 1.75 9H2.25ZM9 2.25V2.75C12.4518 2.75 15.25 5.54822 15.25 9H15.75H16.25C16.25 4.99594 13.0041 1.75 9 1.75V2.25ZM15.75 9H15.25C15.25 12.4518 12.4518 15.25 9 15.25V15.75V16.25C13.0041 16.25 16.25 13.0041 16.25 9H15.75ZM9.03735 11.5875H8.53735V11.6625H9.03735H9.53735V11.5875H9.03735ZM9.03735 11.6625L9.03748 11.1625L8.96277 11.1624L8.96265 11.6624L8.96252 12.1624L9.03723 12.1625L9.03735 11.6625ZM8.96265 11.6624H9.46265V11.5875H8.96265H8.46265V11.6624H8.96265ZM8.96265 11.5875V12.0875H9.03735V11.5875V11.0875H8.96265V11.5875ZM9 6.33746H8.5V9.33746H9H9.5V6.33746H9Z" fill="#0090FF" />
+                                </svg>
+                            </a>
+                        </section>
+                        <section class="profile d-flex flex-column align-items-center">
+                            <div class="profile-content bg-white w-100">
+                                <p class="fw-medium text-center">Узнайте с чего начнется экскурсия</p>
+                                <div class="profile-name d-flex align-items-center">
+                                    <div class="logo position-relative">
+                                        <img src="./assets/images/profile-logo.png" alt="" class="main-img rounded-circle w-100 h-100 object-fit-cover">
+                                        <div class="dot rounded-circle position-absolute"></div>
+                                    </div>
+                                    <div>
+                                        <div class="profile-rating d-flex align-items-center fw-semibold">
+                                            <img src="./assets/images/star.svg" width="15" alt="">
+                                            <span>5</span>
+                                        </div>
+                                        <h3 class="fw-semibold">Алина Александровна</h3>
+                                        <p class="fw-medium m-0">Организатор приключений</p>
+                                    </div>
+                                </div>
+                                <div class="profile-btn d-flex align-items-center justify-content-between">
+                                    <a href="#" class="btn-green w-100 d-flex align-items-center justify-content-center">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.0029 4.25722C9.69922 3.4979 8.96381 3 8.146 3H5.39474C4.3483 3 3.5 3.84834 3.5 4.89478C3.5 13.7895 10.7108 21 19.6055 21C20.6519 21 21.5 20.1518 21.5 19.1053L21.4999 16.354C21.4999 15.5362 21.0019 14.8009 20.2426 14.4971L17.6071 13.4429C16.9251 13.1701 16.1485 13.293 15.5842 13.7633L14.9031 14.3307C14.1084 14.9929 12.94 14.94 12.2085 14.2085L10.2914 12.2915C9.55993 11.5601 9.50722 10.3915 10.1694 9.59688L10.7368 8.91597C11.2071 8.35163 11.33 7.57493 11.0572 6.89286L10.0029 4.25722Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Позвонить</span>
+                                    </a>
+                                    <a href="#" class="btn-light w-100 d-flex align-items-center justify-content-center">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.5 8H20.5C21.0523 8 21.5 8.44772 21.5 9V20L18.1665 17.2308C17.987 17.0817 17.7612 17 17.5278 17H9.5C8.94771 17 8.5 16.5523 8.5 16V13M15.5 4C16.0523 4 16.5 4.44772 16.5 5V12C16.5 12.5523 16.0523 13 15.5 13H7.47217C7.23875 13 7.01304 13.0817 6.8335 13.2308L3.5 16V5C3.5 4.44772 3.94772 4 4.5 4H15.5Z" stroke="#12C647" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Написать</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#" class="more-link d-flex align-items-center justify-content-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.37891 15.2001L5.02843 15.5751L4.37891 15.2001ZM9.22865 6.80011L8.57913 6.42511L9.22865 6.80011ZM14.7715 6.80011L15.421 6.42511L14.7715 6.80011ZM19.6212 15.2001L20.2707 14.8251L19.6212 15.2001ZM11.1863 4.17291L11.4914 4.85807V4.85807L11.1863 4.17291ZM12.8135 4.17291L12.5084 4.85807L12.8135 4.17291ZM3.89649 19.6181L3.45565 20.2249H3.45565L3.89649 19.6181ZM3.08281 18.2091L3.8287 18.1307L3.08281 18.2091ZM20.1036 19.6181L20.5445 20.2249L20.1036 19.6181ZM20.9173 18.2091L21.6632 18.2875L20.9173 18.2091ZM12.0498 16.0001H12.7998C12.7998 15.5858 12.464 15.2501 12.0498 15.2501V16.0001ZM12.0498 16.1001L12.0496 16.8501C12.2486 16.8501 12.4394 16.7711 12.5801 16.6305C12.7208 16.4898 12.7998 16.299 12.7998 16.1001H12.0498ZM11.9502 16.1H11.2002C11.2002 16.5142 11.5359 16.8499 11.95 16.85L11.9502 16.1ZM11.9502 16.0001V15.2501C11.536 15.2501 11.2002 15.5858 11.2002 16.0001H11.9502ZM12.75 9.00006C12.75 8.58584 12.4142 8.25006 12 8.25006C11.5858 8.25006 11.25 8.58584 11.25 9.00006H12H12.75ZM11.25 13.0001C11.25 13.4143 11.5858 13.7501 12 13.7501C12.4142 13.7501 12.75 13.4143 12.75 13.0001H12H11.25ZM16.8499 20.0001V19.2501H7.15039V20.0001V20.7501H16.8499V20.0001ZM4.37891 15.2001L5.02843 15.5751L9.87817 7.17511L9.22865 6.80011L8.57913 6.42511L3.72939 14.8251L4.37891 15.2001ZM14.7715 6.80011L14.122 7.17511L18.9717 15.5751L19.6212 15.2001L20.2707 14.8251L15.421 6.42511L14.7715 6.80011ZM9.22865 6.80011L9.87817 7.17511C10.3403 6.37468 10.6615 5.81976 10.9385 5.42765C11.2177 5.03235 11.3833 4.90617 11.4914 4.85807L11.1863 4.17291L10.8813 3.48775C10.3956 3.70397 10.0371 4.10379 9.71333 4.56221C9.38724 5.02383 9.02644 5.65035 8.57913 6.42511L9.22865 6.80011ZM14.7715 6.80011L15.421 6.42511C14.9737 5.6503 14.6128 5.02378 14.2866 4.56213C13.9627 4.10369 13.6041 3.70394 13.1185 3.48775L12.8135 4.17291L12.5084 4.85807C12.6165 4.90619 12.7822 5.03244 13.0615 5.42773C13.3386 5.81981 13.6599 6.37474 14.122 7.17511L14.7715 6.80011ZM11.1863 4.17291L11.4914 4.85807C11.815 4.71398 12.1848 4.71398 12.5084 4.85807L12.8135 4.17291L13.1185 3.48775C12.4065 3.17075 11.5933 3.17075 10.8813 3.48775L11.1863 4.17291ZM7.15039 20.0001V19.2501C6.22617 19.2501 5.58503 19.2493 5.10703 19.2055C4.62515 19.1612 4.43304 19.0809 4.33732 19.0113L3.89649 19.6181L3.45565 20.2249C3.88566 20.5373 4.41107 20.6479 4.96999 20.6992C5.5328 20.7508 6.25575 20.7501 7.15039 20.7501V20.0001ZM4.37891 15.2001L3.72939 14.8251C3.28206 15.5999 2.91995 16.2256 2.68328 16.7389C2.44824 17.2486 2.28137 17.7589 2.33692 18.2875L3.08281 18.2091L3.8287 18.1307C3.81634 18.013 3.84279 17.8064 4.04542 17.367C4.24642 16.9311 4.56632 16.3755 5.02843 15.5751L4.37891 15.2001ZM3.89649 19.6181L4.33732 19.0113C4.05061 18.803 3.86572 18.4828 3.8287 18.1307L3.08281 18.2091L2.33692 18.2875C2.4184 19.0627 2.82524 19.7668 3.45565 20.2249L3.89649 19.6181ZM16.8499 20.0001V20.7501C17.7445 20.7501 18.4674 20.7508 19.0302 20.6992C19.5891 20.6479 20.1145 20.5373 20.5445 20.2249L20.1036 19.6181L19.6628 19.0113C19.5671 19.0809 19.375 19.1612 18.8932 19.2055C18.4152 19.2493 17.7741 19.2501 16.8499 19.2501V20.0001ZM19.6212 15.2001L18.9717 15.5751C19.4338 16.3755 19.7537 16.9311 19.9547 17.367C20.1573 17.8064 20.1838 18.013 20.1714 18.1307L20.9173 18.2091L21.6632 18.2875C21.7188 17.7589 21.5519 17.2486 21.3169 16.7389C21.0802 16.2256 20.7181 15.5999 20.2707 14.8251L19.6212 15.2001ZM20.1036 19.6181L20.5445 20.2249C21.1749 19.7668 21.5817 19.0627 21.6632 18.2875L20.9173 18.2091L20.1714 18.1307C20.1344 18.4828 19.9495 18.803 19.6628 19.0113L20.1036 19.6181ZM12.0498 16.0001H11.2998V16.1001H12.0498H12.7998V16.0001H12.0498ZM12.0498 16.1001L12.05 15.3501L11.9504 15.35L11.9502 16.1L11.95 16.85L12.0496 16.8501L12.0498 16.1001ZM11.9502 16.1H12.7002V16.0001H11.9502H11.2002V16.1H11.9502ZM11.9502 16.0001V16.7501H12.0498V16.0001V15.2501H11.9502V16.0001ZM12 9.00006H11.25V13.0001H12H12.75V9.00006H12Z" fill="#AAAAAA" />
+                                </svg>
+                                <span>Пожаловаться на тур</span>
+                            </a>
+                        </section>
+                        <section class="our-website bg-white">
+                            <h3 class="fw-bold text-center">Только на нашем сайте</h3>
+                            <ul class="d-flex flex-column align-items-start">
+                                <li class="d-flex align-items-center">
+                                    <div class="icon flex-shrink-0 d-flex align-items-center justify-content-center">
+                                        <img src="./assets/images/our-website-icon-1.svg" alt="">
+                                    </div>
+                                    <p>Только прямая цена — никаких комиссий</p>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="icon flex-shrink-0 d-flex align-items-center justify-content-center">
+                                        <img src="./assets/images/our-website-icon-2.svg" alt="">
+                                    </div>
+                                    <p>Оплата по частям, без процентов</p>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="icon flex-shrink-0 d-flex align-items-center justify-content-center">
+                                        <img src="./assets/images/our-website-icon-3.svg" alt="">
+                                    </div>
+                                    <p>Крупнейший федеральный сервис: 94 направления и 22 вида отдыха</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-7">
+                        <ul class="d-flex flex-column">
+                            <li>© 2025 Tripse.ru — сервис поиска экскурсий и туров</li>
+                            <li>Адрес: Россия, Москва, Ленинградский пр-т, д. 36, стр. 11</li>
+                            <li>Почта: <a href="mailto:info@tripse.ru">info@tripse.ru</a></li>
+                            <li>Телефон: <a href="tel:+8 (800) 777-02-23">8 (800) 777-02-23</a> доб. 003</li>
+                            <li>Поддержка: 24/7</li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="btns d-flex align-items-center">
+                            <a href="#" class="btn-white d-flex align-items-center justify-content-center">Войти</a>
+                            <a href="#" class="btn-green d-flex align-items-center justify-content-center">Регистрация</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h3 class="fw-medium">Информация</h3>
+                        <ul class="footer-navs">
+                            <li>
+                                <a href="#">О проекте</a>
+                            </li>
+                            <li>
+                                <a href="#">Журнал</a>
+                            </li>
+                            <li>
+                                <a href="#">Достопримечательности</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ для туристов</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="fw-medium">Юридическая информация</h3>
+                        <ul class="footer-navs">
+                            <li>
+                                <a href="#">Политика конфиденциальности</a>
+                            </li>
+                            <li>
+                                <a href="#">Правовые основания</a>
+                            </li>
+                            <li>
+                                <a href="#">Пользовательское соглашение</a>
+                            </li>
+                            <li>
+                                <a href="#">Ещё…</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line w-100"></div>
+                <div class="footer-text">Пользовательское соглашение</div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+        
+    </div>
+    
+    <!-- jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- iMask JS -->
+    <script src="./assets/js/iMask.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <!-- JS file -->
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>

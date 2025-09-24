@@ -1,0 +1,28 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-montserrat: "Montserrat", sans-serif;
+$font-gotham: "GothamPro", sans-serif;
+// Fonts end
+
+// Colors
+$color-h1: #111212;
+$color-h2: #1A1C1F;
+$color-h3: #2E343E;
+$color-txt: #46484B;
+$color-osn: #0090FF;
+$color-osn2: #12C647;
+// Colors end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
