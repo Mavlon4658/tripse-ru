@@ -472,8 +472,17 @@ button, input, textarea, li, div {
   padding: 28px 19px 26px;
   gap: 33px;
 }
+@media screen and (max-width: 991px) {
+  .booking {
+    padding: 38px 23px 37px;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+}
+.booking-price {
+  white-space: nowrap;
+}
 .booking-price h3 {
-  font-family: var(--font-family);
   font-size: 25px;
   color: #12C647;
 }
@@ -557,10 +566,20 @@ button, input, textarea, li, div {
   color: #12C647;
   border-bottom: 1px dotted #12C647;
 }
+@media screen and (max-width: 991px) {
+  .booking-btn a {
+    font-size: 10px;
+  }
+}
 .booking-btn p {
   font-size: 12px;
   line-height: 158%;
   color: #737373;
+}
+@media screen and (max-width: 991px) {
+  .booking-btn p {
+    font-size: 10px;
+  }
 }
 .booking-btn p img {
   width: 18px;
@@ -570,6 +589,11 @@ button, input, textarea, li, div {
   height: 58px;
   gap: 10px;
   max-width: 285px;
+}
+@media screen and (max-width: 991px) {
+  .booking .btn-green {
+    max-width: 100%;
+  }
 }
 .booking .blue-link {
   font-size: 14px;
