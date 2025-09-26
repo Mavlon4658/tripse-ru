@@ -883,13 +883,30 @@ button, input, textarea, li, div {
   border-radius: 18px;
   padding: 30px 36px 25px 35px;
 }
+@media screen and (max-width: 991px) {
+  .tour-content {
+    padding: 22px 18px 21px 14px;
+  }
+}
 .tour h2 {
   font-weight: 500;
   font-size: 34px;
   color: #1A1C1F;
+  margin-bottom: 11px;
+}
+@media screen and (max-width: 991px) {
+  .tour h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
 }
 .tour-head {
-  margin: 11px 0 42px;
+  margin-bottom: 42px;
+}
+@media screen and (max-width: 991px) {
+  .tour-head {
+    margin-bottom: 14px;
+  }
 }
 .tour-head a {
   gap: 6px;
@@ -898,19 +915,52 @@ button, input, textarea, li, div {
   line-height: 119%;
   color: #0090FF;
 }
+@media screen and (max-width: 991px) {
+  .tour-head a {
+    font-size: 11px;
+    line-height: 173%;
+  }
+  .tour-head a img {
+    width: 18px;
+  }
+}
 .tour h3 {
   gap: 7px;
   font-size: 18px;
   line-height: 106%;
   color: #2E343E;
 }
+@media screen and (max-width: 991px) {
+  .tour h3 {
+    font-size: 16px;
+    gap: 10px;
+  }
+  .tour h3 img {
+    width: 24px;
+  }
+}
+.tour-swp {
+  margin: 30px 0 40px;
+}
+@media screen and (max-width: 991px) {
+  .tour-swp {
+    margin: 14px 0 17px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .tour-swp .swiper {
+    overflow: visible;
+  }
+}
 .tour-card {
   border-radius: 16px;
   height: 155px;
 }
-.tour-card__wrap {
-  gap: 20px;
-  margin: 30px 0 40px;
+@media screen and (max-width: 991px) {
+  .tour-card {
+    width: 193px;
+    height: 150px;
+  }
 }
 .tour-card a {
   background: rgba(0, 0, 0, 0.61);
@@ -918,20 +968,41 @@ button, input, textarea, li, div {
   text-align: center;
   color: #f1f1f1;
 }
+@media screen and (max-width: 991px) {
+  .tour-text {
+    margin-bottom: 10px !important;
+  }
+}
 .tour-text b {
   font-size: 18px;
   line-height: 106%;
   color: #2E343E;
+}
+@media screen and (max-width: 991px) {
+  .tour-text b {
+    font-size: 16px;
+  }
 }
 .tour-text p {
   font-size: 16px;
   line-height: 119%;
   color: #46484B;
 }
+@media screen and (max-width: 991px) {
+  .tour-text p {
+    font-size: 14px;
+    line-height: 136%;
+  }
+}
 .tour-text:not(.active) {
   position: relative;
   height: 92px;
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .tour-text:not(.active) {
+    height: 170px;
+  }
 }
 .tour-text:not(.active)::before {
   content: "";
@@ -942,11 +1013,23 @@ button, input, textarea, li, div {
   height: 45px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.61) 0%, #fff 100%);
 }
+@media screen and (max-width: 991px) {
+  .tour-text:not(.active)::before {
+    height: 54px;
+  }
+}
 .tour .show-btn {
   gap: 6px;
   font-size: 14px;
   line-height: 136%;
   color: #0090FF;
+}
+@media screen and (max-width: 991px) {
+  .tour .show-btn {
+    margin: 0 0 0 auto;
+    font-size: 12px;
+    line-height: 158%;
+  }
 }
 .tour .show-btn span:nth-child(2) {
   display: none;
@@ -956,6 +1039,9 @@ button, input, textarea, li, div {
 }
 .tour .show-btn.active span:nth-child(2) {
   display: block;
+}
+.tour .show-btn.active img {
+  transform: rotateZ(180deg);
 }
 .tour .accordion {
   gap: 3px;
@@ -972,14 +1058,30 @@ button, input, textarea, li, div {
   line-height: 119%;
   color: #46484B;
 }
+@media screen and (max-width: 991px) {
+  .tour .accordion-button {
+    padding: 16px 22px 16px 17px;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 136%;
+  }
+}
 .tour .accordion-button::after {
   display: none;
 }
 .tour .accordion-button img {
   transition: 0.15s ease-in-out all;
 }
+@media screen and (max-width: 991px) {
+  .tour .accordion-button img {
+    width: 14px;
+  }
+}
 .tour .accordion-button[aria-expanded=true] img {
   transform: rotateZ(180deg);
+}
+.tour .accordion-body {
+  padding-top: 0;
 }
 
 .arrival {

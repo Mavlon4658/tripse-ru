@@ -54,6 +54,21 @@ $(document).ready(function() {
         })
     })
 
+    const tourSwp = new Swiper('.tour-swp .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 2,
+        breakpoints: {
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        },
+        pagination: {
+            el: '.tour-swp .swp-pagination',
+            clickable: true,
+        }
+    })
+
     $('.tour .show-btn').on('click', () => {
         $('.tour .tour-text').toggleClass('active');
         $('.tour .show-btn').toggleClass('active')
