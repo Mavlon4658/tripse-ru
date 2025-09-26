@@ -46,8 +46,11 @@ address {
 
 .wrapper {
     width: 100%;
-    overflow: hidden;
     min-height: 100svh;
+
+    @include media(991) {
+        overflow: hidden;
+    }
 }
 
 ul, ol, dl {

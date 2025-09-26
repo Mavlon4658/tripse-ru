@@ -20,16 +20,14 @@ $(document).ready(function() {
     let init = false;
     let homeSwp;
     function homeSwpHandle() {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 991) {
             if (!init) {
             init = true;
             homeSwp = new Swiper(".home-swp .swiper", {
-                direction: "horizontal",
                 slidesPerView: "auto",
-                centeredSlides: true,
-                spaceBetween: 32,
+                spaceBetween: 3,
                 pagination: {
-                    el: ".swiper-pagination",
+                    el: ".home-swp .swp-pagination",
                     clickable: true,
                 },
             });
