@@ -282,7 +282,7 @@
 
                             <section class="arrival bg-white">
                                 <h2 class="fw-medium mb-3">Рекомендации по прибытию:</h2>
-                                <div class="arrival-content d-flex align-items-start justify-content-between">
+                                <div class="arrival-content d-flex flex-column flex-xl-row align-items-center align-items-xl-start justify-content-between">
                                     <div class="arrival-left w-100 d-flex flex-column">
                                         <div class="arrival-card">
                                             <label for="">На самолете:</label>
@@ -328,7 +328,9 @@
                                         </div>
                                     </div>
                                     <div class="arrival-right flex-shrink-0 d-flex flex-column align-items-center">
-                                        <img src="./assets/images/arrival-icon.svg" alt="">
+                                        <div class="main-img d-flex align-items-center justify-content-center">
+                                            <img src="./assets/images/arrival-icon.svg" alt="">
+                                        </div>
                                         <p class="text-center fw-medium">Узнать стоимость тура с билетами из вашего города</p>
                                         <a href="#" class="btn-green d-flex align-items-center justify-content-center">Узнать стоимость</a>
                                     </div>
@@ -357,29 +359,31 @@
                                                     <a href="#" class="btn-green position-absolute d-flex align-items-center justify-content-center">Показать на карте</a>
                                                 </div>
                                                 <div class="text">
-                                                    <h3 class="fw-medium mb-3">Организатор комментирует:</h3>
+                                                    <h3 class="fw-medium mb-2 mb-lg-3">Организатор комментирует:</h3>
                                                     <p>А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль! Прямо из центра Петербурга мы попадём в Петергоф, увидев его таким, каким он был задуман для прибывающих из-за...</p>
                                                 </div>
-                                                <button class="show-btn d-inline-flex align-items-center gap-1 fw-medium">
-                                                    <span>Раскрыть</span>
-                                                    <span>Скрывать</span>
-                                                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
+                                                <div class="d-flex d-lg-block justify-content-end">
+                                                    <button class="show-btn d-inline-flex align-items-center gap-1 fw-medium">
+                                                        <span>Раскрыть</span>
+                                                        <span>Скрывать</span>
+                                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <h2>
-                                </h2>
                             </section>
 
                             <section class="accomodation">
                                 <div class="accomodation-content bg-white">
-                                    <h2 class="fw-medium">Проживание:</h2>
                                     <div class="accomodation-head d-flex align-items-center justify-content-between">
-                                        <div class="description">А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</div>
+                                        <div class="accomodation-head__left">
+                                            <h2 class="fw-medium">Проживание:</h2>
+                                            <div class="description">А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</div>
+                                        </div>
                                         <a href="#" class="more-link d-flex align-items-center fw-medium flex-shrink-0">
                                             <span>Показать все</span>
                                             <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">

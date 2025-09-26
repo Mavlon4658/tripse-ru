@@ -788,6 +788,10 @@ button, input, textarea, li, div {
 
 .main-content {
     gap: 40px;
+
+    @include media(991) {
+        gap: 30px;
+    }
 }
 
 .home-foot {
@@ -1120,18 +1124,35 @@ button, input, textarea, li, div {
 .arrival {
     border-radius: 18px;
     padding: 44px 22px 45px 35px;
+
+    @include media(991) {
+        padding: 23px 14px 24px;
+    }
     
     h2 {
         font-size: 34px;
         color: $color-h2;
+
+        @include media(991) {
+            font-size: 20px;
+            margin-bottom: 14px !important;
+        }
     }
 
     &-content {
         gap: 10px;
+
+        @include media(991) {
+            gap: 20px;
+        }
     }
 
     &-left {
         gap: 22px;
+
+        @include media(991) {
+            gap: 20px;
+        }
     }
 
     &-card {
@@ -1139,11 +1160,21 @@ button, input, textarea, li, div {
         padding: 13px 30px 22px 20px;
         border-radius: 12px;
 
+        @include media(991) {
+            padding: 12px 8px 13px 10px;
+        }
+
         label {
             font-size: 18px;
             line-height: 106%;
             color: #000;
             margin-bottom: 20px;
+
+            @include media(991) {
+                font-size: 16px;
+                line-height: 119%;
+                margin-bottom: 9px;
+            }
         }
 
         h3 {
@@ -1152,6 +1183,11 @@ button, input, textarea, li, div {
             line-height: 106%;
             color: #000;
             margin-bottom: 12px;
+
+            @include media(991) {
+                margin-bottom: 7px;
+                font-size: 14px;
+            }
         }
 
         .city {
@@ -1159,12 +1195,22 @@ button, input, textarea, li, div {
             line-height: 119%;
             color: #000;
             margin-bottom: 5px;
+
+            @include media(991) {
+                font-size: 12px;
+                line-height: 158%;
+                margin-bottom: 0;
+            }
         }
 
         p {
             font-size: 14px;
             line-height: 136%;
             color: #32a640;
+
+            @include media(991) {
+                font-size: 12px;
+            }
         }
     }
     
@@ -1174,15 +1220,38 @@ button, input, textarea, li, div {
         width: 252px;
         padding: 29px 18px 24px 19px;
 
+        @include media(991) {
+            padding: 23px 18px 24px;
+
+            .main-img {
+                border: 1px solid rgba(0, 144, 255, 0.05);
+                border-radius: 12px;
+                width: 71px;
+                height: 71px;
+                background: rgba(0, 144, 255, 0.04);
+            }
+        }
+
         p {
             margin: 22px 0 13px;
             font-size: 18px;
             line-height: 106%;
             color: #000;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 136%;
+                margin: 17px 0 13px;
+            }
         }
 
         .btn-green {
             width: 177px;
+
+            @include media(991) {
+                width: 215px;
+                height: 53px;
+            }
         }
     }
 }
@@ -1190,6 +1259,10 @@ button, input, textarea, li, div {
 .itinerary {
     border-radius: 18px;
     padding: 34px 34px 12px 35px;
+
+    @include media(991) {
+        padding: 25px 14px 16px;
+    }
 
     .accordion {
         &-button {
@@ -1201,6 +1274,10 @@ button, input, textarea, li, div {
                 font-size: 34px;
                 line-height: 56%;
                 color: $color-h2;
+
+                @include media(991) {
+                    font-size: 20px;
+                }
             }
 
             div {
@@ -1233,10 +1310,18 @@ button, input, textarea, li, div {
                 }
             }
         }
+
+        &-body {
+            padding-top: 22px !important;
+        }
     }
 
     .map {
         margin-bottom: 40px;
+
+        @include media(991) {
+            margin-bottom: 48px;
+        }
 
         iframe {
             height: 126px;
@@ -1249,28 +1334,52 @@ button, input, textarea, li, div {
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
+
+            @include media(991) {
+                bottom: -26px;
+                width: 183px;
+                min-width: 183px;
+            }
         }
     }
 
     .text {
         margin-bottom: 21px;
 
+        @include media(991) {
+            margin-bottom: 0;
+        }
+
         h3 {
             font-size: 18px;
             line-height: 106%;
             color: $color-h3;
+
+            @include media(991) {
+                font-size: 16px;
+                line-height: 119%;
+            }
         }
 
         p {
             font-size: 16px;
             line-height: 119%;
             color: $color-txt;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 136%;
+            }
         }
 
         &:not(.active) {
             height: 92px;
             overflow: hidden;
             position: relative;
+
+            @include media(991) {
+                height: 160px;
+            }
 
             &::after {
                 content: '';
@@ -1288,6 +1397,10 @@ button, input, textarea, li, div {
         font-size: 14px;
         line-height: 136%;
         color: $color-osn;
+
+        @include media(991) {
+            font-size: 12px;
+        }
 
         span:nth-child(2) {
             display: none;
@@ -1313,22 +1426,43 @@ button, input, textarea, li, div {
     &-content {
         padding: 42px 36px 43px 35px;
         border-radius: 18px;
+
+        @include media(991) {
+            padding: 25px 18px 29px 30px;
+            width: calc(100% + 32px);
+            margin-left: -16px;
+        }
     }
 
     h2 {
         font-size: 34px;
         color: $color-h2;
         margin-bottom: 9px;
+
+        @include media(991) {
+            margin-bottom: 14px;
+            font-size: 20px;
+        }
     }
 
     &-head {
         gap: 46px;
         margin-bottom: 48px;
 
+        @include media(991) {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
         .description {
             font-size: 16px;
             line-height: 119%;
             color: $color-txt;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 136%;
+            }
         }
 
         a {
@@ -1336,6 +1470,16 @@ button, input, textarea, li, div {
             font-size: 14px;
             line-height: 136%;
             color: $color-osn;
+            margin-top: 42px;
+
+            @include media(991) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                font-size: 12px;
+                line-height: 158%;
+            }
         }
     }
 
@@ -1371,6 +1515,12 @@ button, input, textarea, li, div {
                 font-size: 16px;
                 line-height: 119%;
                 color: $color-osn2;
+
+                @include media(991) {
+                    font-size: 14px;
+                    line-height: 136%;
+                    padding: 6px 5px 8px 9px;
+                }
             }
 
             .icon {
