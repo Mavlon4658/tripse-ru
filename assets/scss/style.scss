@@ -280,6 +280,10 @@ button, input, textarea, li, div {
 .home {
     margin-bottom: 32px;
 
+    @include media(991) {
+        margin-bottom: 30px;
+    }
+
     &-title {
         font-weight: 500;
         font-size: 40px;
@@ -587,16 +591,40 @@ button, input, textarea, li, div {
 .profile {
     margin: 40px 0;
 
+    @include media(991) {
+        margin: 0 0 30px;
+    }
+
     &-content {
         padding: 18px 29px 26px 23px;
         border-radius: 24px;
         margin-bottom: 7px;
+        background: white;
+
+        @include media(991) {
+            background: transparent;
+            padding: 0;
+            margin-bottom: 16px;
+        }
 
         p {
             font-family: $font-montserrat;
             font-size: 14px;
             color: #565656;
             margin-bottom: 37px;
+
+            @include media(991) {
+                font-size: 12px;
+                margin-bottom: 12px;
+            }
+        }
+
+        &__in {
+            @include media(991) {
+                background: white;
+                padding: 20px 19px 19px 8px;
+                border-radius: 18px;
+            }
         }
     }
 
@@ -604,9 +632,19 @@ button, input, textarea, li, div {
         gap: 11px;
         margin-bottom: 29px;
 
+        @include media(991) {
+            gap: 5px;
+            margin: 0;
+        }
+
         .logo {
             width: 60px;
             height: 60px;
+
+            @include media(991) {
+                width: 50px;
+                height: 50px;
+            }
 
             .dot {
                 width: 12px;
@@ -628,12 +666,21 @@ button, input, textarea, li, div {
             font-family: $font-montserrat;
             font-size: 20px;
             color: #454545;
+
+            @include media(991) {
+                font-size: 16px;
+                margin: 1px 0 4px;
+            }
         }
 
         p {
             font-family: $font-montserrat;
             font-size: 14px;
             color: #565656;
+
+            @include media(991) {
+                font-size: 10px;
+            }
         }
     }
 
@@ -642,6 +689,14 @@ button, input, textarea, li, div {
         font-family: $font-montserrat;
         font-size: 20px;
         color: #454545;
+
+        @include media(991) {
+            font-size: 16px;
+
+            img {
+                width: 12px;
+            }
+        }
     }
 
     &-btn {
@@ -649,6 +704,12 @@ button, input, textarea, li, div {
 
         a {
             gap: 10px;
+
+            @include media(991) {
+                width: 46px !important;
+                height: 46px;
+                padding: 0;
+            }
         }
     }
 
@@ -657,6 +718,15 @@ button, input, textarea, li, div {
         font-size: 14px;
         line-height: 136%;
         color: #aaa;
+
+        @include media(991) {
+            gap: 1px;
+            font-size: 12px;
+
+            svg {
+                width: 18px;
+            }
+        }
     }
 }
 
@@ -704,6 +774,11 @@ button, input, textarea, li, div {
         line-height: 119%;
         color: $color-txt;
         padding: 29px 36px 28px 35px;
+
+        @include media(991) {
+            padding: 0;
+            font-size: 14px;
+        }
     }
 
     &__data {

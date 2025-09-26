@@ -325,6 +325,11 @@ button, input, textarea, li, div {
 .home {
   margin-bottom: 32px;
 }
+@media screen and (max-width: 991px) {
+  .home {
+    margin-bottom: 30px;
+  }
+}
 .home-title {
   font-weight: 500;
   font-size: 40px;
@@ -589,10 +594,23 @@ button, input, textarea, li, div {
 .profile {
   margin: 40px 0;
 }
+@media screen and (max-width: 991px) {
+  .profile {
+    margin: 0 0 30px;
+  }
+}
 .profile-content {
   padding: 18px 29px 26px 23px;
   border-radius: 24px;
   margin-bottom: 7px;
+  background: white;
+}
+@media screen and (max-width: 991px) {
+  .profile-content {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 16px;
+  }
 }
 .profile-content p {
   font-family: "Montserrat", sans-serif;
@@ -600,13 +618,38 @@ button, input, textarea, li, div {
   color: #565656;
   margin-bottom: 37px;
 }
+@media screen and (max-width: 991px) {
+  .profile-content p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .profile-content__in {
+    background: white;
+    padding: 20px 19px 19px 8px;
+    border-radius: 18px;
+  }
+}
 .profile-name {
   gap: 11px;
   margin-bottom: 29px;
 }
+@media screen and (max-width: 991px) {
+  .profile-name {
+    gap: 5px;
+    margin: 0;
+  }
+}
 .profile-name .logo {
   width: 60px;
   height: 60px;
+}
+@media screen and (max-width: 991px) {
+  .profile-name .logo {
+    width: 50px;
+    height: 50px;
+  }
 }
 .profile-name .logo .dot {
   width: 12px;
@@ -626,10 +669,21 @@ button, input, textarea, li, div {
   font-size: 20px;
   color: #454545;
 }
+@media screen and (max-width: 991px) {
+  .profile-name h3 {
+    font-size: 16px;
+    margin: 1px 0 4px;
+  }
+}
 .profile-name p {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #565656;
+}
+@media screen and (max-width: 991px) {
+  .profile-name p {
+    font-size: 10px;
+  }
 }
 .profile-rating {
   gap: 3px;
@@ -637,17 +691,41 @@ button, input, textarea, li, div {
   font-size: 20px;
   color: #454545;
 }
+@media screen and (max-width: 991px) {
+  .profile-rating {
+    font-size: 16px;
+  }
+  .profile-rating img {
+    width: 12px;
+  }
+}
 .profile-btn {
   gap: 14px;
 }
 .profile-btn a {
   gap: 10px;
 }
+@media screen and (max-width: 991px) {
+  .profile-btn a {
+    width: 46px !important;
+    height: 46px;
+    padding: 0;
+  }
+}
 .profile .more-link {
   gap: 5px;
   font-size: 14px;
   line-height: 136%;
   color: #aaa;
+}
+@media screen and (max-width: 991px) {
+  .profile .more-link {
+    gap: 1px;
+    font-size: 12px;
+  }
+  .profile .more-link svg {
+    width: 18px;
+  }
 }
 
 .our-website {
@@ -688,6 +766,12 @@ button, input, textarea, li, div {
   line-height: 119%;
   color: #46484B;
   padding: 29px 36px 28px 35px;
+}
+@media screen and (max-width: 991px) {
+  .home-foot .description {
+    padding: 0;
+    font-size: 14px;
+  }
 }
 .home-foot__data {
   border-radius: 18px;
