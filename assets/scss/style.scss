@@ -778,6 +778,7 @@ button, input, textarea, li, div {
         @include media(991) {
             padding: 0;
             font-size: 14px;
+            background: transparent !important;
         }
     }
 
@@ -785,17 +786,36 @@ button, input, textarea, li, div {
         border-radius: 18px;
         padding: 23px 33px 22px 35px;
 
+        @include media(991) {
+            flex-wrap: wrap;
+            padding: 29px 16px;
+            width: calc(100% + 32px);
+            margin: 30px 0 30px -16px;
+            border-radius: 0;
+            gap: 20px;
+        }
+
         b {
             font-weight: 500;
             font-size: 16px;
             line-height: 119%;
             color: #000;
             margin-bottom: 6px;
+
+            @include media(991) {
+                font-size: 13px;
+                line-height: 146%;
+            }
         }
 
         &-card {
             &__content {
                 width: 204px;
+
+                @include media(991) {
+                    width: auto;
+                    gap: 6px;
+                }
             }
         }
 
@@ -803,6 +823,11 @@ button, input, textarea, li, div {
             font-size: 14px;
             line-height: 136%;
             color: #181818;
+
+            @include media(991) {
+                font-size: 11px;
+                line-height: 173%;
+            }
         }
 
         .rating {
@@ -829,6 +854,16 @@ button, input, textarea, li, div {
             line-height: 136%;
             color: $color-osn;
             margin-top: 23px;
+
+            @include media(991) {
+                font-size: 12px;
+                line-height: 158%;
+                margin-top: 22px;
+
+                img {
+                    width: 18px;
+                }
+            }
         }
     }
 }

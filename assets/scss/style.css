@@ -771,11 +771,22 @@ button, input, textarea, li, div {
   .home-foot .description {
     padding: 0;
     font-size: 14px;
+    background: transparent !important;
   }
 }
 .home-foot__data {
   border-radius: 18px;
   padding: 23px 33px 22px 35px;
+}
+@media screen and (max-width: 991px) {
+  .home-foot__data {
+    flex-wrap: wrap;
+    padding: 29px 16px;
+    width: calc(100% + 32px);
+    margin: 30px 0 30px -16px;
+    border-radius: 0;
+    gap: 20px;
+  }
 }
 .home-foot__data b {
   font-weight: 500;
@@ -784,13 +795,31 @@ button, input, textarea, li, div {
   color: #000;
   margin-bottom: 6px;
 }
+@media screen and (max-width: 991px) {
+  .home-foot__data b {
+    font-size: 13px;
+    line-height: 146%;
+  }
+}
 .home-foot__data-card__content {
   width: 204px;
+}
+@media screen and (max-width: 991px) {
+  .home-foot__data-card__content {
+    width: auto;
+    gap: 6px;
+  }
 }
 .home-foot__data p {
   font-size: 14px;
   line-height: 136%;
   color: #181818;
+}
+@media screen and (max-width: 991px) {
+  .home-foot__data p {
+    font-size: 11px;
+    line-height: 173%;
+  }
 }
 .home-foot__data .rating ul {
   gap: 3.37px;
@@ -811,6 +840,16 @@ button, input, textarea, li, div {
   line-height: 136%;
   color: #0090FF;
   margin-top: 23px;
+}
+@media screen and (max-width: 991px) {
+  .home-foot__data a {
+    font-size: 12px;
+    line-height: 158%;
+    margin-top: 22px;
+  }
+  .home-foot__data a img {
+    width: 18px;
+  }
 }
 
 .tour {
