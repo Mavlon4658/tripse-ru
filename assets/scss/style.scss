@@ -1554,13 +1554,28 @@ button, input, textarea, li, div {
         line-height: 119%;
         color: $color-txt;
         margin-bottom: 23px;
+
+        @include media(991) {
+            font-size: 14px;
+            line-height: 136%;
+            margin-bottom: 14px;
+        }
     }
 
     .swiper {
+        @include media(991) {
+            overflow: visible;
+        }
+
         &-slide {
             height: 155px;
             border-radius: 16px;
             overflow: hidden;
+
+            @include media(991) {
+                width: 193px;
+                height: 271px;
+            }
 
             a {
                 font-size: 20px;
@@ -1580,9 +1595,25 @@ button, input, textarea, li, div {
                 border-radius: 18px;
                 overflow: hidden;
                 padding: 36px;
+
+                @include media(991) {
+                    padding: 15px 13px 13px 14px;
+                }
             }
 
             &-button {
+                font-weight: 500;
+                font-size: 20px;
+                color: $color-h3;
+
+                @include media(991) {
+                    font-size: 16px;
+                }
+
+                &__left {
+                    gap: 12px;
+                }
+                
                 &::after {
                     display: none;
                 }

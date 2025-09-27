@@ -86,9 +86,20 @@ $(document).ready(function() {
 
     $('.accomodation .swiper').each((idx, el) => {
         const swp = new Swiper(el, {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: 'auto',
+            spaceBetween: 2,
+            breakpoints: {
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            },
+            pagination: {
+                el: el.querySelector('.swp-pagination'),
+                clickable: true,
+            }
         })
+        console.log(el.querySelector('.swp-pagination'));
     })
 
     const touristsSwp = new Swiper('.photos-tourists__swp .swiper', {
