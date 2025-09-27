@@ -1506,6 +1506,10 @@ button, input, textarea, li, div {
         &-button {
             &__left {
                 gap: 14px;
+
+                @include media(991) {
+                    gap: 20px;
+                }
             }
 
             &__alert {

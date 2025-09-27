@@ -1445,6 +1445,11 @@ button, input, textarea, li, div {
 .accomodation .accordion-button__left {
   gap: 14px;
 }
+@media screen and (max-width: 991px) {
+  .accomodation .accordion-button__left {
+    gap: 20px;
+  }
+}
 .accomodation .accordion-button__alert {
   border: 1px solid rgba(0, 145, 255, 0.05);
   padding: 6px 7px 5px 9px;
