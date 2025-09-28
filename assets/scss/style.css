@@ -1550,6 +1550,11 @@ button, input, textarea, li, div {
   font-size: 34px;
   color: #1A1C1F;
 }
+@media screen and (max-width: 991px) {
+  .options h2 {
+    font-size: 20px;
+  }
+}
 .options ul {
   gap: 3px;
 }
@@ -1557,8 +1562,18 @@ button, input, textarea, li, div {
   border-radius: 18px;
   padding: 22px 34px 21px 35px;
 }
+@media screen and (max-width: 991px) {
+  .options-card {
+    padding: 32px 13px 22px 14px;
+  }
+}
 .options-card__left {
   gap: 12px;
+}
+@media screen and (max-width: 991px) {
+  .options-card__left {
+    gap: 15px;
+  }
 }
 .options-card__left .icon {
   width: 40px;
@@ -1571,20 +1586,43 @@ button, input, textarea, li, div {
   line-height: 119%;
   color: #46484B;
 }
+@media screen and (max-width: 991px) {
+  .options-card__left p {
+    font-size: 14px;
+  }
+}
 
 .service h2 {
   font-size: 34px;
   color: #1A1C1F;
   margin-bottom: 13px;
 }
+@media screen and (max-width: 991px) {
+  .service h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}
 .service h3 {
   font-size: 16px;
   line-height: 119%;
   color: #46484B;
 }
+@media screen and (max-width: 991px) {
+  .service h3 {
+    font-size: 14px;
+    line-height: 136%;
+    margin-bottom: 14px !important;
+  }
+}
 .service-card {
   border-radius: 12px;
   padding: 22px 34px 21px 35px;
+}
+@media screen and (max-width: 991px) {
+  .service-card {
+    padding: 23px 18px 22px 14px;
+  }
 }
 .service-card__left {
   gap: 12px;
@@ -1595,12 +1633,28 @@ button, input, textarea, li, div {
   background: rgba(0, 144, 255, 0.13);
   border-radius: 8px;
 }
+.service-card__left p {
+  font-size: 16px;
+  line-height: 119%;
+  color: #46484B;
+}
+@media screen and (max-width: 991px) {
+  .service-card__left p {
+    font-size: 14px;
+    line-height: 136%;
+  }
+}
 .service-card .price {
   font-size: 20px;
   color: white;
   background: #12C647;
   border-radius: 10px;
   padding: 9px 11px;
+}
+@media screen and (max-width: 991px) {
+  .service-card .price {
+    line-height: 17px;
+  }
 }
 
 .network {
@@ -1609,10 +1663,20 @@ button, input, textarea, li, div {
   padding: 28px 34px 27px 35px;
   gap: 36px;
 }
+@media screen and (max-width: 991px) {
+  .network {
+    padding: 26px 37px 27px;
+  }
+}
 .network-left {
   font-size: 14px;
   line-height: 136%;
   color: #f8f8f8;
+}
+@media screen and (max-width: 767px) {
+  .network-left {
+    text-align: center;
+  }
 }
 .network-left b {
   font-size: 16px;
@@ -1620,19 +1684,45 @@ button, input, textarea, li, div {
   color: white;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 767px) {
+  .network-left b {
+    margin-bottom: 8px;
+  }
+}
 .network-btn {
   gap: 19px;
 }
+@media screen and (max-width: 767px) {
+  .network-btn {
+    gap: 14px;
+    width: 100%;
+  }
+}
 .network-btn a {
   height: 53px;
+}
+@media screen and (max-width: 767px) {
+  .network-btn a {
+    width: 100%;
+  }
 }
 
 .author {
   border-radius: 12px;
   padding: 34px 37px 43px 34px;
 }
+@media screen and (max-width: 991px) {
+  .author {
+    padding: 22px 12px 30px;
+  }
+}
 .author-head {
   margin-bottom: 29px;
+}
+@media screen and (max-width: 991px) {
+  .author-head {
+    margin-bottom: 19px;
+  }
 }
 .author-logo {
   width: 100px;
@@ -1640,28 +1730,68 @@ button, input, textarea, li, div {
   border: 2px solid white;
   box-shadow: 0 4px 14px 0 rgba(45, 47, 58, 0.12);
 }
+@media screen and (max-width: 991px) {
+  .author-logo {
+    width: 48px;
+    height: 48px;
+  }
+}
 .author-name {
   font-size: 34px;
   color: #1A1C1F;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 991px) {
+  .author-name {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+}
 .author-type {
   font-size: 20px;
   color: #1A1C1F;
 }
+@media screen and (max-width: 991px) {
+  .author-type {
+    font-size: 14px;
+  }
+}
 .author ul {
   gap: 12px;
   margin-bottom: 35px;
+}
+@media screen and (max-width: 991px) {
+  .author ul {
+    gap: 10px;
+    margin-bottom: 22px;
+  }
 }
 .author li p {
   font-size: 16px;
   line-height: 119%;
   color: #1A1C1F;
 }
+@media screen and (max-width: 991px) {
+  .author li p {
+    font-size: 14px;
+    line-height: 136%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .author .text {
+    margin-bottom: 10px !important;
+  }
+}
 .author .text p {
   font-size: 16px;
   line-height: 119%;
   color: #1A1C1F;
+}
+@media screen and (max-width: 991px) {
+  .author .text p {
+    font-size: 14px;
+    line-height: 136%;
+  }
 }
 .author .text:not(.active) {
   position: relative;
@@ -1683,6 +1813,12 @@ button, input, textarea, li, div {
   line-height: 136%;
   color: #0090FF;
 }
+@media screen and (max-width: 991px) {
+  .author .show-btn {
+    font-size: 12px;
+    line-height: 158%;
+  }
+}
 .author .show-btn span:nth-child(2) {
   display: none;
 }
@@ -1698,6 +1834,12 @@ button, input, textarea, li, div {
 .author-foot {
   gap: 27px;
   margin-top: 32px;
+}
+@media screen and (max-width: 991px) {
+  .author-foot {
+    margin-top: 34px;
+    gap: 17px;
+  }
 }
 
 .prices {

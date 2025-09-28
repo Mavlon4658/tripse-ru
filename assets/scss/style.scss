@@ -1626,6 +1626,10 @@ button, input, textarea, li, div {
     h2 {
         font-size: 34px;
         color: $color-h2;
+
+        @include media(991) {
+            font-size: 20px;
+        }
     }
 
     ul {
@@ -1635,6 +1639,69 @@ button, input, textarea, li, div {
     &-card {
         border-radius: 18px;
         padding: 22px 34px 21px 35px;
+
+        @include media(991) {
+            padding: 32px 13px 22px 14px;
+        }
+
+        &__left {
+            gap: 12px;
+
+            @include media(991) {
+                gap: 15px;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                background: rgba(0, 144, 255, 0.13);
+                border-radius: 8px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 119%;
+                color: $color-txt;
+
+                @include media(991) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.service {
+    h2 {
+        font-size: 34px;
+        color: $color-h2;
+        margin-bottom: 13px;
+
+        @include media(991) {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 119%;
+        color: $color-txt;
+
+        @include media(991) {
+            font-size: 14px;
+            line-height: 136%;
+            margin-bottom: 14px !important;
+        }
+    }
+
+    &-card {
+        border-radius: 12px;
+        padding: 22px 34px 21px 35px;
+
+        @include media(991) {
+            padding: 23px 18px 22px 14px;
+        }
 
         &__left {
             gap: 12px;
@@ -1650,36 +1717,11 @@ button, input, textarea, li, div {
                 font-size: 16px;
                 line-height: 119%;
                 color: $color-txt;
-            }
-        }
-    }
-}
 
-.service {
-    h2 {
-        font-size: 34px;
-        color: $color-h2;
-        margin-bottom: 13px;
-    }
-
-    h3 {
-        font-size: 16px;
-        line-height: 119%;
-        color: $color-txt;
-    }
-
-    &-card {
-        border-radius: 12px;
-        padding: 22px 34px 21px 35px;
-
-        &__left {
-            gap: 12px;
-
-            .icon {
-                width: 40px;
-                height: 40px;
-                background: rgba(0, 144, 255, 0.13);
-                border-radius: 8px;
+                @include media(991) {
+                    font-size: 14px;
+                    line-height: 136%;
+                }
             }
         }
 
@@ -1689,6 +1731,10 @@ button, input, textarea, li, div {
             background: $color-osn2;
             border-radius: 10px;
             padding: 9px 11px;
+
+            @include media(991) {
+                line-height: 17px;
+            }
         }
     }
 }
@@ -1699,24 +1745,45 @@ button, input, textarea, li, div {
     padding: 28px 34px 27px 35px;
     gap: 36px;
 
+    @include media(991) {
+        padding: 26px 37px 27px;
+    }
+
     &-left {
         font-size: 14px;
         line-height: 136%;
         color: #f8f8f8;
+
+        @include media(767) {
+            text-align: center;
+        }
         
         b {
             font-size: 16px;
             line-height: 119%;
             color: white;
             margin-bottom: 5px;
+
+            @include media(767) {
+                margin-bottom: 8px;
+            }
         }
     }
 
     &-btn {
         gap: 19px;
 
+        @include media(767) {
+            gap: 14px;
+            width: 100%;
+        }
+
         a {
             height: 53px;
+
+            @include media(767) {
+                width: 100%;
+            }
         }
     }
 }
@@ -1725,8 +1792,16 @@ button, input, textarea, li, div {
     border-radius: 12px;
     padding: 34px 37px 43px 34px;
 
+    @include media(991) {
+        padding: 22px 12px 30px;
+    }
+
     &-head {
         margin-bottom: 29px;
+
+        @include media(991) {
+            margin-bottom: 19px;
+        }
     }
 
     &-logo {
@@ -1734,22 +1809,41 @@ button, input, textarea, li, div {
         height: 100px;
         border: 2px solid white;
         box-shadow: 0 4px 14px 0 rgba(45, 47, 58, 0.12);
+
+        @include media(991) {
+            width: 48px;
+            height: 48px;
+        }
     }
 
     &-name {
         font-size: 34px;
         color: $color-h2;
         margin-bottom: 5px;
+
+        @include media(991) {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
     }
 
     &-type {
         font-size: 20px;
         color: $color-h2;
+
+        @include media(991) {
+            font-size: 14px;
+        }
     }
 
     ul {
         gap: 12px;
         margin-bottom: 35px;
+
+        @include media(991) {
+            gap: 10px;
+            margin-bottom: 22px;
+        }
     }
 
     li {
@@ -1757,14 +1851,28 @@ button, input, textarea, li, div {
             font-size: 16px;
             line-height: 119%;
             color: $color-h2;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 136%;
+            }
         }
     }
 
     .text {
+        @include media(991) {
+            margin-bottom: 10px !important;
+        }
+
         p {
             font-size: 16px;
             line-height: 119%;
             color: $color-h2;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 136%;
+            }
         }
 
         &:not(.active) {
@@ -1790,6 +1898,11 @@ button, input, textarea, li, div {
         line-height: 136%;
         color: $color-osn;
 
+        @include media(991) {
+            font-size: 12px;
+            line-height: 158%;
+        }
+
         span {
             &:nth-child(2) {
                 display: none;
@@ -1814,6 +1927,11 @@ button, input, textarea, li, div {
     &-foot {
         gap: 27px;
         margin-top: 32px;
+
+        @include media(991) {
+            margin-top: 34px;
+            gap: 17px;
+        }
     }
 }
 
