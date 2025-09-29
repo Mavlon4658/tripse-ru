@@ -171,6 +171,29 @@ button, input, textarea, li, div {
     }
 }
 
+.dropdown {
+    &-btn {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 119%;
+        color: $color-osn;
+        gap: 6px;
+
+        @include media(991) {
+            font-size: 12px;
+            line-height: 158%;
+
+            img {
+                width: 10px;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
 // Header
 .header {
     &-container {
@@ -1281,19 +1304,10 @@ button, input, textarea, li, div {
             margin-bottom: 14px;
         }
 
-        a {
-            gap: 6px;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 119%;
-            color: $color-osn;
-
+        .dropdown-btn {
             @include media(991) {
-                font-size: 11px;
-                line-height: 173%;
-
                 img {
-                    width: 18px;
+                    display: none;
                 }
             }
         }
@@ -1820,13 +1834,7 @@ button, input, textarea, li, div {
             }
         }
 
-        a {
-            gap: 6px;
-            font-size: 14px;
-            line-height: 136%;
-            color: $color-osn;
-            margin-top: 42px;
-
+        .dropdown {
             @include media(991) {
                 position: absolute;
                 top: 0;

@@ -231,6 +231,26 @@ button, input, textarea, li, div {
   color: #515151;
 }
 
+.dropdown-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%;
+  color: #0090FF;
+  gap: 6px;
+}
+@media screen and (max-width: 991px) {
+  .dropdown-btn {
+    font-size: 12px;
+    line-height: 158%;
+  }
+  .dropdown-btn img {
+    width: 10px;
+  }
+}
+.dropdown-btn::after {
+  display: none;
+}
+
 .header-container {
   padding: 24px 0;
 }
@@ -1208,20 +1228,9 @@ button, input, textarea, li, div {
     margin-bottom: 14px;
   }
 }
-.tour-head a {
-  gap: 6px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 119%;
-  color: #0090FF;
-}
 @media screen and (max-width: 991px) {
-  .tour-head a {
-    font-size: 11px;
-    line-height: 173%;
-  }
-  .tour-head a img {
-    width: 18px;
+  .tour-head .dropdown-btn img {
+    display: none;
   }
 }
 .tour h3 {
@@ -1710,15 +1719,8 @@ button, input, textarea, li, div {
     line-height: 136%;
   }
 }
-.accomodation-head a {
-  gap: 6px;
-  font-size: 14px;
-  line-height: 136%;
-  color: #0090FF;
-  margin-top: 42px;
-}
 @media screen and (max-width: 991px) {
-  .accomodation-head a {
+  .accomodation-head .dropdown {
     position: absolute;
     top: 0;
     right: 0;
