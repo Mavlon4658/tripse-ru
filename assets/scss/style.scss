@@ -238,6 +238,13 @@ button, input, textarea, li, div {
             width: 24px;
             height: 24px;
         }
+
+        .modal-close {
+            background: #d9d9d9;
+            border-radius: 8px;
+            width: 28px;
+            height: 28px;
+        }
     }
 
     &-body {
@@ -422,6 +429,109 @@ button, input, textarea, li, div {
     }
 }
 // Login end
+
+// Search modal
+.search-modal {
+    .offcanvas {
+        &-header {
+            padding-top: 24px;
+            padding-bottom: 33px;
+        }
+
+        &-body {
+            padding: 0 0 15px;
+        }
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 18px;
+        color: $color-h2;
+    }
+
+    &__inputs {
+        border-top: 1px solid #e7ebee;
+        margin-bottom: 20px;
+
+        li {
+            z-index: 1;
+        }
+
+        img {
+            top: 18px;
+            left: 16px;
+            z-index: -1;
+        }
+
+        input {
+            height: 60px;
+            width: 100%;
+            padding: 0 18px 0 45px;
+            font-size: 15px;
+            color: black;
+            border-bottom: 1px solid #e7ebee;
+            
+            &::placeholder {
+                color: $color-txt;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 18px;
+        color: $color-h2;
+        margin-bottom: 4px;
+        padding: 0 16px;
+    }
+
+    .links {
+        margin-bottom: 17px;
+
+        &-item {
+            padding: 19px 18px 19px 16px;
+            border-bottom: 1px solid #e7ebee;
+
+            &__text {
+                font-size: 16px;
+                color: $color-h2;
+            }
+
+            &__right {
+                gap: 10px;
+
+                span {
+                    border: 1px solid #e8e8e8;
+                    border-radius: 6px;
+                    padding: 6px 9px;
+                    font-size: 13px;
+                    line-height: 12px;
+                    color: $color-osn2;
+                }
+            }
+        }
+    }
+
+    &__foot {
+        padding: 0 18px 0 16px;
+
+        .clear-btn {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 119%;
+            color: #000;
+        }
+
+        .btn-green {
+            gap: 10px;
+            border-radius: 12px;
+            padding: 0;
+            width: 195px;
+            height: 60px;
+            
+        }
+    }
+}
+// Search modal end
 
 .form-tel {
     display: flex;

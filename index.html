@@ -45,7 +45,7 @@
                         <i class="bi bi-heart"></i>
                         <span>Избранное</span>
                     </a>
-                    <button class="d-flex d-lg-none align-items-center justify-content-end">
+                    <button class="d-flex d-lg-none align-items-center justify-content-end" data-bs-toggle="offcanvas" href="#searchModal" role="button" aria-controls="searchModal">
                         <img src="./assets/images/search-icon.svg" alt="">
                     </button>
                     <button class="logout-btn d-flex d-lg-none align-items-center justify-content-center" data-bs-toggle="offcanvas" href="#loginModal" role="button" aria-controls="loginModal">
@@ -108,7 +108,7 @@
         <section class="offcanvas offcanvas-bottom border-0 login" tabindex="-1" id="loginModal" aria-labelledby="loginModalLabel">
             <div class="offcanvas-header d-flex align-items-center justify-content-between">
                 <h2 class="fw-medium">Войдите или зарегистрируйтесь</h3>
-                <button class="d-flex align-items-center justify-content-center flex-shrink-0 " type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                <button class="d-flex align-items-center justify-content-center flex-shrink-0 modal-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 13L1 1M13 1L1 13" stroke="#1A1B1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
@@ -151,6 +151,98 @@
             </div>
         </section>
         <!-- Login end -->
+
+        <!-- Search -->
+        <section class="offcanvas offcanvas-bottom border-0 search-modal" tabindex="-1" id="searchModal" aria-labelledby="searchModalLabel">
+            <div class="offcanvas-header d-flex align-items-center justify-content-between">
+                <h2 class="fw-medium">Поиск туров</h3>
+                <button class="d-flex align-items-center justify-content-center flex-shrink-0 modal-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 13L1 1M13 1L1 13" stroke="#1A1B1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="search-modal__inputs">
+                    <li class="position-relative">
+                        <img src="./assets/images/location-icon.svg" alt="" class="flex-shrink-0 position-absolute">
+                        <input type="text" placeholder="Куда едем?">
+                    </li>
+                    <li class="position-relative">
+                        <img src="./assets/images/calendar-icon-2.svg" alt="" class="flex-shrink-0 position-absolute">
+                        <input type="text" placeholder="Когда едем?">
+                    </li>
+                </ul>
+                <h3 class="fw-medium">Фильтры</h3>
+                <ul class="links">
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Продолжительность</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Любая</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Цена</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Любая</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Проживание и комфорт</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Любая</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Можно с детьми</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Да</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Вид отдыха</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Все</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="search-modal__foot d-flex align-items-center justify-content-between">
+                    <a href="#" class="clear-btn">Сбросить все</a>
+                    <a href="#" class="btn-green d-flex align-items-center justify-content-center">
+                        <span>Применить</span>
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.13672 6L5.37936 10.2426L13.8642 1.75732" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Search end -->
         
         <main>
 

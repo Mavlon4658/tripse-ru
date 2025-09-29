@@ -288,6 +288,12 @@ button, input, textarea, li, div {
   width: 24px;
   height: 24px;
 }
+.offcanvas-header .modal-close {
+  background: #d9d9d9;
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+}
 .offcanvas-body {
   padding: 0 18px 26px;
 }
@@ -434,6 +440,89 @@ button, input, textarea, li, div {
   font-size: 10px;
   line-height: 135%;
   color: #4f4f6d;
+}
+
+.search-modal .offcanvas-header {
+  padding-top: 24px;
+  padding-bottom: 33px;
+}
+.search-modal .offcanvas-body {
+  padding: 0 0 15px;
+}
+.search-modal h2 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #1A1C1F;
+}
+.search-modal__inputs {
+  border-top: 1px solid #e7ebee;
+  margin-bottom: 20px;
+}
+.search-modal__inputs li {
+  z-index: 1;
+}
+.search-modal__inputs img {
+  top: 18px;
+  left: 16px;
+  z-index: -1;
+}
+.search-modal__inputs input {
+  height: 60px;
+  width: 100%;
+  padding: 0 18px 0 45px;
+  font-size: 15px;
+  color: black;
+  border-bottom: 1px solid #e7ebee;
+}
+.search-modal__inputs input::-moz-placeholder {
+  color: #46484B;
+}
+.search-modal__inputs input::placeholder {
+  color: #46484B;
+}
+.search-modal h3 {
+  font-size: 18px;
+  color: #1A1C1F;
+  margin-bottom: 4px;
+  padding: 0 16px;
+}
+.search-modal .links {
+  margin-bottom: 17px;
+}
+.search-modal .links-item {
+  padding: 19px 18px 19px 16px;
+  border-bottom: 1px solid #e7ebee;
+}
+.search-modal .links-item__text {
+  font-size: 16px;
+  color: #1A1C1F;
+}
+.search-modal .links-item__right {
+  gap: 10px;
+}
+.search-modal .links-item__right span {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 6px 9px;
+  font-size: 13px;
+  line-height: 12px;
+  color: #12C647;
+}
+.search-modal__foot {
+  padding: 0 18px 0 16px;
+}
+.search-modal__foot .clear-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%;
+  color: #000;
+}
+.search-modal__foot .btn-green {
+  gap: 10px;
+  border-radius: 12px;
+  padding: 0;
+  width: 195px;
+  height: 60px;
 }
 
 .form-tel {
