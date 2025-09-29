@@ -1845,14 +1845,40 @@ button, input, textarea, li, div {
 .prices {
   border-radius: 12px;
   padding: 52px 34px;
+  --bs-gutter-y: 30px;
+}
+@media screen and (max-width: 991px) {
+  .prices {
+    padding: 48px 16px 47px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    gap: 30px;
+    border-radius: 0;
+  }
+  .prices .col-12 {
+    padding: 0 !important;
+  }
 }
 .prices h3 {
   font-size: 20px;
   color: #2E343E;
   margin-bottom: 34px;
 }
+@media screen and (max-width: 991px) {
+  .prices h3 {
+    margin-bottom: 22px;
+  }
+}
 .prices ul {
   gap: 31px;
+}
+@media screen and (max-width: 991px) {
+  .prices ul {
+    gap: 20px;
+  }
+  .prices ul img {
+    width: 24px;
+  }
 }
 .prices li {
   gap: 10px;
@@ -1862,18 +1888,39 @@ button, input, textarea, li, div {
   line-height: 136%;
   color: #46484B;
 }
+@media screen and (max-width: 991px) {
+  .prices p {
+    font-size: 13px;
+    line-height: 146%;
+  }
+}
 
 .direction {
   background: linear-gradient(131deg, #12c647 0%, #0090ff 100%);
   padding: 39px 48px 40px 34px;
   border-radius: 12px;
 }
+@media screen and (max-width: 991px) {
+  .direction {
+    padding: 48px 28px 51px;
+  }
+}
 .direction ul {
   gap: 31px;
+}
+@media screen and (max-width: 991px) {
+  .direction ul {
+    gap: 37px;
+  }
 }
 .direction li {
   gap: 13px;
   width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .direction li {
+    width: 100% !important;
+  }
 }
 .direction li:nth-child(2) {
   width: 239px;
@@ -1899,16 +1946,37 @@ button, input, textarea, li, div {
   font-size: 34px;
   color: #1A1C1F;
 }
+@media screen and (max-width: 991px) {
+  .know h2 {
+    font-size: 20px;
+    margin-bottom: 14px !important;
+  }
+}
 .know .accordion {
   gap: 2px;
+}
+@media screen and (max-width: 991px) {
+  .know .accordion {
+    gap: 3px;
+  }
 }
 .know .accordion-item {
   padding: 26px 37px 17px 36px;
   border-radius: 18px;
 }
+@media screen and (max-width: 991px) {
+  .know .accordion-item {
+    padding: 28px 13px 27px 14px;
+  }
+}
 .know .accordion-button {
   font-size: 20px;
   color: #2E343E;
+}
+@media screen and (max-width: 991px) {
+  .know .accordion-button {
+    font-size: 16px;
+  }
 }
 .know .accordion-button::after {
   display: none;
@@ -1929,16 +1997,31 @@ button, input, textarea, li, div {
 .know .accordion-button[aria-expanded=true] img:nth-child(1) {
   display: block;
 }
+@media screen and (max-width: 991px) {
+  .know .accordion-body {
+    padding-top: 9px !important;
+  }
+}
 .know .accordion-body p {
   font-size: 14px;
   line-height: 136%;
   color: #46484B;
   max-width: 670px;
 }
+@media screen and (max-width: 991px) {
+  .know .accordion-body p {
+    font-size: 13px;
+  }
+}
 
 .place h2 {
   font-size: 34px;
   color: #1A1C1F;
+}
+@media screen and (max-width: 991px) {
+  .place h2 {
+    font-size: 20px;
+  }
 }
 .place .row {
   --bs-gutter-x: 33px;
@@ -1947,6 +2030,11 @@ button, input, textarea, li, div {
 .place-card {
   padding: 21px 12px 19px 21px;
   border-radius: 18px;
+}
+@media screen and (max-width: 991px) {
+  .place-card {
+    padding: 23px 13px 22px 14px;
+  }
 }
 .place-card__head {
   margin-bottom: 12px;
@@ -1972,18 +2060,38 @@ button, input, textarea, li, div {
   color: #181818;
 }
 
-.tour-dates {
+.tour-dates h2 {
   font-size: 34px;
   color: #1A1C1F;
+}
+@media screen and (max-width: 991px) {
+  .tour-dates h2 {
+    font-size: 20px;
+  }
 }
 .tour-dates__lists {
   padding: 31px 19px 30px 26px;
   border-radius: 18px;
   gap: 30px;
 }
+@media screen and (max-width: 991px) {
+  .tour-dates__lists {
+    gap: 18px;
+    padding: 18px 13px 29px 16px;
+  }
+  .tour-dates__lists li {
+    gap: 17px;
+  }
+}
 .tour-dates .line {
   height: 1px;
   background: rgba(0, 144, 255, 0.08);
+}
+@media screen and (max-width: 991px) {
+  .tour-dates .line {
+    width: calc(100% + 29px) !important;
+    margin-left: -16px;
+  }
 }
 .tour-dates .price {
   padding: 6px 11px;
@@ -2021,6 +2129,11 @@ button, input, textarea, li, div {
   width: 173px;
   gap: 2px;
 }
+@media screen and (max-width: 575px) {
+  .tour-dates .btn-green__outline {
+    width: 100%;
+  }
+}
 .tour-dates .btn-green__outline b {
   font-size: 14px;
   line-height: 136%;
@@ -2055,6 +2168,14 @@ button, input, textarea, li, div {
   line-height: 119%;
   color: #0090FF;
 }
+@media screen and (max-width: 991px) {
+  .tour-dates .more-link {
+    font-size: 12px;
+  }
+  .tour-dates .more-link svg {
+    width: 10px;
+  }
+}
 
 .review {
   gap: 3px;
@@ -2063,13 +2184,29 @@ button, input, textarea, li, div {
   border-radius: 18px;
   padding: 34px 41px 23px 26px;
 }
+@media screen and (max-width: 767px) {
+  .review-head {
+    padding: 25px 14px 22px 15px;
+  }
+}
 .review-head h2 {
   font-size: 34px;
   color: #1A1C1F;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 991px) {
+  .review-head h2 {
+    font-size: 20px;
+    margin-bottom: 23px;
+  }
+}
 .review-head__left {
   max-width: 226px;
+}
+@media screen and (max-width: 767px) {
+  .review-head__left {
+    max-width: 100%;
+  }
 }
 .review-head__left .star {
   gap: 10px;
@@ -2095,6 +2232,11 @@ button, input, textarea, li, div {
 .review-head__right {
   gap: 3px;
 }
+@media screen and (max-width: 767px) {
+  .review-head__right {
+    width: 100%;
+  }
+}
 .review-head__right .star {
   width: 25px;
   height: 25px;
@@ -2111,6 +2253,11 @@ button, input, textarea, li, div {
   background: #d4ffc7;
   border-radius: 4px;
 }
+@media screen and (max-width: 767px) {
+  .review-head__right .line {
+    width: 100%;
+  }
+}
 .review-head__right .line span {
   background: #12C647;
   border-radius: 4px;
@@ -2118,6 +2265,11 @@ button, input, textarea, li, div {
 .review-card {
   padding: 43px 25px 24px 45px;
   border-radius: 18px;
+}
+@media screen and (max-width: 991px) {
+  .review-card {
+    padding: 18px 13px 23px 15px;
+  }
 }
 .review-card__head .logo {
   width: 49px;
@@ -2159,14 +2311,51 @@ button, input, textarea, li, div {
   color: #737373;
   margin-bottom: 19px;
 }
+@media screen and (max-width: 991px) {
+  .review-card__body p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
 .review-card__body .image-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
+@media screen and (max-width: 991px) {
+  .review-card__body .image-list {
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .review-card__body .image-list li {
   aspect-ratio: 1/1;
   border-radius: 14px;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .review-card__body .image-list li:nth-child(n+4) {
+    display: none;
+  }
+}
+.review-card__body .image-list li a {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .review-card__body .image-list li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+    font-size: 16px;
+    color: #f1f1f1;
+  }
 }
 .review-card__body:not(.active) {
   height: 76px;
@@ -2188,6 +2377,14 @@ button, input, textarea, li, div {
   line-height: 136%;
   color: #0090FF;
 }
+@media screen and (max-width: 991px) {
+  .review-card .show-btn {
+    font-size: 12px;
+    line-height: 158%;
+    display: inline-flex;
+    margin: 0 0 0 auto;
+  }
+}
 .review-card .show-btn.hidden {
   display: none !important;
 }
@@ -2203,13 +2400,28 @@ button, input, textarea, li, div {
   padding: 26px 13px 25px 26px;
   border-radius: 15px;
 }
+@media screen and (max-width: 991px) {
+  .photos-tourists {
+    padding: 20px 12px 26px 15px;
+  }
+}
 .photos-tourists h3 {
   font-size: 20px;
   color: #2E343E;
 }
+@media screen and (max-width: 991px) {
+  .photos-tourists h3 {
+    font-size: 16px;
+  }
+}
 .photos-tourists .swp-btn {
   width: 24px;
   height: 24px;
+}
+@media screen and (max-width: 991px) {
+  .photos-tourists .swp-btn {
+    display: none !important;
+  }
 }
 .photos-tourists__content {
   gap: 15px;
@@ -2217,18 +2429,48 @@ button, input, textarea, li, div {
 .photos-tourists__swp {
   width: calc(100% - 78px);
 }
+@media screen and (max-width: 991px) {
+  .photos-tourists__swp {
+    width: 100%;
+  }
+}
 .photos-tourists__swp .swiper-slide {
   height: auto;
   aspect-ratio: 1/1;
   border-radius: 14px;
 }
+.photos-tourists__card {
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 14px;
+}
+.photos-tourists__card-wrap {
+  gap: 15px;
+}
+.photos-tourists__card a {
+  background: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #f1f1f1;
+}
 
 .excursion-head {
   margin-bottom: 14px;
 }
+@media screen and (max-width: 991px) {
+  .excursion-head {
+    font-size: 11px;
+  }
+}
 .excursion-head h2 {
   font-size: 34px;
   color: #1A1C1F;
+}
+@media screen and (max-width: 991px) {
+  .excursion-head h2 {
+    font-size: 20px;
+  }
 }
 .excursion-head .swp-btn {
   gap: 12px;
@@ -2246,10 +2488,20 @@ button, input, textarea, li, div {
 .excursion-head .swp-btn button.swiper-button-disabled svg path {
   stroke: #A4A4A4;
 }
+@media screen and (max-width: 767px) {
+  .excursion .swiper {
+    overflow: visible;
+  }
+}
 .excursion-card {
   padding: 8px 10px 19px;
   border-radius: 18px;
   gap: 15px;
+}
+@media screen and (max-width: 767px) {
+  .excursion-card {
+    width: 255px;
+  }
 }
 .excursion-card__head {
   height: 167px;

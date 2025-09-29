@@ -120,11 +120,17 @@ $(document).ready(function() {
     })
 
     const excursionSwp = new Swiper('.excursion .swiper', {
-        slidesPerView: 3,
-        spaceBetween: 14,
+        slidesPerView: 'auto',
+        spaceBetween: 15,
         navigation: {
             nextEl: '.excursion .swp-btn__next',
             prevEl: '.excursion .swp-btn__prev',
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 14,
+            }
         }
     })
 });

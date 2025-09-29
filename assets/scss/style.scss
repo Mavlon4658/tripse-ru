@@ -1938,15 +1938,40 @@ button, input, textarea, li, div {
 .prices {
     border-radius: 12px;
     padding: 52px 34px;
+    --bs-gutter-y: 30px;
+
+    @include media(991) {
+        padding: 48px 16px 47px;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        gap: 30px;
+        border-radius: 0;
+
+        .col-12 {
+            padding: 0 !important;
+        }
+    }
 
     h3 {
         font-size: 20px;
         color: $color-h3;
         margin-bottom: 34px;
+
+        @include media(991) {
+            margin-bottom: 22px;
+        }
     }
 
     ul {
         gap: 31px;
+
+        @include media(991) {
+            gap: 20px;
+
+            img {
+                width: 24px;
+            }
+        }
     }
 
     li {
@@ -1957,6 +1982,11 @@ button, input, textarea, li, div {
         font-size: 14px;
         line-height: 136%;
         color: $color-txt;
+
+        @include media(991) {
+            font-size: 13px;
+            line-height: 146%;
+        }
     }
 }
 
@@ -1965,13 +1995,25 @@ button, input, textarea, li, div {
     padding: 39px 48px 40px 34px;
     border-radius: 12px;
 
+    @include media(991) {
+        padding: 48px 28px 51px;
+    }
+
     ul {
         gap: 31px;
+
+        @include media(991) {
+            gap: 37px;
+        }
     }
 
     li {
         gap: 13px;
         width: 100%;
+
+        @include media(991) {
+            width: 100% !important;
+        }
 
         &:nth-child(2) {
             width: 239px;
@@ -2002,19 +2044,36 @@ button, input, textarea, li, div {
     h2 {
         font-size: 34px;
         color: $color-h2;
+
+        @include media(991) {
+            font-size: 20px;
+            margin-bottom: 14px !important;
+        }
     }
 
     .accordion {
         gap: 2px;
 
+        @include media(991) {
+            gap: 3px;
+        }
+
         &-item {
             padding: 26px 37px 17px 36px;
             border-radius: 18px;
+
+            @include media(991) {
+                padding: 28px 13px 27px 14px;
+            }
         }
 
         &-button {
             font-size: 20px;
             color: $color-h3;
+
+            @include media(991) {
+                font-size: 16px;
+            }
 
             &::after {
                 display: none;
@@ -2044,11 +2103,19 @@ button, input, textarea, li, div {
         }
 
         &-body {
+            @include media(991) {
+                padding-top: 9px !important;
+            }
+
             p {
                 font-size: 14px;
                 line-height: 136%;
                 color: $color-txt;
                 max-width: 670px;
+
+                @include media(991) {
+                    font-size: 13px;
+                }
             }
         }
     }
@@ -2058,6 +2125,10 @@ button, input, textarea, li, div {
     h2 {
         font-size: 34px;
         color: $color-h2;
+
+        @include media(991) {
+            font-size: 20px;
+        }
     }
 
     .row {
@@ -2068,6 +2139,10 @@ button, input, textarea, li, div {
     &-card {
         padding: 21px 12px 19px 21px;
         border-radius: 18px;
+
+        @include media(991) {
+            padding: 23px 13px 22px 14px;
+        }
 
         &__head {
             margin-bottom: 12px;
@@ -2099,18 +2174,38 @@ button, input, textarea, li, div {
 }
 
 .tour-dates {
-    font-size: 34px;
-    color: $color-h2;
+    h2 {
+        font-size: 34px;
+        color: $color-h2;
+
+        @include media(991) {
+            font-size: 20px;
+        }
+    }
 
     &__lists {
         padding: 31px 19px 30px 26px;
         border-radius: 18px;
         gap: 30px;
+
+        @include media(991) {
+            gap: 18px;
+            padding: 18px 13px 29px 16px;
+
+            li {
+                gap: 17px;
+            }
+        }
     }
 
     .line {
         height: 1px;
         background: rgba(0, 144, 255, 0.08);
+
+        @include media(991) {
+            width: calc(100% + 29px) !important;
+            margin-left: -16px;
+        }
     }
 
     .price {
@@ -2156,6 +2251,10 @@ button, input, textarea, li, div {
         width: 173px;
         gap: 2px;
 
+        @include media(575) {
+            width: 100%;
+        }
+
         b {
             font-size: 14px;
             line-height: 136%;
@@ -2196,6 +2295,14 @@ button, input, textarea, li, div {
         font-size: 16px;
         line-height: 119%;
         color: $color-osn;
+
+        @include media(991) {
+            font-size: 12px;
+
+            svg {
+                width: 10px;
+            }
+        }
     }
 }
 
@@ -2205,19 +2312,28 @@ button, input, textarea, li, div {
     &-head {
         border-radius: 18px;
         padding: 34px 41px 23px 26px;
+
+        @include media(767) {
+            padding: 25px 14px 22px 15px;
+        }
         
         h2 {
             font-size: 34px;
             color: $color-h2;
             margin-bottom: 15px;
-        }
 
-        &__content {
-
+            @include media(991) {
+                font-size: 20px;
+                margin-bottom: 23px;
+            }
         }
 
         &__left {
             max-width: 226px;
+
+            @include media(767) {
+                max-width: 100%;
+            }
 
             .star {
                 gap: 10px;
@@ -2246,6 +2362,10 @@ button, input, textarea, li, div {
 
         &__right {
             gap: 3px;
+
+            @include media(767) {
+                width: 100%;
+            }
             
             .star {
                 width: 25px;
@@ -2265,6 +2385,10 @@ button, input, textarea, li, div {
                 background: #d4ffc7;
                 border-radius: 4px;
 
+                @include media(767) {
+                    width: 100%;
+                }
+
                 span {
                     background: $color-osn2;
                     border-radius: 4px;
@@ -2276,6 +2400,10 @@ button, input, textarea, li, div {
     &-card {
         padding: 43px 25px 24px 45px;
         border-radius: 18px;
+
+        @include media(991) {
+            padding: 18px 13px 23px 15px;
+        }
 
         &__head {
             .logo {
@@ -2326,6 +2454,11 @@ button, input, textarea, li, div {
                 line-height: 119%;
                 color: #737373;
                 margin-bottom: 19px;
+
+                @include media(991) {
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
             }
 
             .image-list {
@@ -2333,9 +2466,41 @@ button, input, textarea, li, div {
                 grid-template-columns: repeat(5, 1fr);
                 gap: 16px;
 
+                @include media(991) {
+                    gap: 15px;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
                 li {
                     aspect-ratio: 1 / 1;
                     border-radius: 14px;
+                    position: relative;
+
+                    @include media(991) {
+                        &:nth-child(n+4) {
+                            display: none;
+                        }
+                    }
+
+                    a {
+                        display: none;
+
+                        @include media(991) {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgba(0, 0, 0, 0.4);
+                            font-weight: 500;
+                            font-size: 16px;
+                            color: #f1f1f1;
+                            
+                        }
+                    }
                 }
             }
 
@@ -2362,6 +2527,13 @@ button, input, textarea, li, div {
             line-height: 136%;
             color: $color-osn;
 
+            @include media(991) {
+                font-size: 12px;
+                line-height: 158%;
+                display: inline-flex;
+                margin: 0 0 0 auto;
+            }
+
             &.hidden {
                 display: none !important;
             }
@@ -2381,14 +2553,26 @@ button, input, textarea, li, div {
     padding: 26px 13px 25px 26px;
     border-radius: 15px;
 
+    @include media(991) {
+        padding: 20px 12px 26px 15px;
+    }
+
     h3 {
         font-size: 20px;
         color: $color-h3;
+
+        @include media(991) {
+            font-size: 16px;
+        }
     }
 
     .swp-btn {
         width: 24px;
         height: 24px;
+
+        @include media(991) {
+            display: none !important;
+        }
     }
 
     &__content {
@@ -2398,6 +2582,10 @@ button, input, textarea, li, div {
     &__swp {
         width: calc(100% - 78px);
 
+        @include media(991) {
+            width: 100%;
+        }
+
         .swiper {
             &-slide {
                 height: auto;
@@ -2406,15 +2594,41 @@ button, input, textarea, li, div {
             }
         }
     }
+
+    &__card {
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 14px;
+
+        &-wrap {
+            gap: 15px;
+        }
+
+        a {
+            background: rgba(0, 0, 0, 0.4);
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+            color: #f1f1f1;
+        }
+    }
 }
 
 .excursion {
     &-head {
         margin-bottom: 14px;
 
+        @include media(991) {
+            font-size: 11px;
+        }
+
         h2 {
             font-size: 34px;
             color: $color-h2;
+
+            @include media(991) {
+                font-size: 20px;
+            }
         }
 
         .swp-btn {
@@ -2438,10 +2652,20 @@ button, input, textarea, li, div {
         }
     }
 
+    .swiper {
+        @include media(767) {
+            overflow: visible;
+        }
+    }
+
     &-card {
         padding: 8px 10px 19px;
         border-radius: 18px;
         gap: 15px;
+
+        @include media(767) {
+            width: 255px;
+        }
 
         &__head {
             height: 167px;
