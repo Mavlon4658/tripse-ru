@@ -335,6 +335,153 @@ button, input, textarea, li, div {
   font-size: 16px;
 }
 
+.login .offcanvas-header {
+  padding-top: 24px;
+  padding-bottom: 27px;
+}
+.login h2 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #1A1C1F;
+}
+.login ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  background: #f5f6f7;
+  border-radius: 12px;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+.login ul li {
+  height: 54px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #4b4b5a;
+}
+.login ul li:has(input:checked) {
+  background: white;
+  box-shadow: 10px 4px 24px 0 rgba(36, 37, 42, 0.1);
+}
+.login ul input {
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.login .form-tel {
+  margin-bottom: 20px;
+}
+.login .btn-green {
+  margin-bottom: 23px;
+  height: 60px;
+}
+.login .form-checkbox {
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.login .form-checkbox .icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #B2B2B2;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.login .form-checkbox i {
+  font-size: 25px;
+  transform: translateY(3px);
+  display: none;
+}
+.login .form-checkbox input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.login .form-checkbox input:checked ~ i {
+  display: block;
+}
+.login .form-checkbox p {
+  padding-top: 2px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 135%;
+  color: #1A1C1F;
+}
+.login .form-checkbox p a {
+  color: #0090FF;
+}
+.login .btn-gray__outline {
+  font-size: 16px;
+  line-height: 119%;
+  color: #1A1C1F;
+  height: 60px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+.login .description {
+  font-size: 10px;
+  line-height: 135%;
+  color: #4f4f6d;
+}
+
+.form-tel {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background: #f3f5f6;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+.form-tel button {
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 14px;
+  border-right: 1px solid #E7EBEE;
+  gap: 8px;
+}
+.form-tel button img {
+  width: 35px;
+}
+.form-tel label {
+  font-size: 11px;
+  color: #1A1C1F;
+  top: 13px;
+  left: 94px;
+  position: absolute;
+  z-index: -1;
+}
+.form-tel input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding: 30px 13px 16px 13px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 14px;
+  color: black;
+}
+.form-tel input::-moz-placeholder {
+  color: #4b4b5a;
+}
+.form-tel input::placeholder {
+  color: #4b4b5a;
+}
+
 .swp-pagination {
   display: flex;
   align-items: center;
