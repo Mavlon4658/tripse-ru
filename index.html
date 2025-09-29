@@ -22,7 +22,7 @@
         <header class="header bg-white">
             <div class="container header-container d-flex align-items-center justify-content-between gap-4">
                 <div class="d-flex align-items-center gap-1 flex-shrink-0">
-                    <button class="bars d-flex d-lg-none align-items-center justify-content-center">
+                    <button class="bars d-flex d-lg-none align-items-center justify-content-center" data-bs-toggle="offcanvas" href="#menuModal" role="button" aria-controls="menuModal">
                         <img src="./assets/images/bars.svg" alt="">
                     </button>
                     <a href="/" class="header-logo">
@@ -59,6 +59,94 @@
             </div>
         </header>
         <!-- Header end -->
+    
+        <!-- Menu -->
+        <section class="offcanvas offcanvas-bottom border-0 menu" tabindex="-1" id="menuModal" aria-labelledby="menuModalLabel">
+            <div class="offcanvas-header d-flex align-items-center">
+                <button class="d-flex align-items-center justify-content-center flex-shrink-0 " type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 13L1 1M13 1L1 13" stroke="#1A1B1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <img src="./assets/images/menu-logo.svg" alt="">
+            </div>
+            <div class="offcanvas-body">
+                <ul class="menu-navs d-flex flex-column">
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-1.svg" alt="" class="flex-shrink-0">
+                            <span>Туры</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-2.svg" alt="" class="flex-shrink-0">
+                            <span>Избранное</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-3.svg" alt="" class="flex-shrink-0">
+                            <span>Направления</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-4.svg" alt="" class="flex-shrink-0">
+                            <span>Виды отдыха</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <p>Войдите в систему и получите полный доступ к функциям TRIPSEE</p>
+                <a href="#" class="btn-gray d-flex align-items-center justify-content-center p-0">Войти</a>
+            </div>
+        </section>
+        <!-- Menu end -->
+
+        <!-- Login -->
+        <section class="offcanvas offcanvas-bottom border-0 login" tabindex="-1" id="loginModal" aria-labelledby="loginModalLabel">
+            <div class="offcanvas-header d-flex align-items-center">
+                <button class="d-flex align-items-center justify-content-center flex-shrink-0 " type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 13L1 1M13 1L1 13" stroke="#1A1B1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <img src="./assets/images/menu-logo.svg" alt="">
+            </div>
+            <div class="offcanvas-body">
+                <ul class="menu-navs d-flex flex-column">
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-1.svg" alt="" class="flex-shrink-0">
+                            <span>Туры</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-2.svg" alt="" class="flex-shrink-0">
+                            <span>Избранное</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-3.svg" alt="" class="flex-shrink-0">
+                            <span>Направления</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-4.svg" alt="" class="flex-shrink-0">
+                            <span>Виды отдыха</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <p>Войдите в систему и получите полный доступ к функциям TRIPSEE</p>
+                <a href="#" class="btn-gray d-flex align-items-center justify-content-center p-0">Войти</a>
+            </div>
+        </section>
+        <!-- Login end -->
         
         <main>
 
