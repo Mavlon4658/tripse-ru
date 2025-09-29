@@ -2709,9 +2709,22 @@ button, input, textarea, li, div {
     background: #efefef;
     padding: 46px 0 18px;
 
+    @include media(991) {
+        margin-top: 80px;
+        padding: 20px 0 20px;
+    }
+
+    .row {
+        --bs-gutter-y: 25px;
+    }
+
     ul {
         gap: 11px;
         margin-bottom: 27px;
+
+        @include media(991) {
+            gap: 12px;
+        }
 
         li {
             font-size: 12px;
@@ -2743,6 +2756,8 @@ button, input, textarea, li, div {
     }
 
     &-navs {
+        margin-bottom: 0 !important;
+
         a {
             font-size: 12px;
             line-height: 135%;
@@ -2754,6 +2769,10 @@ button, input, textarea, li, div {
         background: #e6e6e6;
         height: 1px;
         margin: 23px 0 15px;
+
+        @include media(991) {
+            margin: 25px 0;
+        }
     }
 
     &-text {

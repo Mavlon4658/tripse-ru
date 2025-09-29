@@ -2536,9 +2536,23 @@ button, input, textarea, li, div {
   background: #efefef;
   padding: 46px 0 18px;
 }
+@media screen and (max-width: 991px) {
+  .footer {
+    margin-top: 80px;
+    padding: 20px 0 20px;
+  }
+}
+.footer .row {
+  --bs-gutter-y: 25px;
+}
 .footer ul {
   gap: 11px;
   margin-bottom: 27px;
+}
+@media screen and (max-width: 991px) {
+  .footer ul {
+    gap: 12px;
+  }
 }
 .footer ul li {
   font-size: 12px;
@@ -2563,6 +2577,9 @@ button, input, textarea, li, div {
   color: #000;
   margin-bottom: 10px;
 }
+.footer-navs {
+  margin-bottom: 0 !important;
+}
 .footer-navs a {
   font-size: 12px;
   line-height: 135%;
@@ -2572,6 +2589,11 @@ button, input, textarea, li, div {
   background: #e6e6e6;
   height: 1px;
   margin: 23px 0 15px;
+}
+@media screen and (max-width: 991px) {
+  .footer .line {
+    margin: 25px 0;
+  }
 }
 .footer-text {
   font-size: 12px;
