@@ -1308,6 +1308,7 @@ button, input, textarea, li, div {
 }
 .tour-head .main-select {
   width: auto;
+  flex-shrink: 0;
 }
 .tour-head .main-select__btn {
   gap: 6px;
@@ -1319,6 +1320,7 @@ button, input, textarea, li, div {
   font-size: 16px;
   line-height: 119%;
   color: #0090FF;
+  white-space: nowrap;
 }
 @media screen and (max-width: 991px) {
   .tour-head .main-select__btn {

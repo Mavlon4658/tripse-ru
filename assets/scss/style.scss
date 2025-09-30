@@ -1392,6 +1392,7 @@ button, input, textarea, li, div {
 
         .main-select {
             width: auto;
+            flex-shrink: 0;
 
             &__btn {
                 gap: 6px;
@@ -1403,6 +1404,7 @@ button, input, textarea, li, div {
                 font-size: 16px;
                 line-height: 119%;
                 color: $color-osn;
+                white-space: nowrap;
 
                 @include media(991) {
                     font-size: 11px;
