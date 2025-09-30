@@ -99,7 +99,6 @@ $(document).ready(function() {
                 clickable: true,
             }
         })
-        console.log(el.querySelector('.swp-pagination'));
     })
 
     const touristsSwp = new Swiper('.photos-tourists__swp .swiper', {
@@ -132,5 +131,32 @@ $(document).ready(function() {
                 spaceBetween: 14,
             }
         }
+    })
+
+    $('.main-select').each((idx, el) => {
+        $(el).find('.main-select__btn').on('click', () => {
+            $(el).find('.main-select__btn').toggleClass('active');
+            $(el).find('.main-select__list').toggleClass('active');
+        })
+        $(el).find('.main-select__list li').each((listIdx, listEl) => {
+            $(listEl).on('click', () => {
+                const txt = $(listEl).find('span').text();
+                $(el).find('.main-select__btn span').text(txt);
+                $(el).find('.main-select__btn input').text(txt);
+                $(el).find('.main-select__list li').removeClass('selected');
+                $(listEl).addClass('selected');
+                $(el).find('.main-select__btn').removeClass('active');
+                $(el).find('.main-select__list').removeClass('active');
+            })
+        })
+    })
+
+    window.addEventListener('click', evetn => {
+        $('.main-select').each((idx, el) => {
+            if(!el.contains(evetn.target)) {
+                $(el).find('.main-select__btn').removeClass('active');
+                $(el).find('.main-select__list').removeClass('active');
+            }
+        });
     })
 });
