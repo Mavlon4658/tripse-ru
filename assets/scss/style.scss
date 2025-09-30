@@ -1390,11 +1390,35 @@ button, input, textarea, li, div {
             margin-bottom: 14px;
         }
 
-        .dropdown-btn {
-            @include media(991) {
-                img {
-                    display: none;
+        .main-select {
+            width: auto;
+
+            &__btn {
+                gap: 6px;
+                height: auto;
+                padding: 0;
+                width: auto;
+                background: transparent;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 119%;
+                color: $color-osn;
+
+                @include media(991) {
+                    font-size: 11px;
+                    line-height: 19px;
+
+                    svg {
+                        display: none;
+                    }
                 }
+            }
+
+            &__list {
+                width: 200px;
+                min-width: 200px;
+                left: auto;
+                right: -10px;
             }
         }
     }
@@ -1918,14 +1942,44 @@ button, input, textarea, li, div {
             }
         }
 
-        .dropdown {
+        .main-select {
+            width: auto;
+            flex-shrink: 0;
+
             @include media(991) {
                 position: absolute;
                 top: 0;
                 right: 0;
                 margin: 0;
-                font-size: 12px;
-                line-height: 158%;
+            }
+
+            &__btn {
+                gap: 6px;
+                height: auto;
+                padding: 0;
+                width: auto;
+                background: transparent;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 119%;
+                color: $color-osn;
+                white-space: nowrap;
+
+                @include media(991) {
+                    font-size: 11px;
+                    line-height: 19px;
+
+                    svg {
+                        display: none;
+                    }
+                }
+            }
+
+            &__list {
+                width: 200px;
+                min-width: 200px;
+                left: auto;
+                right: -10px;
             }
         }
     }

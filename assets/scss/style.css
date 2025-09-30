@@ -1306,10 +1306,34 @@ button, input, textarea, li, div {
     margin-bottom: 14px;
   }
 }
+.tour-head .main-select {
+  width: auto;
+}
+.tour-head .main-select__btn {
+  gap: 6px;
+  height: auto;
+  padding: 0;
+  width: auto;
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%;
+  color: #0090FF;
+}
 @media screen and (max-width: 991px) {
-  .tour-head .dropdown-btn img {
+  .tour-head .main-select__btn {
+    font-size: 11px;
+    line-height: 19px;
+  }
+  .tour-head .main-select__btn svg {
     display: none;
   }
+}
+.tour-head .main-select__list {
+  width: 200px;
+  min-width: 200px;
+  left: auto;
+  right: -10px;
 }
 .tour h3 {
   gap: 7px;
@@ -1795,15 +1819,44 @@ button, input, textarea, li, div {
     line-height: 136%;
   }
 }
+.accomodation-head .main-select {
+  width: auto;
+  flex-shrink: 0;
+}
 @media screen and (max-width: 991px) {
-  .accomodation-head .dropdown {
+  .accomodation-head .main-select {
     position: absolute;
     top: 0;
     right: 0;
     margin: 0;
-    font-size: 12px;
-    line-height: 158%;
   }
+}
+.accomodation-head .main-select__btn {
+  gap: 6px;
+  height: auto;
+  padding: 0;
+  width: auto;
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%;
+  color: #0090FF;
+  white-space: nowrap;
+}
+@media screen and (max-width: 991px) {
+  .accomodation-head .main-select__btn {
+    font-size: 11px;
+    line-height: 19px;
+  }
+  .accomodation-head .main-select__btn svg {
+    display: none;
+  }
+}
+.accomodation-head .main-select__list {
+  width: 200px;
+  min-width: 200px;
+  left: auto;
+  right: -10px;
 }
 .accomodation .acc1 .accordion-button span {
   font-size: 20px;
