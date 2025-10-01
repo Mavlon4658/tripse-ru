@@ -159,4 +159,34 @@ $(document).ready(function() {
             }
         });
     })
+    const accWrap = document.querySelectorAll('.acc-wrap');
+    
+    if (accWrap.length) {
+        accWrap.forEach(el => {
+            const btns = el.querySelectorAll('.toggle-btn');
+            const accordions = el.querySelectorAll('.accordion .collapse');
+            console.log(btns);
+            btns[0].onclick = () => {
+                accordions.forEach(acc => {
+                    let bsCollapse = new bootstrap.Collapse(acc, {
+                        toggle: false,
+                    });
+                    bsCollapse.show();
+                })
+                $(btns[0]).addClass('d-none');
+                $(btns[1]).removeClass('d-none');
+            }
+            btns[1].onclick = () => {
+                accordions.forEach(acc => {
+                    let bsCollapse = new bootstrap.Collapse(acc, {
+                        toggle: false,
+                    });
+                    bsCollapse.hide();
+                })
+                $(btns[0]).removeClass('d-none');
+                $(btns[1]).addClass('d-none');
+            }
+        })
+    }
+
 });

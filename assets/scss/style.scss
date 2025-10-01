@@ -1371,6 +1371,23 @@ button, input, textarea, li, div {
     }
 }
 
+.toggle-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 119%;
+    color: $color-osn;
+    flex-shrink: 0;
+    white-space: nowrap;
+    
+    @include media(991) {
+        font-size: 11px;
+        line-height: 173%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
 .tour {
     gap: 3px;
 

@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="./assets/fonts/GothamPro/stylesheets.css">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -386,7 +386,7 @@
                                 </div>
                             </section>
 
-                            <section class="tour d-flex flex-column">
+                            <section class="tour d-flex flex-column acc-wrap">
                                 <div class="tour-content bg-white">
                                     <div class="tour-head d-flex align-items-start align-items-lg-end justify-content-between">
                                         <div>
@@ -396,29 +396,18 @@
                                                 <img src="./assets/images/mail-icon.svg" alt="">
                                             </a>
                                         </div>
-                                        <div class="main-select">
-                                            <div class="main-select__btn">
-                                                <span>Показать все даты</span>
-                                                <input type="text" value="Показать все даты">
-                                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-                                            <ul class="main-select__list">
-                                                <li class="selected">
-                                                    <span>Показать все даты</span>
-                                                </li>
-                                                <li>
-                                                    <span>select 1</span>
-                                                </li>
-                                                <li>
-                                                    <span>select 2</span>
-                                                </li>
-                                                <li>
-                                                    <span>select 3</span>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <button class="toggle-btn show-data align-items-center gap-1 gap-lg-2">
+                                            <span>Показать все даты</span>
+                                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="toggle-btn show-data d-none align-items-center gap-1 gap-lg-2">
+                                            <span>Скрыть все даты</span>
+                                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 5.5L5 1.5L9 5.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
                                     </div>
                                     <h3 class="d-flex align-items-center fw-medium">
                                         <img src="./assets/images/sun-icon.svg" alt="">
@@ -580,36 +569,25 @@
                                 </div>
                             </section>
 
-                            <section class="accomodation">
+                            <section class="accomodation acc-wrap">
                                 <div class="accomodation-content bg-white">
                                     <div class="accomodation-head d-flex align-items-center justify-content-between">
                                         <div class="accomodation-head__left">
                                             <h2 class="fw-medium">Проживание:</h2>
                                             <div class="description">А вы давно были в круизе? Давайте отправимся на скоростном судне (метеор или новейший катамаран) в Северный Версаль!</div>
                                         </div>
-                                        <div class="main-select">
-                                            <div class="main-select__btn">
-                                                <span>Показать все даты</span>
-                                                <input type="text" value="Показать все даты">
-                                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-                                            <ul class="main-select__list">
-                                                <li class="selected">
-                                                    <span>Показать все даты</span>
-                                                </li>
-                                                <li>
-                                                    <span>select 1</span>
-                                                </li>
-                                                <li>
-                                                    <span>select 2</span>
-                                                </li>
-                                                <li>
-                                                    <span>select 3</span>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <button class="toggle-btn show-data align-items-center gap-1 gap-lg-2">
+                                            <span>Показать все даты</span>
+                                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 1.5L5 5.5L1 1.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="toggle-btn show-data d-none align-items-center gap-1 gap-lg-2">
+                                            <span>Скрыть все даты</span>
+                                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 5.5L5 1.5L9 5.5" stroke="#0090FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
                                     </div>
                                     <div class="accordion acc1" id="accomodationAcc">
                                         <div class="accordion-item border-0">
@@ -2010,8 +1988,9 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
     <!-- JS file -->
     <script src="./assets/js/main.js"></script>
 
