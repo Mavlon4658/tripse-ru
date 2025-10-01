@@ -916,6 +916,10 @@ button, input, textarea, li, div {
         h3 {
             font-size: 25px;
             color: $color-osn2;
+
+            @include media(375) {
+                font-size: 20px;
+            }
         }
 
         del {
@@ -923,8 +927,8 @@ button, input, textarea, li, div {
             color: #9a9a9a;
             margin: 0 8px 0 14px;
 
-            @include media(991) {
-
+            @include media(375) {
+                font-size: 16px;
             }
         }
 
@@ -1048,6 +1052,14 @@ button, input, textarea, li, div {
 
         @include media(991) {
             max-width: 100%;
+        }
+    }
+
+    .btn-blue__outline {
+        @include media(375) {
+            width: 100%;
+            gap: 4px;
+            font-size: 12px;
         }
     }
 
@@ -1388,11 +1400,18 @@ button, input, textarea, li, div {
 
         @include media(991) {
             margin-bottom: 14px;
+            position: relative;
         }
 
         .main-select {
             width: auto;
             flex-shrink: 0;
+
+            @include media(991) {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
 
             &__btn {
                 gap: 6px;

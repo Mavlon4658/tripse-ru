@@ -879,10 +879,20 @@ button, input, textarea, li, div {
   font-size: 25px;
   color: #12C647;
 }
+@media screen and (max-width: 375px) {
+  .booking-price h3 {
+    font-size: 20px;
+  }
+}
 .booking-price del {
   font-size: 18px;
   color: #9a9a9a;
   margin: 0 8px 0 14px;
+}
+@media screen and (max-width: 375px) {
+  .booking-price del {
+    font-size: 16px;
+  }
 }
 .booking-price span {
   font-size: 14px;
@@ -986,6 +996,13 @@ button, input, textarea, li, div {
 @media screen and (max-width: 991px) {
   .booking .btn-green {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .booking .btn-blue__outline {
+    width: 100%;
+    gap: 4px;
+    font-size: 12px;
   }
 }
 .booking .blue-link {
@@ -1304,11 +1321,19 @@ button, input, textarea, li, div {
 @media screen and (max-width: 991px) {
   .tour-head {
     margin-bottom: 14px;
+    position: relative;
   }
 }
 .tour-head .main-select {
   width: auto;
   flex-shrink: 0;
+}
+@media screen and (max-width: 991px) {
+  .tour-head .main-select {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 .tour-head .main-select__btn {
   gap: 6px;
