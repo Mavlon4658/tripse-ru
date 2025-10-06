@@ -165,7 +165,6 @@ $(document).ready(function() {
         accWrap.forEach(el => {
             const btns = el.querySelectorAll('.toggle-btn');
             const accordions = el.querySelectorAll('.accordion .collapse');
-            console.log(btns);
             btns[0].onclick = () => {
                 accordions.forEach(acc => {
                     let bsCollapse = new bootstrap.Collapse(acc, {
@@ -189,4 +188,99 @@ $(document).ready(function() {
         })
     }
 
+    const collectionSwp = new Swiper('.collection .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        breakpoints: {
+            1150: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            }
+        },
+        pagination: {
+            el: '.collection .swip-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.collection .swip-btn__next',
+            prevEl: '.collection .swip-btn__prev',
+        }
+    })
+    
+    const newTour = new Swiper('.new-tour .new-tour__swp', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        breakpoints: {
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            }
+        },
+        pagination: {
+            el: '.new-tour__foot .swip-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.new-tour__foot .swip-btn__next',
+            prevEl: '.new-tour__foot .swip-btn__prev',
+        }
+    })
+    
+    $('.new-tour__card-head .swiper').each((idx, el) => {
+        const newTourHeadSwp = new Swiper(el, {
+            nested: true,
+            // touchStartPreventDefault: false,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 1000,
+            navigation: {
+                nextEl: $(el).find('.swip-btn__next')[0],
+                prevEl: $(el).find('.swip-btn__prev')[0],
+            }
+        })
+    })
+
+    const reivewsSwp = new Swiper('.reviews .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        breakpoints: {
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            }
+        },
+        navigation: {
+            nextEl: '.reviews .btn-next',
+            prevEl: '.reviews .btn-prev',
+        }
+    })
+
+    const popularSwp = new Swiper('.popular-swp .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        navigation: {
+            nextEl: '.popular-head .btn-next',
+            prevEl: '.popular-head .btn-prev',
+        }
+    })
+
+    if (document.querySelector('.popular-swp .swiper')) {
+        popularSwp.on('slideChange', function (e) {
+            if (popularSwp.activeIndex != 0) {
+                $('.popular-swp .block-left').removeClass('d-none');
+            } else {
+                $('.popular-swp .block-left').addClass('d-none');
+            }
+            if (popularSwp.activeIndex == 5) {
+                $('.popular-swp .block-right').addClass('d-none');
+            } else {
+                $('.popular-swp .block-right').removeClass('d-none');
+            }
+        });
+    }
 });

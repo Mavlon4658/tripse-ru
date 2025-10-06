@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./assets/fonts/GothamPro/stylesheets.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Syle CSS -->
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <!-- Header -->
+        <header class="header bg-white">
+            <div class="container header-container d-flex align-items-center justify-content-between gap-4">
+                <div class="d-flex align-items-center gap-1 flex-shrink-0">
+                    <button class="bars d-flex d-lg-none align-items-center justify-content-center" data-bs-toggle="offcanvas" href="#menuModal" role="button" aria-controls="menuModal">
+                        <img src="./assets/images/bars.svg" alt="">
+                    </button>
+                    <a href="/" class="header-logo">
+                        <img src="./assets/images/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="d-flex align-items-center justify-content-end gap-4 header-right">
+                    <div class="header-form d-none d-lg-flex align-items-center py-2 pe-2 ps-3">
+                        <div class="inp-search position-relative">
+                            <i class="bi bi-search position-absolute"></i>
+                            <input type="text" placeholder="Куда поедем?">
+                        </div>
+                        <div class="inp-calendar position-relative">
+                            <i class="bi bi-calendar-check position-absolute"></i>
+                            <input type="text" placeholder="Когда?">
+                        </div>
+                        <button class="btn-gray">Найти туры</button>
+                    </div>
+                    <a href="#" class="d-none d-lg-flex flex-column align-items-center gap-1 favorite-link">
+                        <i class="bi bi-heart"></i>
+                        <span>Избранное</span>
+                    </a>
+                    <button class="d-flex d-lg-none align-items-center justify-content-end" data-bs-toggle="offcanvas" href="#searchModal" role="button" aria-controls="searchModal">
+                        <img src="./assets/images/search-icon.svg" alt="">
+                    </button>
+                    <button class="logout-btn d-flex d-lg-none align-items-center justify-content-center" data-bs-toggle="offcanvas" href="#loginModal" role="button" aria-controls="loginModal">
+                        <img src="./assets/images/log-out-icon.svg" alt="">
+                    </button>
+                    <a href="#" class="btn-green d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/phone-icon.svg" alt="" class="d-lg-none">
+                        <span class="d-none d-lg-inline">Войти</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+    
+        <!-- Menu -->
+        <section class="offcanvas offcanvas-bottom border-0 menu" tabindex="-1" id="menuModal" aria-labelledby="menuModalLabel">
+            <div class="offcanvas-header d-flex align-items-center">
+                <button class="d-flex align-items-center justify-content-center flex-shrink-0 " type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 13L1 1M13 1L1 13" stroke="#1A1B1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <img src="./assets/images/menu-logo.svg" alt="">
+            </div>
+            <div class="offcanvas-body">
+                <ul class="menu-navs d-flex flex-column">
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-1.svg" alt="" class="flex-shrink-0">
+                            <span>Туры</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-2.svg" alt="" class="flex-shrink-0">
+                            <span>Избранное</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-3.svg" alt="" class="flex-shrink-0">
+                            <span>Направления</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center fw-medium">
+                            <img src="./assets/images/menu-nav-icon-4.svg" alt="" class="flex-shrink-0">
+                            <span>Виды отдыха</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <p>Войдите в систему и получите полный доступ к функциям TRIPSEE</p>
+                <a href="#" class="btn-gray d-flex align-items-center justify-content-center p-0">Войти</a>
+            </div>
+        </section>
+        <!-- Menu end -->
+
+        <!-- Login -->
+        <section class="offcanvas offcanvas-bottom border-0 login" tabindex="-1" id="loginModal" aria-labelledby="loginModalLabel">
+            <div class="offcanvas-header d-flex align-items-center justify-content-between">
+                <h2 class="fw-medium">Войдите или зарегистрируйтесь</h3>
+                <button class="d-flex align-items-center justify-content-center flex-shrink-0 modal-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 13L1 1M13 1L1 13" stroke="#1A1B1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul>
+                    <li class="d-flex align-items-center justify-content-center position-relative">
+                        <input type="radio" name="userType" checked id="" class="position-absolute start-0 top-0 w-100 h-100">
+                        <span>Я турист</span>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-center position-relative">
+                        <input type="radio" name="userType" id="" class="position-absolute start-0 top-0 w-100 h-100">
+                        <span>Я автор тура</span>
+                    </li>
+                </ul>
+                <div class="form-tel">
+                    <button>
+                        <img src="./assets/images/flag-ru.svg" alt="">
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 1L5 5L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <label for="">Ваш телефон</label>
+                    <input type="tel" placeholder="+7">
+                </div>
+                <button class="btn-green d-flex align-items-center justify-content-center text-center w-100">Продолжить</button>
+                <div class="form-checkbox d-flex align-items-start">
+                    <div class="icon flex-shrink-0">
+                        <input type="checkbox" name="" id="">
+                        <i class="bi bi-check"></i>
+                    </div>
+                    <p>Я соглашаюсь с условиями <a href="#" class="d-inline">Пользовательского соглашения</a> и разрешаю обработку моих персональных данных в рамках <a href="#" class="d-inline">Политики конфиденциальности</a></p>
+                </div>
+                <a href="#" class="btn-gray__outline d-flex align-items-center justify-content-center w-100 fw-medium">
+                    <img src="./assets/images/mail-icon.svg" width="20" alt="" class="flex-shrink-0">
+                    <span>Вход по почте</span>
+                </a>
+                <div class="description text-center">На сайте работает защита reCAPTCHA. Действуют Политика конфиденциальности и Правила использования Google</div>
+            </div>
+        </section>
+        <!-- Login end -->
+
+        <!-- Search -->
+        <section class="offcanvas offcanvas-bottom border-0 search-modal" tabindex="-1" id="searchModal" aria-labelledby="searchModalLabel">
+            <div class="offcanvas-header d-flex align-items-center justify-content-between">
+                <h2 class="fw-medium">Поиск туров</h3>
+                <button class="d-flex align-items-center justify-content-center flex-shrink-0 modal-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 13L1 1M13 1L1 13" stroke="#1A1B1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="search-modal__inputs">
+                    <li class="position-relative">
+                        <img src="./assets/images/location-icon.svg" alt="" class="flex-shrink-0 position-absolute">
+                        <input type="text" placeholder="Куда едем?">
+                    </li>
+                    <li class="position-relative">
+                        <img src="./assets/images/calendar-icon-2.svg" alt="" class="flex-shrink-0 position-absolute">
+                        <input type="text" placeholder="Когда едем?">
+                    </li>
+                </ul>
+                <h3 class="fw-medium">Фильтры</h3>
+                <ul class="links">
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Продолжительность</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Любая</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Цена</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Любая</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Проживание и комфорт</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Любая</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Можно с детьми</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Да</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-between gap-3 w-100 links-item">
+                            <span class="links-item__text">Вид отдыха</span>
+                            <span class="links-item__right d-flex align-items-center">
+                                <span>Все</span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="search-modal__foot d-flex align-items-center justify-content-between">
+                    <a href="#" class="clear-btn">Сбросить все</a>
+                    <a href="#" class="btn-green d-flex align-items-center justify-content-center">
+                        <span>Применить</span>
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.13672 6L5.37936 10.2426L13.8642 1.75732" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Search end -->
+        
+        <main>
+
+            <!-- Breadcrumb -->
+            <section class="breadcrumb">
+                <ul class="container d-flex align-items-center flex-wrap gap-2">
+                    <li><a href="#">Главная</a></li>
+                    <li><span class="active">/</span></li>
+                    <li><a href="#">Экскурсии</a></li>
+                    <li><span class="active">/</span></li>
+                    <li><a href="#">Россия</a></li>
+                    <li><span class="active">/</span></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><span>/</span></li>
+                    <li><span>Автобусная обзорная экскурсия по Москве за 4 часа с посещением смотровых площадок</span></li>
+                </ul>
+            </section>
+            <!-- Breadcrumb end -->
+            
+            <!-- Tour home -->
+            <section class="tour-home">
+                <div class="container">
+                    <h1 class="text-center fw-medium">Поиск и бронирование экскурсий по всему миру</h1>
+                    <p class="tour-home__description text-center">Сервис поиска экскурсий на русском языке. Мы объединяем предложения туроператоров, экскурсионных бюро и частных гидов в 124 странах. Сравниваем цены на похожие экскурсии, анализируем отзывы путешественников и рекомендуем лучший вариант для бронирования.</p>
+                    <div class="tour-home__content bg-white d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between gap-3 mb-4">
+                        <ul class="tour-home__countries d-flex flex-wrap gap-3 gap-lg-4">
+                            <li>
+                                <a href="#" class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/flag-1.svg" alt="" class="rounded-circle flex-shrink-0 object-fit-cover">
+                                    <span>Россия</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/flag-2.svg" alt="" class="rounded-circle flex-shrink-0 object-fit-cover">
+                                    <span>Грузия</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/flag-3.svg" alt="" class="rounded-circle flex-shrink-0 object-fit-cover">
+                                    <span>Узбекистан</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/flag-4.svg" alt="" class="rounded-circle flex-shrink-0 object-fit-cover">
+                                    <span>Египет</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/flag-5.svg" alt="" class="rounded-circle flex-shrink-0 object-fit-cover">
+                                    <span>Испания</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/flag-6.svg" alt="" class="rounded-circle flex-shrink-0 object-fit-cover">
+                                    <span>Великобритания</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <input type="text" placeholder="Найдите страну..." class="tour-home__search flex-shrink-0">
+                    </div>
+                    <div class="tour-home__card-wrap row g-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-1.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Санкт-Петербург</b>
+                                    Россия
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">1331 экскурсия</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-2.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Москва</b>
+                                    Россия
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">714 экскурсий</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-3.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Тбилиси</b>
+                                    Грузия
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">433 экскурсии</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-4.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Стамбул</b>
+                                    Турция
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">431 экскурсия</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-1.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Санкт-Петербург</b>
+                                    Россия
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">1331 экскурсия</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-2.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Москва</b>
+                                    Россия
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">714 экскурсий</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-3.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Тбилиси</b>
+                                    Грузия
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">433 экскурсии</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="#" class="tour-home__card d-flex flex-column justify-content-between position-relative overflow-hidden">
+                                <img src="./assets/images/tour-home-card-4.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 object-fit-cover">
+                                <span class="top-text d-flex flex-column">
+                                    <b class="fw-medium">Стамбул</b>
+                                    Турция
+                                </span>
+                                <span class="bottom-text d-flex align-items-center justify-content-between w-100">
+                                    <span class="fw-medium">431 экскурсия</span>
+                                    <img src="./assets/images/link-icon.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tour-home__foot d-flex align-items-center justify-content-between bg-white">
+                        <div class="tour-home__foot-card d-flex flex-column align-items-center text-center">
+                            <div class="main-img d-flex align-items-center justify-content-center rounded-circle bg-orange">
+                                <img src="./assets/images/tour-home-foot-icon-1.svg" alt="">
+                            </div>
+                            <h3 class="fw-semibold">Туры напрямую от авторов</h3>
+                            <p>Бронируй без наценок и посредников</p>
+                        </div>
+                        <div class="line flex-shrink-0"></div>
+                        <div class="tour-home__foot-card d-flex flex-column align-items-center text-center">
+                            <div class="main-img d-flex align-items-center justify-content-center rounded-circle bg-green">
+                                <img src="./assets/images/tour-home-foot-icon-2.svg" alt="">
+                            </div>
+                            <h3 class="fw-semibold">Проверенные авторы</h3>
+                            <p>Все авторы подтверждают свою личность <img src="./assets/images/tour-home__foot-icon-1.svg" alt="" class="d-inline"></p>
+                        </div>
+                        <div class="line flex-shrink-0"></div>
+                        <div class="tour-home__foot-card d-flex flex-column align-items-center text-center">
+                            <div class="main-img d-flex align-items-center justify-content-center rounded-circle bg-blue">
+                                <img src="./assets/images/tour-home-foot-icon-3.svg" alt="">
+                            </div>
+                            <h3 class="fw-semibold">Безопасная оплата</h3>
+                            <p>Оплата через безопасную сделку от <img src="./assets/images/tour-home__foot-icon-2.svg" alt="" class="d-inline"></p>
+                        </div>
+                        <div class="line flex-shrink-0"></div>
+                        <div class="tour-home__foot-card d-flex flex-column align-items-center text-center">
+                            <div class="main-img d-flex align-items-center justify-content-center rounded-circle bg-orange">
+                                <img src="./assets/images/tour-home-foot-icon-4.svg" alt="">
+                            </div>
+                            <h3 class="fw-semibold">Реальные отзывы</h3>
+                            <p>После каждого путешествия мы собираем отзыв туриста</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Tour home end -->
+
+            <!-- Collection -->
+            <section class="collection bg-white">
+                <div class="container d-flex flex-column">
+                    <h2 class="sec-title">Коллекции путешествий</h2>
+                    <div class="swiper w-100">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide collection-card d-flex align-items-end position-relative overflow-hidden">
+                                <img src="./assets/images/collection-card-1.png" alt="" class="main-img position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                                <h3 class="fw-semibold">Золотая осень</h3>
+                            </div>
+                            <div class="swiper-slide collection-card d-flex align-items-end position-relative overflow-hidden">
+                                <img src="./assets/images/collection-card-2.png" alt="" class="main-img position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                                <h3 class="fw-semibold">Туры на Новый год и Рождество</h3>
+                            </div>
+                            <div class="swiper-slide collection-card d-flex align-items-end position-relative overflow-hidden">
+                                <img src="./assets/images/collection-card-3.png" alt="" class="main-img position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                                <h3 class="fw-semibold">Наши лучшие туры</h3>
+                            </div>
+                            <div class="swiper-slide collection-card d-flex align-items-end position-relative overflow-hidden">
+                                <img src="./assets/images/collection-card-4.png" alt="" class="main-img position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                                <h3 class="fw-semibold">DiscoverySpecial: туры по всему миру</h3>
+                            </div>
+                            <div class="swiper-slide collection-card d-flex align-items-end position-relative overflow-hidden">
+                                <img src="./assets/images/collection-card-1.png" alt="" class="main-img position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                                <h3 class="fw-semibold">Золотая осень</h3>
+                            </div>
+                            <div class="swiper-slide collection-card d-flex align-items-end position-relative overflow-hidden">
+                                <img src="./assets/images/collection-card-2.png" alt="" class="main-img position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                                <h3 class="fw-semibold">Туры на Новый год и Рождество</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-flex align-items-center justify-content-between w-100">
+                        <div class="swip-pagination"></div>
+                        <div class="swip-btn__wrap d-flex align-items-center gap-3">
+                            <button class="swip-btn swip-btn__prev">
+                                <img src="./assets/images/swiper-prev.svg" alt="">
+                            </button>
+                            <button class="swip-btn swip-btn__next">
+                                <img src="./assets/images/swiper-next.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Collection end -->
+
+            <!-- New tour -->
+            <section class="new-tour bg-white">
+                <div class="container d-flex flex-column">
+                    <h2 class="sec-title">Новинки туров на нашем сайте</h2>
+                    <div class="swiper new-tour__swp w-100">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide new-tour__card overflow-hidden position-relative">
+                                <div class="new-tour__card-head position-relative">
+                                    <div class="swiper">
+                                        <button class="swip-btn swip-btn__prev">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.81971 0.622704C8.87792 0.680761 8.9241 0.749731 8.95561 0.825662C8.98711 0.901594 9.00333 0.982995 9.00333 1.0652C9.00333 1.14741 8.98711 1.22881 8.95561 1.30475C8.9241 1.38068 8.87792 1.44965 8.81971 1.5077L1.76097 8.5652L8.81971 15.6227C8.93707 15.7401 9.003 15.8992 9.003 16.0652C9.003 16.2312 8.93707 16.3903 8.81971 16.5077C8.70236 16.6251 8.54318 16.691 8.37721 16.691C8.21125 16.691 8.05207 16.6251 7.93471 16.5077L0.434715 9.0077C0.376511 8.94965 0.330333 8.88068 0.298825 8.80475C0.267317 8.72881 0.251099 8.64741 0.251099 8.5652C0.251099 8.483 0.267317 8.40159 0.298825 8.32566C0.330333 8.24973 0.376511 8.18076 0.434715 8.1227L7.93471 0.622704C7.99277 0.5645 8.06174 0.518322 8.13767 0.486814C8.2136 0.455305 8.29501 0.439087 8.37721 0.439087C8.45942 0.439087 8.54082 0.455305 8.61676 0.486814C8.69269 0.518322 8.76166 0.5645 8.81971 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <button class="swip-btn swip-btn__next">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.434715 0.622704C0.492773 0.5645 0.561742 0.518322 0.637673 0.486814C0.713605 0.455305 0.795006 0.439087 0.877216 0.439087C0.959425 0.439087 1.04083 0.455305 1.11676 0.486814C1.19269 0.518322 1.26166 0.5645 1.31972 0.622704L8.81971 8.1227C8.87792 8.18076 8.9241 8.24973 8.95561 8.32566C8.98711 8.40159 9.00333 8.483 9.00333 8.5652C9.00333 8.64741 8.98711 8.72881 8.95561 8.80475C8.9241 8.88068 8.87792 8.94965 8.81971 9.0077L1.31972 16.5077C1.20236 16.6251 1.04319 16.691 0.877216 16.691C0.711246 16.691 0.552074 16.6251 0.434715 16.5077C0.317357 16.3903 0.251426 16.2312 0.251426 16.0652C0.251426 15.8992 0.317357 15.7401 0.434715 15.6227L7.49347 8.5652L0.434715 1.5077C0.376511 1.44965 0.330333 1.38068 0.298825 1.30475C0.267317 1.22881 0.251099 1.14741 0.251099 1.0652C0.251099 0.982995 0.267317 0.901594 0.298825 0.825662C0.330333 0.749731 0.376511 0.680761 0.434715 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text position-absolute d-flex align-items-center gap-2">
+                                        <div class="rating d-flex align-items-center gap-2">
+                                            <div class="star d-flex align-items-center gap-1">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/half-yellow-star.svg" alt="">
+                                            </div>
+                                            <span class="fw-medium">4,8</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/hand.svg" alt="">
+                                            <span>1050</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/msg-icon.svg" alt="">
+                                            <span>6987</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-tour__card-body py-4 px-3">
+                                    <h3 class="fw-medium">Автобусная экскурсия по Минску</h3>
+                                    <div class="description">Испытайте удовольствие от езды на комфортабельном автобусе, которую начнем с Привокзальной площади, прокатившись по влиятельному …</div>
+                                    <ul class="d-flex flex-column gap-1 mb-4">
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Сложность</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Легкий</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Комфорт</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Выше среднего</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="price mb-2">
+                                        <b>80 500 ₽</b> / 6 дней
+                                    </div>
+                                    <div class="date d-flex align-items-center gap-1">
+                                        15 – 21 дек.
+                                        <p class="d-flex align-items-center gap-1 fw-semibold">
+                                            <span>+140 даты</span>
+                                            <img src="./assets/images/calendar-blue.svg" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide new-tour__card overflow-hidden position-relative">
+                                <div class="new-tour__card-head position-relative">
+                                    <div class="swiper">
+                                        <button class="swip-btn swip-btn__prev">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.81971 0.622704C8.87792 0.680761 8.9241 0.749731 8.95561 0.825662C8.98711 0.901594 9.00333 0.982995 9.00333 1.0652C9.00333 1.14741 8.98711 1.22881 8.95561 1.30475C8.9241 1.38068 8.87792 1.44965 8.81971 1.5077L1.76097 8.5652L8.81971 15.6227C8.93707 15.7401 9.003 15.8992 9.003 16.0652C9.003 16.2312 8.93707 16.3903 8.81971 16.5077C8.70236 16.6251 8.54318 16.691 8.37721 16.691C8.21125 16.691 8.05207 16.6251 7.93471 16.5077L0.434715 9.0077C0.376511 8.94965 0.330333 8.88068 0.298825 8.80475C0.267317 8.72881 0.251099 8.64741 0.251099 8.5652C0.251099 8.483 0.267317 8.40159 0.298825 8.32566C0.330333 8.24973 0.376511 8.18076 0.434715 8.1227L7.93471 0.622704C7.99277 0.5645 8.06174 0.518322 8.13767 0.486814C8.2136 0.455305 8.29501 0.439087 8.37721 0.439087C8.45942 0.439087 8.54082 0.455305 8.61676 0.486814C8.69269 0.518322 8.76166 0.5645 8.81971 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <button class="swip-btn swip-btn__next">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.434715 0.622704C0.492773 0.5645 0.561742 0.518322 0.637673 0.486814C0.713605 0.455305 0.795006 0.439087 0.877216 0.439087C0.959425 0.439087 1.04083 0.455305 1.11676 0.486814C1.19269 0.518322 1.26166 0.5645 1.31972 0.622704L8.81971 8.1227C8.87792 8.18076 8.9241 8.24973 8.95561 8.32566C8.98711 8.40159 9.00333 8.483 9.00333 8.5652C9.00333 8.64741 8.98711 8.72881 8.95561 8.80475C8.9241 8.88068 8.87792 8.94965 8.81971 9.0077L1.31972 16.5077C1.20236 16.6251 1.04319 16.691 0.877216 16.691C0.711246 16.691 0.552074 16.6251 0.434715 16.5077C0.317357 16.3903 0.251426 16.2312 0.251426 16.0652C0.251426 15.8992 0.317357 15.7401 0.434715 15.6227L7.49347 8.5652L0.434715 1.5077C0.376511 1.44965 0.330333 1.38068 0.298825 1.30475C0.267317 1.22881 0.251099 1.14741 0.251099 1.0652C0.251099 0.982995 0.267317 0.901594 0.298825 0.825662C0.330333 0.749731 0.376511 0.680761 0.434715 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text position-absolute d-flex align-items-center gap-2">
+                                        <div class="rating d-flex align-items-center gap-2">
+                                            <div class="star d-flex align-items-center gap-1">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/half-yellow-star.svg" alt="">
+                                            </div>
+                                            <span class="fw-medium">4,8</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/hand.svg" alt="">
+                                            <span>1050</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/msg-icon.svg" alt="">
+                                            <span>6987</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-tour__card-body py-4 px-3">
+                                    <h3 class="fw-medium">Автобусная экскурсия по Минску</h3>
+                                    <div class="description">Испытайте удовольствие от езды на комфортабельном автобусе, которую начнем с Привокзальной площади, прокатившись по влиятельному …</div>
+                                    <ul class="d-flex flex-column gap-1 mb-4">
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Сложность</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Легкий</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Комфорт</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Выше среднего</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="price mb-2">
+                                        <b>80 500 ₽</b> / 6 дней
+                                    </div>
+                                    <div class="date d-flex align-items-center gap-1">
+                                        15 – 21 дек.
+                                        <p class="d-flex align-items-center gap-1 fw-semibold">
+                                            <span>+140 даты</span>
+                                            <img src="./assets/images/calendar-blue.svg" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide new-tour__card overflow-hidden position-relative">
+                                <div class="new-tour__card-head position-relative">
+                                    <div class="swiper">
+                                        <button class="swip-btn swip-btn__prev">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.81971 0.622704C8.87792 0.680761 8.9241 0.749731 8.95561 0.825662C8.98711 0.901594 9.00333 0.982995 9.00333 1.0652C9.00333 1.14741 8.98711 1.22881 8.95561 1.30475C8.9241 1.38068 8.87792 1.44965 8.81971 1.5077L1.76097 8.5652L8.81971 15.6227C8.93707 15.7401 9.003 15.8992 9.003 16.0652C9.003 16.2312 8.93707 16.3903 8.81971 16.5077C8.70236 16.6251 8.54318 16.691 8.37721 16.691C8.21125 16.691 8.05207 16.6251 7.93471 16.5077L0.434715 9.0077C0.376511 8.94965 0.330333 8.88068 0.298825 8.80475C0.267317 8.72881 0.251099 8.64741 0.251099 8.5652C0.251099 8.483 0.267317 8.40159 0.298825 8.32566C0.330333 8.24973 0.376511 8.18076 0.434715 8.1227L7.93471 0.622704C7.99277 0.5645 8.06174 0.518322 8.13767 0.486814C8.2136 0.455305 8.29501 0.439087 8.37721 0.439087C8.45942 0.439087 8.54082 0.455305 8.61676 0.486814C8.69269 0.518322 8.76166 0.5645 8.81971 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <button class="swip-btn swip-btn__next">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.434715 0.622704C0.492773 0.5645 0.561742 0.518322 0.637673 0.486814C0.713605 0.455305 0.795006 0.439087 0.877216 0.439087C0.959425 0.439087 1.04083 0.455305 1.11676 0.486814C1.19269 0.518322 1.26166 0.5645 1.31972 0.622704L8.81971 8.1227C8.87792 8.18076 8.9241 8.24973 8.95561 8.32566C8.98711 8.40159 9.00333 8.483 9.00333 8.5652C9.00333 8.64741 8.98711 8.72881 8.95561 8.80475C8.9241 8.88068 8.87792 8.94965 8.81971 9.0077L1.31972 16.5077C1.20236 16.6251 1.04319 16.691 0.877216 16.691C0.711246 16.691 0.552074 16.6251 0.434715 16.5077C0.317357 16.3903 0.251426 16.2312 0.251426 16.0652C0.251426 15.8992 0.317357 15.7401 0.434715 15.6227L7.49347 8.5652L0.434715 1.5077C0.376511 1.44965 0.330333 1.38068 0.298825 1.30475C0.267317 1.22881 0.251099 1.14741 0.251099 1.0652C0.251099 0.982995 0.267317 0.901594 0.298825 0.825662C0.330333 0.749731 0.376511 0.680761 0.434715 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text position-absolute d-flex align-items-center gap-2">
+                                        <div class="rating d-flex align-items-center gap-2">
+                                            <div class="star d-flex align-items-center gap-1">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/half-yellow-star.svg" alt="">
+                                            </div>
+                                            <span class="fw-medium">4,8</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/hand.svg" alt="">
+                                            <span>1050</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/msg-icon.svg" alt="">
+                                            <span>6987</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-tour__card-body py-4 px-3">
+                                    <h3 class="fw-medium">Автобусная экскурсия по Минску</h3>
+                                    <div class="description">Испытайте удовольствие от езды на комфортабельном автобусе, которую начнем с Привокзальной площади, прокатившись по влиятельному …</div>
+                                    <ul class="d-flex flex-column gap-1 mb-4">
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Сложность</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Легкий</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Комфорт</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Выше среднего</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="price mb-2">
+                                        <b>80 500 ₽</b> / 6 дней
+                                    </div>
+                                    <div class="date d-flex align-items-center gap-1">
+                                        15 – 21 дек.
+                                        <p class="d-flex align-items-center gap-1 fw-semibold">
+                                            <span>+140 даты</span>
+                                            <img src="./assets/images/calendar-blue.svg" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide new-tour__card overflow-hidden position-relative">
+                                <div class="new-tour__card-head position-relative">
+                                    <div class="swiper">
+                                        <button class="swip-btn swip-btn__prev">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.81971 0.622704C8.87792 0.680761 8.9241 0.749731 8.95561 0.825662C8.98711 0.901594 9.00333 0.982995 9.00333 1.0652C9.00333 1.14741 8.98711 1.22881 8.95561 1.30475C8.9241 1.38068 8.87792 1.44965 8.81971 1.5077L1.76097 8.5652L8.81971 15.6227C8.93707 15.7401 9.003 15.8992 9.003 16.0652C9.003 16.2312 8.93707 16.3903 8.81971 16.5077C8.70236 16.6251 8.54318 16.691 8.37721 16.691C8.21125 16.691 8.05207 16.6251 7.93471 16.5077L0.434715 9.0077C0.376511 8.94965 0.330333 8.88068 0.298825 8.80475C0.267317 8.72881 0.251099 8.64741 0.251099 8.5652C0.251099 8.483 0.267317 8.40159 0.298825 8.32566C0.330333 8.24973 0.376511 8.18076 0.434715 8.1227L7.93471 0.622704C7.99277 0.5645 8.06174 0.518322 8.13767 0.486814C8.2136 0.455305 8.29501 0.439087 8.37721 0.439087C8.45942 0.439087 8.54082 0.455305 8.61676 0.486814C8.69269 0.518322 8.76166 0.5645 8.81971 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <button class="swip-btn swip-btn__next">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.434715 0.622704C0.492773 0.5645 0.561742 0.518322 0.637673 0.486814C0.713605 0.455305 0.795006 0.439087 0.877216 0.439087C0.959425 0.439087 1.04083 0.455305 1.11676 0.486814C1.19269 0.518322 1.26166 0.5645 1.31972 0.622704L8.81971 8.1227C8.87792 8.18076 8.9241 8.24973 8.95561 8.32566C8.98711 8.40159 9.00333 8.483 9.00333 8.5652C9.00333 8.64741 8.98711 8.72881 8.95561 8.80475C8.9241 8.88068 8.87792 8.94965 8.81971 9.0077L1.31972 16.5077C1.20236 16.6251 1.04319 16.691 0.877216 16.691C0.711246 16.691 0.552074 16.6251 0.434715 16.5077C0.317357 16.3903 0.251426 16.2312 0.251426 16.0652C0.251426 15.8992 0.317357 15.7401 0.434715 15.6227L7.49347 8.5652L0.434715 1.5077C0.376511 1.44965 0.330333 1.38068 0.298825 1.30475C0.267317 1.22881 0.251099 1.14741 0.251099 1.0652C0.251099 0.982995 0.267317 0.901594 0.298825 0.825662C0.330333 0.749731 0.376511 0.680761 0.434715 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text position-absolute d-flex align-items-center gap-2">
+                                        <div class="rating d-flex align-items-center gap-2">
+                                            <div class="star d-flex align-items-center gap-1">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/half-yellow-star.svg" alt="">
+                                            </div>
+                                            <span class="fw-medium">4,8</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/hand.svg" alt="">
+                                            <span>1050</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/msg-icon.svg" alt="">
+                                            <span>6987</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-tour__card-body py-4 px-3">
+                                    <h3 class="fw-medium">Автобусная экскурсия по Минску</h3>
+                                    <div class="description">Испытайте удовольствие от езды на комфортабельном автобусе, которую начнем с Привокзальной площади, прокатившись по влиятельному …</div>
+                                    <ul class="d-flex flex-column gap-1 mb-4">
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Сложность</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Легкий</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Комфорт</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Выше среднего</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="price mb-2">
+                                        <b>80 500 ₽</b> / 6 дней
+                                    </div>
+                                    <div class="date d-flex align-items-center gap-1">
+                                        15 – 21 дек.
+                                        <p class="d-flex align-items-center gap-1 fw-semibold">
+                                            <span>+140 даты</span>
+                                            <img src="./assets/images/calendar-blue.svg" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide new-tour__card overflow-hidden position-relative">
+                                <div class="new-tour__card-head position-relative">
+                                    <div class="swiper">
+                                        <button class="swip-btn swip-btn__prev">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.81971 0.622704C8.87792 0.680761 8.9241 0.749731 8.95561 0.825662C8.98711 0.901594 9.00333 0.982995 9.00333 1.0652C9.00333 1.14741 8.98711 1.22881 8.95561 1.30475C8.9241 1.38068 8.87792 1.44965 8.81971 1.5077L1.76097 8.5652L8.81971 15.6227C8.93707 15.7401 9.003 15.8992 9.003 16.0652C9.003 16.2312 8.93707 16.3903 8.81971 16.5077C8.70236 16.6251 8.54318 16.691 8.37721 16.691C8.21125 16.691 8.05207 16.6251 7.93471 16.5077L0.434715 9.0077C0.376511 8.94965 0.330333 8.88068 0.298825 8.80475C0.267317 8.72881 0.251099 8.64741 0.251099 8.5652C0.251099 8.483 0.267317 8.40159 0.298825 8.32566C0.330333 8.24973 0.376511 8.18076 0.434715 8.1227L7.93471 0.622704C7.99277 0.5645 8.06174 0.518322 8.13767 0.486814C8.2136 0.455305 8.29501 0.439087 8.37721 0.439087C8.45942 0.439087 8.54082 0.455305 8.61676 0.486814C8.69269 0.518322 8.76166 0.5645 8.81971 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <button class="swip-btn swip-btn__next">
+                                            <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.434715 0.622704C0.492773 0.5645 0.561742 0.518322 0.637673 0.486814C0.713605 0.455305 0.795006 0.439087 0.877216 0.439087C0.959425 0.439087 1.04083 0.455305 1.11676 0.486814C1.19269 0.518322 1.26166 0.5645 1.31972 0.622704L8.81971 8.1227C8.87792 8.18076 8.9241 8.24973 8.95561 8.32566C8.98711 8.40159 9.00333 8.483 9.00333 8.5652C9.00333 8.64741 8.98711 8.72881 8.95561 8.80475C8.9241 8.88068 8.87792 8.94965 8.81971 9.0077L1.31972 16.5077C1.20236 16.6251 1.04319 16.691 0.877216 16.691C0.711246 16.691 0.552074 16.6251 0.434715 16.5077C0.317357 16.3903 0.251426 16.2312 0.251426 16.0652C0.251426 15.8992 0.317357 15.7401 0.434715 15.6227L7.49347 8.5652L0.434715 1.5077C0.376511 1.44965 0.330333 1.38068 0.298825 1.30475C0.267317 1.22881 0.251099 1.14741 0.251099 1.0652C0.251099 0.982995 0.267317 0.901594 0.298825 0.825662C0.330333 0.749731 0.376511 0.680761 0.434715 0.622704Z" fill="black" />
+                                            </svg>
+                                        </button>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/new-tour-card-3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text position-absolute d-flex align-items-center gap-2">
+                                        <div class="rating d-flex align-items-center gap-2">
+                                            <div class="star d-flex align-items-center gap-1">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/yellow-star.svg" alt="">
+                                                <img src="./assets/images/half-yellow-star.svg" alt="">
+                                            </div>
+                                            <span class="fw-medium">4,8</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/hand.svg" alt="">
+                                            <span>1050</span>
+                                        </div>
+                                        <div class="text-item d-flex align-items-center gap-1 fw-medium">
+                                            <img src="./assets/images/msg-icon.svg" alt="">
+                                            <span>6987</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-tour__card-body py-4 px-3">
+                                    <h3 class="fw-medium">Автобусная экскурсия по Минску</h3>
+                                    <div class="description">Испытайте удовольствие от езды на комфортабельном автобусе, которую начнем с Привокзальной площади, прокатившись по влиятельному …</div>
+                                    <ul class="d-flex flex-column gap-1 mb-4">
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Сложность</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Легкий</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span>Комфорт</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <p>Выше среднего</p>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot active"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="price mb-2">
+                                        <b>80 500 ₽</b> / 6 дней
+                                    </div>
+                                    <div class="date d-flex align-items-center gap-1">
+                                        15 – 21 дек.
+                                        <p class="d-flex align-items-center gap-1 fw-semibold">
+                                            <span>+140 даты</span>
+                                            <img src="./assets/images/calendar-blue.svg" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-tour__foot d-none d-lg-flex align-items-center justify-content-between w-100">
+                        <div class="swip-pagination"></div>
+                        <div class="swip-btn__wrap d-flex align-items-center gap-3">
+                            <button class="swip-btn swip-btn__prev">
+                                <img src="./assets/images/swiper-prev.svg" alt="">
+                            </button>
+                            <button class="swip-btn swip-btn__next">
+                                <img src="./assets/images/swiper-next.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- New tour end -->
+
+            <!-- Choice -->
+            <section class="choice">
+                <div class="container position-relative">
+                    <h2 class="fw-bold mb-1">Сложно сделать выбор?</h2>
+                    <div class="description mb-4">Подберём для вас лучший тур за несколько минут</div>
+                    <div class="choice-form d-flex align-items-center justify-content-between bg-white position-relative mb-3">
+                        <div>
+                            <label for="" class="position-absolute">Ваш номер телефона</label>
+                            <input type="tel" placeholder="+7">
+                        </div>
+                        <button class="fw-semibold">Перезвоните мне</button>
+                    </div>
+                    <div class="checkbox d-flex align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center position-relative flex-shrink-0">
+                            <input type="checkbox" name="" id="" class="position-absolute top-0 start-0 w-100 h-100">
+                            <img src="./assets/images/check-icon.svg" width="16" alt="">
+                        </div>
+                        <p>Я <a href="#" class="d-inline">согласен</a> на обработку своих персональных данных согласно <a href="#" class="d-inline">политике защиты и обработки персональных данных</a></p>
+                    </div>
+                    <img src="./assets/images/choice-card.png" alt="" class="main-img position-absolute bottom-0">
+                </div>
+            </section>
+            <!-- Choice end -->
+
+            <!-- Location -->
+            <section class="location">
+                <div class="container position-relative">
+                    <img src="./assets/images/location-bg.png" alt="" class="bg-img position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                    <h2 class="fw-bold text-white">Начните приключение с выбора континента</h2>
+                    <p class="text-white">Больше 1000 идей для путешествий по всему миру</p>
+                    <ul class="d-flex align-items-start justify-content-between">
+                        <li class="d-flex flex-column align-items-center">
+                            <img src="./assets/images/map-location.svg" alt="">
+                            <h3 class="fw-semibold text-center">Европа</h3>
+                        </li>
+                        <li class="d-flex flex-column align-items-center">
+                            <img src="./assets/images/map-location.svg" alt="">
+                            <h3 class="fw-semibold text-center">Азия</h3>
+                        </li>
+                        <li class="d-flex flex-column align-items-center">
+                            <img src="./assets/images/map-location.svg" alt="">
+                            <h3 class="fw-semibold text-center">Африка</h3>
+                        </li>
+                        <li class="d-flex flex-column align-items-center">
+                            <img src="./assets/images/map-location.svg" alt="">
+                            <h3 class="fw-semibold text-center">Южная америка</h3>
+                        </li>
+                        <li class="d-flex flex-column align-items-center">
+                            <img src="./assets/images/map-location.svg" alt="">
+                            <h3 class="fw-semibold text-center">Северная америка</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Location end -->
+
+            <!-- Tour place -->
+            <section class="tour-place">
+                <div class="container">
+                    <h2 class="fw-bold">Куда уже можно ехать?</h2>
+                    <p class="description">Мы тщательно следим за открытием границ и подбираем проверенные варианты</p>
+                    <div class="tour-place__card-wrap">
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-1.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <div class="alert position-absolute fw-medium">Скидки до 40%</div>
+                            <h3 class="fw-semibold">Абхазия</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-2.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Черногория</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-3.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Сербия</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-4.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Вьетнам</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-1.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <div class="alert position-absolute fw-medium">Скидки до 40%</div>
+                            <h3 class="fw-semibold">Абхазия</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-2.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Черногория</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-3.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Сербия</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-4.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Вьетнам</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-1.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <div class="alert position-absolute fw-medium">Скидки до 40%</div>
+                            <h3 class="fw-semibold">Абхазия</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-2.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Черногория</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-3.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Сербия</h3>
+                        </div>
+                        <div class="tour-place__card position-relative overflow-hidden d-flex flex-column justify-content-end">
+                            <img src="./assets/images/tour-place-card-4.png" alt="" class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover">
+                            <h3 class="fw-semibold">Вьетнам</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Tour place end -->
+
+            <!-- Reviews -->
+            <section class="reviews">
+                <div class="container">
+                    <h2 class="fw-semibold mb-4 text-center">Отзывы путешественников</h2>
+                    <div class="position-relative">
+                        <button class="btn-prev position-absolute">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.3805 6.01415C16.4773 5.92086 16.5543 5.80902 16.6068 5.68532C16.6594 5.56161 16.6865 5.42857 16.6865 5.29415C16.6865 5.15973 16.6594 5.02669 16.6068 4.90298C16.5543 4.77927 16.4773 4.66743 16.3805 4.57415L16.1525 4.35415C15.9661 4.1742 15.7171 4.07364 15.458 4.07364C15.1989 4.07364 14.9499 4.1742 14.7635 4.35415L6.8735 11.9651C6.77672 12.0584 6.69973 12.1703 6.64715 12.294C6.59457 12.4177 6.56747 12.5507 6.56747 12.6851C6.56747 12.8196 6.59457 12.9526 6.64715 13.0763C6.69973 13.2 6.77672 13.3119 6.8735 13.4051L14.7635 21.0151C14.9499 21.1951 15.1989 21.2957 15.458 21.2957C15.7171 21.2957 15.9661 21.1951 16.1525 21.0151L16.3805 20.7951C16.4771 20.7019 16.554 20.5901 16.6065 20.4665C16.659 20.3429 16.686 20.2099 16.686 20.0756C16.686 19.9413 16.659 19.8084 16.6065 19.6848C16.554 19.5612 16.4771 19.4494 16.3805 19.3561L9.4635 12.6851L16.3805 6.01415Z" fill="#202020" />
+                            </svg>
+                        </button>
+                        <button class="btn-next position-absolute">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.87341 19.356C7.77663 19.4493 7.69964 19.5611 7.64706 19.6848C7.59448 19.8085 7.56738 19.9416 7.56738 20.076C7.56738 20.2104 7.59448 20.3434 7.64706 20.4671C7.69964 20.5908 7.77663 20.7027 7.87341 20.796L8.10141 21.016C8.28783 21.1959 8.53681 21.2965 8.79591 21.2965C9.05501 21.2965 9.30399 21.1959 9.49041 21.016L17.3804 13.405C17.4772 13.3117 17.5542 13.1998 17.6068 13.0761C17.6593 12.9524 17.6864 12.8194 17.6864 12.685C17.6864 12.5506 17.6593 12.4175 17.6068 12.2938C17.5542 12.1701 17.4772 12.0583 17.3804 11.965L9.49041 4.35497C9.30399 4.17503 9.05501 4.07446 8.79591 4.07446C8.53681 4.07446 8.28783 4.17503 8.10141 4.35497L7.87341 4.57497C7.77678 4.66824 7.69993 4.78002 7.64744 4.90363C7.59495 5.02725 7.5679 5.16017 7.5679 5.29447C7.5679 5.42877 7.59495 5.56169 7.64744 5.68531C7.69993 5.80892 7.77678 5.9207 7.87341 6.01397L14.7904 12.685L7.87341 19.356Z" fill="#202020" />
+                            </svg>
+                        </button>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide reviews-card p-3">
+                                    <div class="reviews-card__head d-flex flex-column flex-lg-row gap-3 gap-lg-2 align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/images/user-logo-1.png" alt="" width="40" height="40" class="logo-img rounded-circle object-fit-cover">
+                                            <div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <h3 class="fw-medium">Лилия</h3>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>Опыт: 8 экскурсий</p>
+                                            </div>
+                                        </div>
+                                        <p>29 сентября 2025</p>
+                                    </div>
+                                    <div class="reviews-card__body mb-3">
+                                        <h4 class="fw-medium">Фотопрогулка по скрытым уголкам Тбилиси</h4>
+                                        <p>Три насыщенных часа по невероятным улочкам Старого Тбилиси! Непринужденная творческая прогулка, по итогу которой на руках около 400 шикарных снимков на память, и незабываемые воспоминания! Я очень рада, что выбрала этот формат и…</p>
+                                    </div>
+                                    <ul class="reviews-card__foot d-flex align-items-center gap-2">
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li class="position-relative">
+                                            <img src="./assets/images/reviews-card-1-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            <span class="position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center fw-medium">+4</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide reviews-card p-3">
+                                    <div class="reviews-card__head d-flex flex-column flex-lg-row gap-3 gap-lg-2 align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/images/user-logo-1.png" alt="" width="40" height="40" class="logo-img rounded-circle object-fit-cover">
+                                            <div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <h3 class="fw-medium">Лилия</h3>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>Опыт: 8 экскурсий</p>
+                                            </div>
+                                        </div>
+                                        <p>29 сентября 2025</p>
+                                    </div>
+                                    <div class="reviews-card__body mb-3">
+                                        <h4 class="fw-medium">Фотопрогулка по скрытым уголкам Тбилиси</h4>
+                                        <p>Три насыщенных часа по невероятным улочкам Старого Тбилиси! Непринужденная творческая прогулка, по итогу которой на руках около 400 шикарных снимков на память, и незабываемые воспоминания! Я очень рада, что выбрала этот формат и…</p>
+                                    </div>
+                                    <ul class="reviews-card__foot d-flex align-items-center gap-2">
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li class="position-relative">
+                                            <img src="./assets/images/reviews-card-1-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            <span class="position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center fw-medium">+4</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide reviews-card p-3">
+                                    <div class="reviews-card__head d-flex flex-column flex-lg-row gap-3 gap-lg-2 align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/images/user-logo-1.png" alt="" width="40" height="40" class="logo-img rounded-circle object-fit-cover">
+                                            <div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <h3 class="fw-medium">Лилия</h3>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>Опыт: 8 экскурсий</p>
+                                            </div>
+                                        </div>
+                                        <p>29 сентября 2025</p>
+                                    </div>
+                                    <div class="reviews-card__body mb-3">
+                                        <h4 class="fw-medium">Фотопрогулка по скрытым уголкам Тбилиси</h4>
+                                        <p>Три насыщенных часа по невероятным улочкам Старого Тбилиси! Непринужденная творческая прогулка, по итогу которой на руках около 400 шикарных снимков на память, и незабываемые воспоминания! Я очень рада, что выбрала этот формат и…</p>
+                                    </div>
+                                    <ul class="reviews-card__foot d-flex align-items-center gap-2">
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li class="position-relative">
+                                            <img src="./assets/images/reviews-card-1-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            <span class="position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center fw-medium">+4</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide reviews-card p-3">
+                                    <div class="reviews-card__head d-flex flex-column flex-lg-row gap-3 gap-lg-2 align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/images/user-logo-1.png" alt="" width="40" height="40" class="logo-img rounded-circle object-fit-cover">
+                                            <div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <h3 class="fw-medium">Лилия</h3>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>Опыт: 8 экскурсий</p>
+                                            </div>
+                                        </div>
+                                        <p>29 сентября 2025</p>
+                                    </div>
+                                    <div class="reviews-card__body mb-3">
+                                        <h4 class="fw-medium">Фотопрогулка по скрытым уголкам Тбилиси</h4>
+                                        <p>Три насыщенных часа по невероятным улочкам Старого Тбилиси! Непринужденная творческая прогулка, по итогу которой на руках около 400 шикарных снимков на память, и незабываемые воспоминания! Я очень рада, что выбрала этот формат и…</p>
+                                    </div>
+                                    <ul class="reviews-card__foot d-flex align-items-center gap-2">
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li class="position-relative">
+                                            <img src="./assets/images/reviews-card-1-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            <span class="position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center fw-medium">+4</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide reviews-card p-3">
+                                    <div class="reviews-card__head d-flex flex-column flex-lg-row gap-3 gap-lg-2 align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/images/user-logo-1.png" alt="" width="40" height="40" class="logo-img rounded-circle object-fit-cover">
+                                            <div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <h3 class="fw-medium">Лилия</h3>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>Опыт: 8 экскурсий</p>
+                                            </div>
+                                        </div>
+                                        <p>29 сентября 2025</p>
+                                    </div>
+                                    <div class="reviews-card__body mb-3">
+                                        <h4 class="fw-medium">Фотопрогулка по скрытым уголкам Тбилиси</h4>
+                                        <p>Три насыщенных часа по невероятным улочкам Старого Тбилиси! Непринужденная творческая прогулка, по итогу которой на руках около 400 шикарных снимков на память, и незабываемые воспоминания! Я очень рада, что выбрала этот формат и…</p>
+                                    </div>
+                                    <ul class="reviews-card__foot d-flex align-items-center gap-2">
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li class="position-relative">
+                                            <img src="./assets/images/reviews-card-1-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            <span class="position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center fw-medium">+4</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide reviews-card p-3">
+                                    <div class="reviews-card__head d-flex flex-column flex-lg-row gap-3 gap-lg-2 align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/images/user-logo-1.png" alt="" width="40" height="40" class="logo-img rounded-circle object-fit-cover">
+                                            <div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <h3 class="fw-medium">Лилия</h3>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                        <img src="./assets/images/star-red.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>Опыт: 8 экскурсий</p>
+                                            </div>
+                                        </div>
+                                        <p>29 сентября 2025</p>
+                                    </div>
+                                    <div class="reviews-card__body mb-3">
+                                        <h4 class="fw-medium">Фотопрогулка по скрытым уголкам Тбилиси</h4>
+                                        <p>Три насыщенных часа по невероятным улочкам Старого Тбилиси! Непринужденная творческая прогулка, по итогу которой на руках около 400 шикарных снимков на память, и незабываемые воспоминания! Я очень рада, что выбрала этот формат и…</p>
+                                    </div>
+                                    <ul class="reviews-card__foot d-flex align-items-center gap-2">
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-2.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-3.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/reviews-card-1-4.png" alt="" class="w-100 h-100 object-fit-cover">
+                                        </li>
+                                        <li class="position-relative">
+                                            <img src="./assets/images/reviews-card-1-5.png" alt="" class="w-100 h-100 object-fit-cover">
+                                            <span class="position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center fw-medium">+4</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Reviews end -->
+
+            <!-- Blog -->
+            <section class="blog">
+                <div class="container">
+                    <h2 class="fw-bold">Читайте в нашем блоге</h2>
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="blog-card">
+                                <div class="main-img overflow-hidden mb-3">
+                                    <img src="./assets/images/blog-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="date mb-2 pb-1">30 сентября 2025</div>
+                                <h3 class="fw-bold">Лучшие места ЮАР для незабываемого путешествия</h3>
+                                <p>ЮАР невероятно многогранна: у ее берегов встречаются два океана, а на суше саванны и древние горы соседствуют с яркими мегаполисами. Это одно из лучших мест для знакомства с уникальной африканской природой. Ежегодн</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="blog-card">
+                                <div class="main-img overflow-hidden mb-3">
+                                    <img src="./assets/images/blog-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="date mb-2 pb-1">30 сентября 2025</div>
+                                <h3 class="fw-bold">Главные вершины Европы: от Кавказа до Альп</h3>
+                                <p>Европа знаменита не только старинными городами и богатым культурным наследием. Это еще и континент, небо которого пронзают горные хребты: от суровых ледников Кавказа до живописных Альп, мистических Пиренеев и</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="blog-card">
+                                <div class="main-img overflow-hidden mb-3">
+                                    <img src="./assets/images/blog-card-1.png" alt="" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="date mb-2 pb-1">30 сентября 2025</div>
+                                <h3 class="fw-bold">Знаменитые вулканы Индонезии, которые стоит увидеть</h3>
+                                <p>Среди всех чудес Индонезии вулканы стоит поставить на первое место. Именно здесь можно увидеть самое яркое и масштабное проявление вулканической активности. Государство занимает большой архипелаг между Индийск</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-gray w-100 d-flex align-items-center justify-content-center p-0 fw-semibold">Смотреть все статьи</a>
+                </div>
+            </section>
+            <!-- Blog end -->
+
+            <!-- Collections -->
+            <section class="collections">
+                <div class="container">
+                    <h2 class="fw-bold">Подборки для ваших впечателний</h2>
+                    <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between gap-2 gap-lg-4">
+                        <div class="d-flex flex-row flex-lg-column gap-2 tab-head flex-shrink-0" id="tab" role="tablist">
+                            <button class="active" id="tab-link-1" data-bs-toggle="tab" data-bs-target="#tab-item-1" type="button" role="tab" aria-controls="tab-link-1" aria-selected="true">Регионы</button>
+                            <button id="tab-link-2" data-bs-toggle="tab" data-bs-target="#tab-item-2" type="button" role="tab" aria-controls="tab-link-2" aria-selected="false">Коллекции</button>
+                            <button id="tab-link-3" data-bs-toggle="tab" data-bs-target="#tab-item-3" type="button" role="tab" aria-controls="tab-link-3" aria-selected="false">Виды отдыха</button>
+                            <button id="tab-link-4" data-bs-toggle="tab" data-bs-target="#tab-item-4" type="button" role="tab" aria-controls="tab-link-4" aria-selected="false">Сезоны</button>
+                            <button id="tab-link-5" data-bs-toggle="tab" data-bs-target="#tab-item-5" type="button" role="tab" aria-controls="tab-link-5" aria-selected="false">По месяцам</button>
+                            <button id="tab-link-6" data-bs-toggle="tab" data-bs-target="#tab-item-6" type="button" role="tab" aria-controls="tab-link-6" aria-selected="false">На праздники</button>
+                            <button id="tab-link-7" data-bs-toggle="tab" data-bs-target="#tab-item-7" type="button" role="tab" aria-controls="tab-link-7" aria-selected="false">По цене</button>
+                        </div>
+                        <div class="tab-content" id="tabContent">
+                            <div class="tab-pane fade show active" id="tab-item-1" role="tabpanel" aria-labelledby="tab-link-1" tabindex="0">
+                                <ul>
+                                    <li><a href="#">Авсаллар</a></li>
+                                    <li><a href="#">Адана</a></li>
+                                    <li><a href="#">Аджису</a></li>
+                                    <li><a href="#">Аксарай</a></li>
+                                    <li><a href="#">Аланья</a></li>
+                                    <li><a href="#">Анкара</a></li>
+                                    <li><a href="#">Анталья</a></li>
+                                    <li><a href="#">Арнавуткёй</a></li>
+                                    <li><a href="#">Афьонкарахисар</a></li>
+                                    <li><a href="#">Бахчелиэвлер</a></li>
+                                    <li><a href="#">Бейоглу (Пера)</a></li>
+                                    <li><a href="#">Белек</a></li>
+                                    <li><a href="#">Бельдиби</a></li>
+                                    <li><a href="#">Бешикташ</a></li>
+                                    <li><a href="#">Беязыт</a></li>
+                                    <li><a href="#">Богазкент</a></li>
+                                    <li><a href="#">Бодрум</a></li>
+                                    <li><a href="#">Бурса</a></li>
+                                    <li><a href="#">Геджек</a></li>
+                                    <li><a href="#">Гёйнюк</a></li>
+                                    <li><a href="#">Гюмюлдур</a></li>
+                                    <li><a href="#">Даламан</a></li>
+                                    <li><a href="#">Дальян</a></li>
+                                    <li><a href="#">Дидим</a></li>
+                                    <li><a href="#">Еникапы</a></li>
+                                    <li><a href="#">Зейтинбурну</a></li>
+                                    <li><a href="#">Измир</a></li>
+                                    <li><a href="#">Илерибаши</a></li>
+                                    <li><a href="#">Инжекум</a></li>
+                                    <li><a href="#">Искелемевкии</a></li>
+                                    <li><a href="#">Кадрие</a></li>
+                                    <li><a href="#">Кайсери</a></li>
+                                    <li><a href="#">Калкан</a></li>
+                                    <li><a href="#">Каппадокия</a></li>
+                                    <li><a href="#">Каракой</a></li>
+                                    <li><a href="#">Каргыджак</a></li>
+                                    <li><a href="#">Каш</a></li>
+                                    <li><a href="#">Кемер</a></li>
+                                    <li><a href="#">Кестель</a></li>
+                                    <li><a href="#">Кизилагач</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-semibold">
+                                        <span>Показать всё</span>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.57087 2.11932C8.38217 1.84414 8.05074 1.81227 7.83059 2.04814L4.49727 5.61956L1.16394 2.04814C0.943793 1.81227 0.61236 1.84414 0.423665 2.11932C0.234969 2.39449 0.260464 2.80879 0.480607 3.04465L4.15561 6.98215C4.35221 7.1928 4.64232 7.1928 4.83893 6.98215L8.51392 3.04465C8.73407 2.80879 8.75956 2.39449 8.57087 2.11932Z" fill="#3D95FB" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-item-2" role="tabpanel" aria-labelledby="tab-link-2" tabindex="0">
+                                <ul>
+                                    <li><a href="#">Авсаллар 2</a></li>
+                                    <li><a href="#">Адана</a></li>
+                                    <li><a href="#">Аджису</a></li>
+                                    <li><a href="#">Аксарай</a></li>
+                                    <li><a href="#">Аланья</a></li>
+                                    <li><a href="#">Анкара</a></li>
+                                    <li><a href="#">Анталья</a></li>
+                                    <li><a href="#">Арнавуткёй</a></li>
+                                    <li><a href="#">Афьонкарахисар</a></li>
+                                    <li><a href="#">Бахчелиэвлер</a></li>
+                                    <li><a href="#">Бейоглу (Пера)</a></li>
+                                    <li><a href="#">Белек</a></li>
+                                    <li><a href="#">Бельдиби</a></li>
+                                    <li><a href="#">Бешикташ</a></li>
+                                    <li><a href="#">Беязыт</a></li>
+                                    <li><a href="#">Богазкент</a></li>
+                                    <li><a href="#">Бодрум</a></li>
+                                    <li><a href="#">Бурса</a></li>
+                                    <li><a href="#">Геджек</a></li>
+                                    <li><a href="#">Гёйнюк</a></li>
+                                    <li><a href="#">Гюмюлдур</a></li>
+                                    <li><a href="#">Даламан</a></li>
+                                    <li><a href="#">Дальян</a></li>
+                                    <li><a href="#">Дидим</a></li>
+                                    <li><a href="#">Еникапы</a></li>
+                                    <li><a href="#">Зейтинбурну</a></li>
+                                    <li><a href="#">Измир</a></li>
+                                    <li><a href="#">Илерибаши</a></li>
+                                    <li><a href="#">Инжекум</a></li>
+                                    <li><a href="#">Искелемевкии</a></li>
+                                    <li><a href="#">Кадрие</a></li>
+                                    <li><a href="#">Кайсери</a></li>
+                                    <li><a href="#">Калкан</a></li>
+                                    <li><a href="#">Каппадокия</a></li>
+                                    <li><a href="#">Каракой</a></li>
+                                    <li><a href="#">Каргыджак</a></li>
+                                    <li><a href="#">Каш</a></li>
+                                    <li><a href="#">Кемер</a></li>
+                                    <li><a href="#">Кестель</a></li>
+                                    <li><a href="#">Кизилагач</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-semibold">
+                                        <span>Показать всё</span>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.57087 2.11932C8.38217 1.84414 8.05074 1.81227 7.83059 2.04814L4.49727 5.61956L1.16394 2.04814C0.943793 1.81227 0.61236 1.84414 0.423665 2.11932C0.234969 2.39449 0.260464 2.80879 0.480607 3.04465L4.15561 6.98215C4.35221 7.1928 4.64232 7.1928 4.83893 6.98215L8.51392 3.04465C8.73407 2.80879 8.75956 2.39449 8.57087 2.11932Z" fill="#3D95FB" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-item-3" role="tabpanel" aria-labelledby="tab-link-3" tabindex="0">
+                                <ul>
+                                    <li><a href="#">Авсаллар 3</a></li>
+                                    <li><a href="#">Адана</a></li>
+                                    <li><a href="#">Аджису</a></li>
+                                    <li><a href="#">Аксарай</a></li>
+                                    <li><a href="#">Аланья</a></li>
+                                    <li><a href="#">Анкара</a></li>
+                                    <li><a href="#">Анталья</a></li>
+                                    <li><a href="#">Арнавуткёй</a></li>
+                                    <li><a href="#">Афьонкарахисар</a></li>
+                                    <li><a href="#">Бахчелиэвлер</a></li>
+                                    <li><a href="#">Бейоглу (Пера)</a></li>
+                                    <li><a href="#">Белек</a></li>
+                                    <li><a href="#">Бельдиби</a></li>
+                                    <li><a href="#">Бешикташ</a></li>
+                                    <li><a href="#">Беязыт</a></li>
+                                    <li><a href="#">Богазкент</a></li>
+                                    <li><a href="#">Бодрум</a></li>
+                                    <li><a href="#">Бурса</a></li>
+                                    <li><a href="#">Геджек</a></li>
+                                    <li><a href="#">Гёйнюк</a></li>
+                                    <li><a href="#">Гюмюлдур</a></li>
+                                    <li><a href="#">Даламан</a></li>
+                                    <li><a href="#">Дальян</a></li>
+                                    <li><a href="#">Дидим</a></li>
+                                    <li><a href="#">Еникапы</a></li>
+                                    <li><a href="#">Зейтинбурну</a></li>
+                                    <li><a href="#">Измир</a></li>
+                                    <li><a href="#">Илерибаши</a></li>
+                                    <li><a href="#">Инжекум</a></li>
+                                    <li><a href="#">Искелемевкии</a></li>
+                                    <li><a href="#">Кадрие</a></li>
+                                    <li><a href="#">Кайсери</a></li>
+                                    <li><a href="#">Калкан</a></li>
+                                    <li><a href="#">Каппадокия</a></li>
+                                    <li><a href="#">Каракой</a></li>
+                                    <li><a href="#">Каргыджак</a></li>
+                                    <li><a href="#">Каш</a></li>
+                                    <li><a href="#">Кемер</a></li>
+                                    <li><a href="#">Кестель</a></li>
+                                    <li><a href="#">Кизилагач</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-semibold">
+                                        <span>Показать всё</span>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.57087 2.11932C8.38217 1.84414 8.05074 1.81227 7.83059 2.04814L4.49727 5.61956L1.16394 2.04814C0.943793 1.81227 0.61236 1.84414 0.423665 2.11932C0.234969 2.39449 0.260464 2.80879 0.480607 3.04465L4.15561 6.98215C4.35221 7.1928 4.64232 7.1928 4.83893 6.98215L8.51392 3.04465C8.73407 2.80879 8.75956 2.39449 8.57087 2.11932Z" fill="#3D95FB" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-item-4" role="tabpanel" aria-labelledby="tab-link-4" tabindex="0">
+                                <ul>
+                                    <li><a href="#">Авсаллар 4</a></li>
+                                    <li><a href="#">Адана</a></li>
+                                    <li><a href="#">Аджису</a></li>
+                                    <li><a href="#">Аксарай</a></li>
+                                    <li><a href="#">Аланья</a></li>
+                                    <li><a href="#">Анкара</a></li>
+                                    <li><a href="#">Анталья</a></li>
+                                    <li><a href="#">Арнавуткёй</a></li>
+                                    <li><a href="#">Афьонкарахисар</a></li>
+                                    <li><a href="#">Бахчелиэвлер</a></li>
+                                    <li><a href="#">Бейоглу (Пера)</a></li>
+                                    <li><a href="#">Белек</a></li>
+                                    <li><a href="#">Бельдиби</a></li>
+                                    <li><a href="#">Бешикташ</a></li>
+                                    <li><a href="#">Беязыт</a></li>
+                                    <li><a href="#">Богазкент</a></li>
+                                    <li><a href="#">Бодрум</a></li>
+                                    <li><a href="#">Бурса</a></li>
+                                    <li><a href="#">Геджек</a></li>
+                                    <li><a href="#">Гёйнюк</a></li>
+                                    <li><a href="#">Гюмюлдур</a></li>
+                                    <li><a href="#">Даламан</a></li>
+                                    <li><a href="#">Дальян</a></li>
+                                    <li><a href="#">Дидим</a></li>
+                                    <li><a href="#">Еникапы</a></li>
+                                    <li><a href="#">Зейтинбурну</a></li>
+                                    <li><a href="#">Измир</a></li>
+                                    <li><a href="#">Илерибаши</a></li>
+                                    <li><a href="#">Инжекум</a></li>
+                                    <li><a href="#">Искелемевкии</a></li>
+                                    <li><a href="#">Кадрие</a></li>
+                                    <li><a href="#">Кайсери</a></li>
+                                    <li><a href="#">Калкан</a></li>
+                                    <li><a href="#">Каппадокия</a></li>
+                                    <li><a href="#">Каракой</a></li>
+                                    <li><a href="#">Каргыджак</a></li>
+                                    <li><a href="#">Каш</a></li>
+                                    <li><a href="#">Кемер</a></li>
+                                    <li><a href="#">Кестель</a></li>
+                                    <li><a href="#">Кизилагач</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-semibold">
+                                        <span>Показать всё</span>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.57087 2.11932C8.38217 1.84414 8.05074 1.81227 7.83059 2.04814L4.49727 5.61956L1.16394 2.04814C0.943793 1.81227 0.61236 1.84414 0.423665 2.11932C0.234969 2.39449 0.260464 2.80879 0.480607 3.04465L4.15561 6.98215C4.35221 7.1928 4.64232 7.1928 4.83893 6.98215L8.51392 3.04465C8.73407 2.80879 8.75956 2.39449 8.57087 2.11932Z" fill="#3D95FB" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-item-5" role="tabpanel" aria-labelledby="tab-link-5" tabindex="0">
+                                <ul>
+                                    <li><a href="#">Авсаллар 5</a></li>
+                                    <li><a href="#">Адана</a></li>
+                                    <li><a href="#">Аджису</a></li>
+                                    <li><a href="#">Аксарай</a></li>
+                                    <li><a href="#">Аланья</a></li>
+                                    <li><a href="#">Анкара</a></li>
+                                    <li><a href="#">Анталья</a></li>
+                                    <li><a href="#">Арнавуткёй</a></li>
+                                    <li><a href="#">Афьонкарахисар</a></li>
+                                    <li><a href="#">Бахчелиэвлер</a></li>
+                                    <li><a href="#">Бейоглу (Пера)</a></li>
+                                    <li><a href="#">Белек</a></li>
+                                    <li><a href="#">Бельдиби</a></li>
+                                    <li><a href="#">Бешикташ</a></li>
+                                    <li><a href="#">Беязыт</a></li>
+                                    <li><a href="#">Богазкент</a></li>
+                                    <li><a href="#">Бодрум</a></li>
+                                    <li><a href="#">Бурса</a></li>
+                                    <li><a href="#">Геджек</a></li>
+                                    <li><a href="#">Гёйнюк</a></li>
+                                    <li><a href="#">Гюмюлдур</a></li>
+                                    <li><a href="#">Даламан</a></li>
+                                    <li><a href="#">Дальян</a></li>
+                                    <li><a href="#">Дидим</a></li>
+                                    <li><a href="#">Еникапы</a></li>
+                                    <li><a href="#">Зейтинбурну</a></li>
+                                    <li><a href="#">Измир</a></li>
+                                    <li><a href="#">Илерибаши</a></li>
+                                    <li><a href="#">Инжекум</a></li>
+                                    <li><a href="#">Искелемевкии</a></li>
+                                    <li><a href="#">Кадрие</a></li>
+                                    <li><a href="#">Кайсери</a></li>
+                                    <li><a href="#">Калкан</a></li>
+                                    <li><a href="#">Каппадокия</a></li>
+                                    <li><a href="#">Каракой</a></li>
+                                    <li><a href="#">Каргыджак</a></li>
+                                    <li><a href="#">Каш</a></li>
+                                    <li><a href="#">Кемер</a></li>
+                                    <li><a href="#">Кестель</a></li>
+                                    <li><a href="#">Кизилагач</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-semibold">
+                                        <span>Показать всё</span>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.57087 2.11932C8.38217 1.84414 8.05074 1.81227 7.83059 2.04814L4.49727 5.61956L1.16394 2.04814C0.943793 1.81227 0.61236 1.84414 0.423665 2.11932C0.234969 2.39449 0.260464 2.80879 0.480607 3.04465L4.15561 6.98215C4.35221 7.1928 4.64232 7.1928 4.83893 6.98215L8.51392 3.04465C8.73407 2.80879 8.75956 2.39449 8.57087 2.11932Z" fill="#3D95FB" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-item-6" role="tabpanel" aria-labelledby="tab-link-6" tabindex="0">
+                                <ul>
+                                    <li><a href="#">Авсаллар 6</a></li>
+                                    <li><a href="#">Адана</a></li>
+                                    <li><a href="#">Аджису</a></li>
+                                    <li><a href="#">Аксарай</a></li>
+                                    <li><a href="#">Аланья</a></li>
+                                    <li><a href="#">Анкара</a></li>
+                                    <li><a href="#">Анталья</a></li>
+                                    <li><a href="#">Арнавуткёй</a></li>
+                                    <li><a href="#">Афьонкарахисар</a></li>
+                                    <li><a href="#">Бахчелиэвлер</a></li>
+                                    <li><a href="#">Бейоглу (Пера)</a></li>
+                                    <li><a href="#">Белек</a></li>
+                                    <li><a href="#">Бельдиби</a></li>
+                                    <li><a href="#">Бешикташ</a></li>
+                                    <li><a href="#">Беязыт</a></li>
+                                    <li><a href="#">Богазкент</a></li>
+                                    <li><a href="#">Бодрум</a></li>
+                                    <li><a href="#">Бурса</a></li>
+                                    <li><a href="#">Геджек</a></li>
+                                    <li><a href="#">Гёйнюк</a></li>
+                                    <li><a href="#">Гюмюлдур</a></li>
+                                    <li><a href="#">Даламан</a></li>
+                                    <li><a href="#">Дальян</a></li>
+                                    <li><a href="#">Дидим</a></li>
+                                    <li><a href="#">Еникапы</a></li>
+                                    <li><a href="#">Зейтинбурну</a></li>
+                                    <li><a href="#">Измир</a></li>
+                                    <li><a href="#">Илерибаши</a></li>
+                                    <li><a href="#">Инжекум</a></li>
+                                    <li><a href="#">Искелемевкии</a></li>
+                                    <li><a href="#">Кадрие</a></li>
+                                    <li><a href="#">Кайсери</a></li>
+                                    <li><a href="#">Калкан</a></li>
+                                    <li><a href="#">Каппадокия</a></li>
+                                    <li><a href="#">Каракой</a></li>
+                                    <li><a href="#">Каргыджак</a></li>
+                                    <li><a href="#">Каш</a></li>
+                                    <li><a href="#">Кемер</a></li>
+                                    <li><a href="#">Кестель</a></li>
+                                    <li><a href="#">Кизилагач</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-semibold">
+                                        <span>Показать всё</span>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.57087 2.11932C8.38217 1.84414 8.05074 1.81227 7.83059 2.04814L4.49727 5.61956L1.16394 2.04814C0.943793 1.81227 0.61236 1.84414 0.423665 2.11932C0.234969 2.39449 0.260464 2.80879 0.480607 3.04465L4.15561 6.98215C4.35221 7.1928 4.64232 7.1928 4.83893 6.98215L8.51392 3.04465C8.73407 2.80879 8.75956 2.39449 8.57087 2.11932Z" fill="#3D95FB" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-item-7" role="tabpanel" aria-labelledby="tab-link-7" tabindex="0">
+                                <ul>
+                                    <li><a href="#">Авсаллар 7</a></li>
+                                    <li><a href="#">Адана</a></li>
+                                    <li><a href="#">Аджису</a></li>
+                                    <li><a href="#">Аксарай</a></li>
+                                    <li><a href="#">Аланья</a></li>
+                                    <li><a href="#">Анкара</a></li>
+                                    <li><a href="#">Анталья</a></li>
+                                    <li><a href="#">Арнавуткёй</a></li>
+                                    <li><a href="#">Афьонкарахисар</a></li>
+                                    <li><a href="#">Бахчелиэвлер</a></li>
+                                    <li><a href="#">Бейоглу (Пера)</a></li>
+                                    <li><a href="#">Белек</a></li>
+                                    <li><a href="#">Бельдиби</a></li>
+                                    <li><a href="#">Бешикташ</a></li>
+                                    <li><a href="#">Беязыт</a></li>
+                                    <li><a href="#">Богазкент</a></li>
+                                    <li><a href="#">Бодрум</a></li>
+                                    <li><a href="#">Бурса</a></li>
+                                    <li><a href="#">Геджек</a></li>
+                                    <li><a href="#">Гёйнюк</a></li>
+                                    <li><a href="#">Гюмюлдур</a></li>
+                                    <li><a href="#">Даламан</a></li>
+                                    <li><a href="#">Дальян</a></li>
+                                    <li><a href="#">Дидим</a></li>
+                                    <li><a href="#">Еникапы</a></li>
+                                    <li><a href="#">Зейтинбурну</a></li>
+                                    <li><a href="#">Измир</a></li>
+                                    <li><a href="#">Илерибаши</a></li>
+                                    <li><a href="#">Инжекум</a></li>
+                                    <li><a href="#">Искелемевкии</a></li>
+                                    <li><a href="#">Кадрие</a></li>
+                                    <li><a href="#">Кайсери</a></li>
+                                    <li><a href="#">Калкан</a></li>
+                                    <li><a href="#">Каппадокия</a></li>
+                                    <li><a href="#">Каракой</a></li>
+                                    <li><a href="#">Каргыджак</a></li>
+                                    <li><a href="#">Каш</a></li>
+                                    <li><a href="#">Кемер</a></li>
+                                    <li><a href="#">Кестель</a></li>
+                                    <li><a href="#">Кизилагач</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#" class="more-link d-flex align-items-center fw-semibold">
+                                        <span>Показать всё</span>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.57087 2.11932C8.38217 1.84414 8.05074 1.81227 7.83059 2.04814L4.49727 5.61956L1.16394 2.04814C0.943793 1.81227 0.61236 1.84414 0.423665 2.11932C0.234969 2.39449 0.260464 2.80879 0.480607 3.04465L4.15561 6.98215C4.35221 7.1928 4.64232 7.1928 4.83893 6.98215L8.51392 3.04465C8.73407 2.80879 8.75956 2.39449 8.57087 2.11932Z" fill="#3D95FB" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Collections end -->
+            
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-7 order-3 order-lg-1">
+                        <ul class="d-flex flex-column">
+                            <li>© 2025 Tripse.ru — сервис поиска экскурсий и туров</li>
+                            <li>Адрес: Россия, Москва, Ленинградский пр-т, д. 36, стр. 11</li>
+                            <li>Почта: <a href="mailto:info@tripse.ru">info@tripse.ru</a></li>
+                            <li>Телефон: <a href="tel:+8 (800) 777-02-23">8 (800) 777-02-23</a> доб. 003</li>
+                            <li>Поддержка: 24/7</li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="btns d-flex align-items-center">
+                            <a href="#" class="btn-white d-flex align-items-center justify-content-center">Войти</a>
+                            <a href="#" class="btn-green d-flex align-items-center justify-content-center">Регистрация</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 order-1 order-lg-2">
+                        <h3 class="fw-medium">Информация</h3>
+                        <ul class="footer-navs">
+                            <li>
+                                <a href="#">О проекте</a>
+                            </li>
+                            <li>
+                                <a href="#">Журнал</a>
+                            </li>
+                            <li>
+                                <a href="#">Достопримечательности</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ для туристов</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-3 order-2 order-lg-3">
+                        <h3 class="fw-medium">Юридическая информация</h3>
+                        <ul class="footer-navs">
+                            <li>
+                                <a href="#">Политика конфиденциальности</a>
+                            </li>
+                            <li>
+                                <a href="#">Правовые основания</a>
+                            </li>
+                            <li>
+                                <a href="#">Пользовательское соглашение</a>
+                            </li>
+                            <li>
+                                <a href="#">Ещё…</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line w-100"></div>
+                <div class="footer-text">Пользовательское соглашение</div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+        
+    </div>
+    
+    <!-- jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- iMask JS -->
+    <script src="./assets/js/iMask.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
+    <!-- JS file -->
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
