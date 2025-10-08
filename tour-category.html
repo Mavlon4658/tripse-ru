@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script> -->
     <!-- Syle CSS -->
     <link rel="stylesheet" href="./assets/scss/style.css">
 </head>
@@ -280,6 +283,188 @@
                 </div>
             </section>
             <!-- Category home end -->
+
+            <!-- Catalog list -->
+            <div class="catalog-list">
+                <div class="container bg-white py-4 px-3 d-flex align-items-center justify-content-between gap-3">
+                    <button class="btn-prev flex-shrink-0 d-none d-md-flex align-items-center justify-content-center rounded-circle">
+                        <svg width="14" height="30" viewBox="0 0 14 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.8007 8.30763L10.4918 7L3.36274 14.1266C3.24783 14.2408 3.15663 14.3766 3.09439 14.5262C3.03216 14.6757 3.00012 14.8361 3.00012 14.9981C3.00012 15.1602 3.03216 15.3206 3.09439 15.4701C3.15663 15.6197 3.24783 15.7555 3.36274 15.8697L10.4918 23L11.7994 21.6924L5.10831 15L11.8007 8.30763Z" fill="#515151" />
+                        </svg>
+                    </button>
+                    <div class="catalog-list__swp">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-1.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>VIP-отдых и услуги</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-2.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Пляжи</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-3.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Экскурсионный отдых и круизы</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-4.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Отдых с детьми</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-5.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Горнолыжные курорты</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-6.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Острова</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-7.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Свадебные пакеты</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-8.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Отдых без детей</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-9.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>СПА и термы</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-10.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>Спортивные проекты</p>
+                                </div>
+                                <div class="swiper-slide catalog-list__card text-center">
+                                    <img src="./assets/images/catalog-list-icon-11.svg" alt="" class="position-absolute top-0 start-50 translate-middle-x">
+                                    <p>отдых и проекты</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-next flex-shrink-0 d-none d-md-flex align-items-center justify-content-center rounded-circle">
+                        <svg width="14" height="30" viewBox="0 0 14 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8.80763L4.30887 7.5L11.4379 14.6266C11.5528 14.7408 11.644 14.8766 11.7063 15.0262C11.7685 15.1757 11.8005 15.3361 11.8005 15.4981C11.8005 15.6602 11.7685 15.8206 11.7063 15.9701C11.644 16.1197 11.5528 16.2555 11.4379 16.3697L4.30887 23.5L3.00124 22.1924L9.69237 15.5L3 8.80763Z" fill="#515151" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Catalog list end -->
+
+            <!-- Filter content -->
+            <section class="filter-content">
+                <div class="container bg-white">
+                    <div class="d-flex align-items-center flex-wrap gap-3">
+                        <div class="date-inp d-flex align-items-center">
+                            <input type="text" placeholder="Выберите даты" id="myDatePicker">
+                            <div class="icon">
+                                <img src="./assets/images/calendar-dark-icon.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="main-select">
+                            <div class="main-select__btn">
+                                <span>Формат проведения</span>
+                                <input type="text" value="Формат проведения">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 9L12 16L5 9" stroke="#232428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <ul class="main-select__list">
+                                <li class="selected">
+                                    <span>Формат проведения</span>
+                                </li>
+                                <li>
+                                    <span>select 1</span>
+                                </li>
+                                <li>
+                                    <span>select 2</span>
+                                </li>
+                                <li>
+                                    <span>select 3</span>
+                                </li>
+                                <li>
+                                    <span>select 4</span>
+                                </li>
+                                <li>
+                                    <span>select 5</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-select">
+                            <div class="main-select__btn">
+                                <span>Способ передвижения</span>
+                                <input type="text" value="Способ передвижения">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 9L12 16L5 9" stroke="#232428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <ul class="main-select__list">
+                                <li class="selected">
+                                    <span>Способ передвижения</span>
+                                </li>
+                                <li>
+                                    <span>select 1</span>
+                                </li>
+                                <li>
+                                    <span>select 2</span>
+                                </li>
+                                <li>
+                                    <span>select 3</span>
+                                </li>
+                                <li>
+                                    <span>select 4</span>
+                                </li>
+                                <li>
+                                    <span>select 5</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-select">
+                            <div class="main-select__btn">
+                                <span>Цена</span>
+                                <input type="text" value="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 9L12 16L5 9" stroke="#232428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="main-select__list flex-column p-3 pos-center" style="width: 220px">
+                                <div class="form_range">
+                                    <p class="mb-2">Цена за экскурсию</p>
+                                    <div class="form_range__val mb-2">
+                                        <div class="form_range__val_item">
+                                            <input class="val" type="number" value="0" min="0" max="20000" step="1" readonly>
+                                        </div>
+                                        <div class="form_range__val_item">
+                                            <input class="val" type="number" value="0" min="0" max="20000" step="1" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="form_range__inp">
+                                        <div class="line"></div>
+                                        <input value="200" min="200" max="70000" step="1" type="range" />
+                                        <input value="70000" min="200" max="70000" step="1" type="range" />
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <button class="btn-blue">Показать</button>
+                                    <button class="btn-gray__outline">Сбросить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line my-3"></div>
+                    <div class="filter-content__foot d-flex flex-wrap align-items-center">
+                        <p class="pe-2">Сортировать по:</p>
+                        <a href="#" class="active d-flex align-items-center">
+                            <img src="./assets/images/star-dark.svg" alt="">
+                            <span>Популярные</span>
+                        </a>
+                        <a href="#" class="d-flex align-items-center">Новые</a>
+                        <a href="#" class="d-flex align-items-center">Минимальная цена</a>
+                        <a href="#" class="d-flex align-items-center">Высокий рейтинг</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Filter content end -->
 
             <!-- Filter block -->
             <section class="filter-block">
@@ -2281,7 +2466,8 @@
         <!-- Footer end -->
         
     </div>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- jQuery JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- iMask JS -->
